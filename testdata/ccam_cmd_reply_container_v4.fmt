@@ -1,0 +1,60 @@
+/* CCAM_CMD_REPLY_CONTAINER_V4.FMT                                          */
+ OBJECT                = COLUMN
+   NAME                = "CMD_REPLY BIT STRINGS"
+   DATA_TYPE           = MSB_BIT_STRING
+   START_BYTE          = 1
+   BYTES               = 4
+
+   OBJECT              = BIT_COLUMN
+     NAME              = CMD_REPLY_OPCODE
+     BIT_DATA_TYPE     = MSB_UNSIGNED_INTEGER
+     START_BIT         = 1
+     BITS              = 8
+     DESCRIPTION       = "0xdd - spectrometer data
+                          0xc0 - laser data
+                          0x77 - rmi image data
+                          0xc2 - autofocus data
+                          0x55aa - soh data"
+   END_OBJECT          = BIT_COLUMN
+
+   OBJECT              = BIT_COLUMN
+     NAME              = CMD_REPLY_ERROR_CONTROL
+     BIT_DATA_TYPE     = MSB_UNSIGNED_INTEGER
+     START_BIT         = 9
+     BITS              = 2
+     DESCRIPTION       = "Error control :
+                          0 = reserved
+                          1 =  The CRC error control algorithm is applied
+                          2 = The Checksum error control Algorithm was applied
+                          3 = No error Control"
+   END_OBJECT          = BIT_COLUMN
+
+   OBJECT              = BIT_COLUMN
+     NAME              = CMD_REPLY_DATA_PRESENT
+     BIT_DATA_TYPE     = BOOLEAN
+     START_BIT         = 11
+     BITS              = 1
+     DESCRIPTION       = "Is data present
+                          0 = nodata
+                          1 = data"
+   END_OBJECT          = BIT_COLUMN
+
+   OBJECT              = BIT_COLUMN
+     NAME              = CMD_REPLY_STATUS_FLAGS
+     BIT_DATA_TYPE     = MSB_UNSIGNED_INTEGER
+     START_BIT         = 12
+     BITS              = 21
+     DESCRIPTION       = "Status flags:
+                        bit 1 - command Reply Flag 
+                                 (0- not cmd_reply, 1 - cmd_reply)
+                        bit 2:16 - described in attached document under 
+                                 flags tab
+                        bit 17:21 - 
+                                  0 0000 - reserved
+                                  0 0001 - First time command
+                                  0 0010 - Retry command (cmd reply frame)
+                                  1 0010 - Retry command (sci frame) "
+   END_OBJECT          = BIT_COLUMN
+ END_OBJECT            = COLUMN
+
+/* End of format file CCAM_CMD_REPLY_CONTAINER_V4.FMT */

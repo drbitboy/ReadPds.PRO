@@ -1,0 +1,12 @@
+/* CCAM_LIBS_ANCILLARY_V4.FMT.                                        */
+
+  /* This format file defines the 20 ancillary TEMP data columns.       */
+  /* 80bytes                                                       */      
+  ^STRUCTURE                      = "CCAM_ANCILLARY_TMPS_V4.FMT"
+
+  /* This format file defines the 16 command arguments and    */
+  /* 22 command Parameters                                    */
+  /* 90 bytes                                                 */      
+  ^STRUCTURE                      = "CCAM_LIBS_CMD_ARG_PARAMS_V4.FMT"
+  
+/* End of format file CCAM_LIBS_ANCILLARY_V4.FMT */

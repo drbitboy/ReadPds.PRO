@@ -1,0 +1,121 @@
+/* Format file CCAM_SOH_TO_RCE_CONTAINER_V4.FMT                      */
+/* Defines columns inside the container CCAM_SOH_TO_RCE in a Chemcam */
+/* State of Health Science Data table.                               */
+/* The START_BYTE value for each column is relative to the start     */
+/* of the container.                                                 */
+
+    OBJECT                        = COLUMN
+      COLUMN_NUMBER               = 1
+      NAME                        = "TIME"
+      START_BYTE                  = 1
+      BYTES                       = 4
+      DATA_TYPE                   = MSB_UNSIGNED_INTEGER
+      DESCRIPTION                 = "Time collected"
+    END_OBJECT                    = COLUMN
+
+    OBJECT                        = COLUMN
+      COLUMN_NUMBER               = 2
+      NAME                        = "CCAM_DPU_SOH_STRUCT"
+      START_BYTE                  = 5
+      BYTES                       = 18
+      DATA_TYPE                   = MSB_UNSIGNED_INTEGER
+      ITEMS                       = 9
+      ITEM_BYTES                  = 2
+      DESCRIPTION        = "Vector of 9 2-byte unsigned integer values:
+           Item 0: DPU Analog Ground ( V = counts * (2.5V/255cnts) )
+           Item 1: DPU_+5_Digital    ( V = counts * 2.5 * (2.5V/255cnts) )
+           Item 2: DPU_+2.5_Digital  ( V = counts * (2.5/2) * (2.5V/255cnts) )
+           Item 3: DPU_+5_Analog     ( V = counts * (2.5V/255cnts) )
+           Item 4: DPU_-5_Analog     ( V = -counts * (2.5V/255cnts) )
+           Item 5: DPU_degC          ( degC = counts * (2.5V/255cnts) * 
+                                        (150 degC/2V) - 50 degC )
+           Item 6: Spectrometer_degC ( degC = counts * (2.5V/255cnts) * 
+                                        (150 degC/2V) - 50 degC )
+           Item 7: LVPS_degC         ( degC = counts * (2.5v/255cnts) * 
+                                        (150 degC/2V) - 50 degC )
+           Item 8: motor_pos         ( counts  )
+           "
+    END_OBJECT                    = COLUMN
+
+    OBJECT                        = COLUMN
+      COLUMN_NUMBER               = 3
+      NAME                        = "CCAM_MU_SOH_STRUCT"
+      START_BYTE                  = 23
+      BYTES                       = 78
+      DATA_TYPE                   = MSB_UNSIGNED_INTEGER
+      ITEMS                       = 39
+      ITEM_BYTES                  = 2
+      DESCRIPTION        = "Vector of 39 2-byte unsigned integer values:
+           Item 0: Digital HK bit flags, meanings given for values of 0/1:
+                     Bit 0 = limit switch open/closed
+                     Bit 1 = thermal flag cold/hot
+                     Bit 2 = 15/30V converter off/on
+                     Bit 3 = 12V converter off/on
+                     Bit 4 = limiter osc off/on
+                     Bit 5 = limiter amp1 off/on
+                     Bit 6 = limiter amp2 off/on
+                     Bit 7 = floating 15V off/on
+                     Bit 8 = pockels off/on
+                     Bit 9 = 30V motor off/on
+                     Bit 10 = CWL off/on
+                     Bit 11 = 12V autofocus off/on
+                     Bit 12 = camera off/on
+                     Bit 13 = osc warm-up off/on
+                     Bit 14 = amp warm-up off/on
+                     Bit 15 = CWL warm-up off/on
+           Item 1: HK_heatsink_degC (-52.1 - 98.5 degC)
+                                     (V = VMON * 0.04796 - 57.47)
+           Item 2: HK_I_+3.3v (0 -1A)(V = VMON * 0.29858)
+           Item 3: HK_I_+30v  (0 - 2A)(V = VMON * 0.22229 - 115.7)
+           Item 4: HK_I_-5v   (0 - 250mA)(V = VMON * 0.05670 + 31.6)
+           Item 5: HK_I_+12v  (0 - 750mA)(V = VMON * 0.05807)
+           Item 6: HK_V_+3.3v (0 - 3.5V)(V = VMON * 0.000898)
+           Item 7: HK_V_+5v   (0 - 5.2V)(V = VMON * 0.001492)
+           Item 8: HK_V_-5v   (0 - -5.2V)(V = VMON * -0.00163)
+           Item 9: HK_V_+12v  (0 - 13V)(V = VMON * 0.003458)
+          Item 10: HK_V_-12v  (0 - -13V)(V = VMON * -0.00350)
+          Item 11: HK_V_+15v  (0 - 16V)(V = VMON * 0.005696)
+          Item 12: HK_V_+30v  (0 - 32V)(V = VMON * 0.007977)
+          Item 13: Laser diode control current (0 - 150mA)
+                                     (V = VMON * 0.002935)
+          Item 14: CWL_degC         (-52.1 - 98.5degC)
+                                     (V = VMON * 0.037226 - 57.47)
+          Item 15: HK_I_limiterdegC (-52.1 - 98.5degC)
+                                     (V = VMON * 0.037226 - 57.47)
+          Item 16: Autofocus signal output (0 - 2.5V)
+                                     (V = VMON * 0.610501)
+          Item 17: LMD18200_degC  (-52.1 - 98.5degC)
+                                     (V = VMON * 0.047958 - 57.47)
+          Item 18: HK_Laser1_degC (-52.1 - 98.5degC)
+                                     (V = VMON * 0.037226 - 57.47)
+          Item 19: HK_Laser2_degC (-52.1 - 98.5degC)
+                                     (V = VMON * 0.037226 - 57.47)
+          Item 20: HK_Laser3_degC (-52.1 - 98.5degC)
+                                     (V = VMON * 0.037226 - 57.47)
+          Item 21: HK_Laser4_degC (-52.1 - 98.5degC)
+                                     (V = VMON * 0.037226 - 57.47)
+          Item 22: HK_Stack1_V  (0 - 30V)(V = VMON * 0.00763)
+          Item 23: HK_Stack1_I  (0 - 136A)(V = VMON * 0.03817 + 1.925)
+          Item 24: HK_Stack2_V  (0 - 30V)(V = VMON * 0.00763)
+          Item 25: HK_Stack2_I  (0 - 136A)(V = VMON * 0.03971 - 3.994)
+          Item 26: HK_Stack3_V  (0 - 30V)(V = VMON * 0.00763)
+          Item 27: HK_Stack3_I  (0 - 136A)(V = VMON * 0.03848 - 0.780)
+          Item 28: optical_flux_level 
+                                (power of LIBS shots iff {2000 - 40095})
+                               (-14.57 - 30.06)(V = VMON * 0.01369 - 2.96)
+          Item 29: HK_pockels_V (0 - 2418V)(V = VMON * 0.61050)
+          Item 30: HK_LIMIT_SWITCH(V = VMON * 0.128798 - 7.73)
+          Item 31: HK_Spare2(V = VMON * 0.000611)
+          Item 32: HK_RMI_degC     (-60 - 90degC)(V = VMON * 0.04210 - 60.6)
+          Item 33: HK_FPGA_degC    (-52.1 - 98.5degC)(V = VMON * 0.04796 - 57.47)
+          Item 34: HK_Telescope1_degC  (-52.1 - 98.5degC)
+                                                (V = VMON * 0.037226 - 57.47)
+          Item 35: HK_Telescope2_degC  (-52.1 - 98.5degC)
+                                                (V = VMON * 0.037226 - 57.47)
+          Item 36: FPGA_3.3V  (0 - 7.88V)(V = VMON * 0.001906)
+          Item 37: displacement_steps
+          Item 38: displacement_count
+           "
+    END_OBJECT                    = COLUMN
+
+/* End of format file CCAM_SOH_TO_RCE_CONTAINER_V4.FMT */

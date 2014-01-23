@@ -1,0 +1,332 @@
+/* CCAM_SOH_SCIDATA_COLS_V4.FMT.                               */
+
+  OBJECT                         = COLUMN 
+    COLUMN_NUMBER                = 1
+    NAME                         = "BYTE_COUNT"
+    START_BYTE                   = 1
+    BYTES                        = 4
+    DATA_TYPE                    = MSB_UNSIGNED_INTEGER
+    DESCRIPTION                  = "Number of bytes in SOH DPO"
+  END_OBJECT                     = COLUMN
+                                                                             
+  OBJECT                         = COLUMN 
+    COLUMN_NUMBER                = 2
+    NAME                         = "RCECONTROL"
+    START_BYTE                   = 5
+    BYTES                        = 4
+    DATA_TYPE                    = MSB_UNSIGNED_INTEGER
+    DESCRIPTION                  = "Instrument Transfer frame Header
+                                    contains: (8bits) Opcode 52 for soh
+                                              (2bits) Error Control Type Flag 
+                          00 = reserved
+                          01 =  The CRC error control algorithm is applied
+                          10 = The Checksum error control Algorithm applied
+                          11 = No error Control
+                                              (1 bit) Data Present 
+                          0 = nodata
+                          1 = data
+                                              (21 bits) Status as follows
+                        bit 1 - command Reply Flag
+                                 (0- not cmd_reply, 1 - cmd_reply)
+                        bit 2 - notSafe
+                                 ( 0 - safe
+                                   1 - Bu doesn't know that MU mortors
+                                     are in sun-safe position)
+                        bit 3 - BootSource
+                                 (Which memory was used for boot
+                                  0 - Init0 PROMO
+                                  1 - Init1 PROM1)
+                        bit 4 - CommSide
+                                 (Talking with which RCE?
+                                  0 - RCE A or none
+                                  1 - RCE B)
+                        bit 5 - CWL_heater_notOn
+                                 (CWL heating loop algorithm off
+                                  0 - on
+                                  1 - off)
+                        bit 6 - Amp_heater_notOn
+                                 ( Amp heating loop algorithm off
+                                  0 - on
+                                  1 - off)
+                        bit 7 - OSC_heater_notOn
+                                 ( Osc heating loop algorithm off
+                                  0 - on
+                                  1 - off)
+                        bit 8 - RMI_notOn
+                                 ( RMI is not Powered
+                                  0 - on
+                                  1 - off)
+                        bit 9 - RMIdata_notOK
+                                 ( RMI off or comm with RMI not OK
+                                  0 - OK
+                                  1 - not OK, =1
+                                      when RMI if off)
+                        bit 10 - Spectrometer_notOK
+                                 ( not used should be 0)
+                        bit 11 - LVPS_notOn
+                                 ( Low Voltage (spectrometer)power supply
+                                   0 - on
+                                   1 - off )
+                        bit 12 - MAST_notOK
+                                 ( Bad communication with the mast unit
+                                   0 - OK
+                                   1 - not OK)
+                        bit 13 - LIBS_HV_notOn
+                                 ( High voltage to LIBS not on
+                                   0 - on
+                                   1 - not on)
+                        bit 14 - LIBS_notReady
+                                 (LIBS not in operating temperature range
+                                   0 - ready
+                                   1 - not ready)
+                        bit 15 - CWL_notReady
+                                 (CWL not in operating temperature range
+                                   0 - ready
+                                   1 - not ready)
+                        bit 16 - SelfTestFailed
+                                  (not used should be 0)
+                        bit 17:21 -
+                                  0 0000 - reserved
+                                  0 0001 - First time command
+                                  0 0010 - Retry command (cmd reply frame)
+                                  1 0010 - Retry command (sci frame) "
+
+  END_OBJECT                     = COLUMN
+                                                                             
+  OBJECT                         = COLUMN 
+    COLUMN_NUMBER                = 3
+    NAME                         = "RCEBYTECOUNT"
+    START_BYTE                   = 9
+    BYTES                        = 4
+    DATA_TYPE                    = MSB_UNSIGNED_INTEGER
+    DESCRIPTION                  = "rce bytecount, bytes following"
+  END_OBJECT                     = COLUMN
+                                                                             
+  OBJECT                         = COLUMN 
+    COLUMN_NUMBER                = 4
+    NAME                         = "DATAID"
+    START_BYTE                   = 13
+    BYTES                        = 2
+    DATA_TYPE                    = MSB_UNSIGNED_INTEGER
+    DESCRIPTION                  = "id word is 0x55aa for soh"
+  END_OBJECT                     = COLUMN
+                                                                             
+  OBJECT                         = COLUMN 
+    COLUMN_NUMBER                = 5
+    NAME                         = "HEAD2"
+    START_BYTE                   = 15
+    BYTES                        = 2
+    DATA_TYPE                    = MSB_UNSIGNED_INTEGER
+    DESCRIPTION                  = "00 for soh"
+  END_OBJECT                     = COLUMN
+                                                                             
+  OBJECT                         = COLUMN 
+    COLUMN_NUMBER                = 6
+    NAME                         = "BYTES"
+    START_BYTE                   = 17
+    BYTES                        = 4
+    DATA_TYPE                    = MSB_UNSIGNED_INTEGER
+    DESCRIPTION                  = "Number of bytes that follow"
+  END_OBJECT                     = COLUMN
+                                                                             
+  OBJECT                         = COLUMN 
+    COLUMN_NUMBER                = 7
+    NAME                         = "RCE_TIME"
+    START_BYTE                   = 21 
+    BYTES                        = 4
+    DATA_TYPE                    = MSB_UNSIGNED_INTEGER
+    DESCRIPTION                  = "Time stamp"
+  END_OBJECT                     = COLUMN
+                                                                             
+  OBJECT                         = COLUMN 
+    COLUMN_NUMBER                = 8
+    NAME                         = "CUR_MSEC_COUNT"
+    START_BYTE                   = 25
+    BYTES                        = 4
+    DATA_TYPE                    = MSB_UNSIGNED_INTEGER
+    DESCRIPTION                  = "Local counter ~1 msec/count"
+  END_OBJECT                     = COLUMN
+                                                                             
+  OBJECT                         = COLUMN 
+    COLUMN_NUMBER                = 9
+    NAME                         = "GOOD_CMDS"
+    START_BYTE                   = 29
+    BYTES                        = 2
+    DATA_TYPE                    = MSB_UNSIGNED_INTEGER
+    DESCRIPTION                  = "Received from RCE"
+  END_OBJECT                     = COLUMN
+                                                                             
+  OBJECT                         = COLUMN 
+    COLUMN_NUMBER                = 10
+    NAME                         = "BAD_CMDS"
+    START_BYTE                   = 31 
+    BYTES                        = 2
+    DATA_TYPE                    = MSB_UNSIGNED_INTEGER
+    DESCRIPTION                  = "Received from RCE"
+  END_OBJECT                     = COLUMN
+                                                                             
+  OBJECT                         = COLUMN 
+    COLUMN_NUMBER                = 11
+    NAME                         = "MAST_CMDS"
+    START_BYTE                   = 33 
+    BYTES                        = 2
+    DATA_TYPE                    = MSB_UNSIGNED_INTEGER
+    DESCRIPTION                  = "Cmds sent to mast"
+  END_OBJECT                     = COLUMN
+                                 
+  OBJECT                         = COLUMN 
+    COLUMN_NUMBER                = 12
+    NAME                         = "MAST_ACKS"
+    START_BYTE                   = 35
+    BYTES                        = 2
+    DATA_TYPE                    = MSB_UNSIGNED_INTEGER
+    DESCRIPTION                  = "Cmds ACKed by mast"
+  END_OBJECT                     = COLUMN
+                                                                             
+  OBJECT                         = COLUMN 
+    COLUMN_NUMBER                = 13
+    NAME                         = "MAST_NAKS"
+    START_BYTE                   = 37
+    BYTES                        = 2
+    DATA_TYPE                    = MSB_UNSIGNED_INTEGER
+    DESCRIPTION                  = "Cmds NAKed by mast"
+  END_OBJECT                     = COLUMN
+                                                                             
+  OBJECT                         = COLUMN 
+    COLUMN_NUMBER                = 14
+    NAME                         = "MAST_RESENDS"
+    START_BYTE                   = 39
+    BYTES                        = 2
+    DATA_TYPE                    = MSB_UNSIGNED_INTEGER
+    DESCRIPTION                  = "Cmds resent to mast"
+  END_OBJECT                     = COLUMN
+                                                                             
+  OBJECT                         = COLUMN 
+    COLUMN_NUMBER                = 15
+    NAME                         = "MAST_PKTS_RECD"
+    START_BYTE                   = 41
+    BYTES                        = 2
+    DATA_TYPE                    = MSB_UNSIGNED_INTEGER
+    DESCRIPTION                  = "Cmds recieved from MAST"
+  END_OBJECT                     = COLUMN
+                                                                             
+  OBJECT                         = COLUMN 
+    COLUMN_NUMBER                = 16
+    NAME                         = "MAST_PKTS_BAD"
+    START_BYTE                   = 43
+    BYTES                        = 2
+    DATA_TYPE                    = MSB_UNSIGNED_INTEGER
+    DESCRIPTION                  = "Pkts incomplete or with checksum 
+                                    error"
+  END_OBJECT                     = COLUMN
+                                                                             
+  OBJECT                         = COLUMN 
+    COLUMN_NUMBER                = 17
+    NAME                         = "CC_STATE"
+    START_BYTE                   = 45
+    BYTES                        = 2
+    DATA_TYPE                    = MSB_UNSIGNED_INTEGER
+    DESCRIPTION                  = "Major and minor state values"
+  END_OBJECT                     = COLUMN
+                                                                             
+  OBJECT                         = COLUMN 
+    COLUMN_NUMBER                = 18
+    NAME                         = "STATUS"
+    START_BYTE                   = 47
+    BYTES                        = 2
+    DATA_TYPE                    = MSB_UNSIGNED_INTEGER
+    DESCRIPTION                  = "TBD status bits"
+  END_OBJECT                     = COLUMN
+                                                                             
+  OBJECT                         = COLUMN 
+    COLUMN_NUMBER                = 19
+    NAME                         = "MEM_FPGA_VERSION"
+    START_BYTE                   = 49
+    BYTES                        = 2
+    DATA_TYPE                    = MSB_UNSIGNED_INTEGER
+    DESCRIPTION                  = "Memory FPGA version (33)"
+  END_OBJECT                     = COLUMN
+                                                                             
+  OBJECT                         = COLUMN 
+    COLUMN_NUMBER                = 20
+    NAME                         = "MICRO_FPGA_VERSION (34)"
+    START_BYTE                   = 51
+    BYTES                        = 2
+    DATA_TYPE                    = MSB_UNSIGNED_INTEGER
+    DESCRIPTION                  = "MICRO FPGA version"
+  END_OBJECT                     = COLUMN
+                                                                             
+  OBJECT                         = COLUMN 
+    COLUMN_NUMBER                = 21
+    NAME                         = "SPECT_FPGA_VERSION (20)"
+    START_BYTE                   = 53
+    BYTES                        = 2
+    DATA_TYPE                    = MSB_UNSIGNED_INTEGER
+    DESCRIPTION                  = "Spectromitor FPGA Version"
+  END_OBJECT                     = COLUMN
+                                                                             
+  OBJECT                         = COLUMN 
+    COLUMN_NUMBER                = 22
+    NAME                         = "IMAGES_SENT"
+    START_BYTE                   = 55
+    BYTES                        = 2
+    DATA_TYPE                    = MSB_UNSIGNED_INTEGER
+    DESCRIPTION                  = "Images sent To RCE"
+  END_OBJECT                     = COLUMN
+                                                                             
+  OBJECT                         = COLUMN 
+    COLUMN_NUMBER                = 23
+    NAME                         = "SOH_SENT"
+    START_BYTE                   = 57
+    BYTES                        = 2
+    DATA_TYPE                    = MSB_UNSIGNED_INTEGER
+    DESCRIPTION                  = "Soh Sent To RCE"
+  END_OBJECT                     = COLUMN
+                                                                             
+  OBJECT                         = COLUMN 
+    COLUMN_NUMBER                = 24
+    NAME                         = "SPECT_SENT"
+    START_BYTE                   = 59
+    BYTES                        = 2
+    DATA_TYPE                    = MSB_UNSIGNED_INTEGER
+    DESCRIPTION                  = "Spectra sent To RCE"
+  END_OBJECT                     = COLUMN
+                                                                             
+  OBJECT                         = COLUMN 
+    COLUMN_NUMBER                = 25
+    NAME                         = "LASER_DATA_SENT"
+    START_BYTE                   = 61
+    BYTES                        = 2
+    DATA_TYPE                    = MSB_UNSIGNED_INTEGER
+    DESCRIPTION                  = "W,V,A per laser shot"
+  END_OBJECT                     = COLUMN
+                                                                             
+  OBJECT                         = COLUMN 
+    COLUMN_NUMBER                = 26
+    NAME                         = "SPARE"
+    START_BYTE                   = 63
+    BYTES                        = 2
+    DATA_TYPE                    = MSB_UNSIGNED_INTEGER
+    DESCRIPTION                  = "Boot bank plus eepro initialized data 
+                                    location"
+  END_OBJECT                     = COLUMN
+                                                                             
+  OBJECT                         = COLUMN 
+    COLUMN_NUMBER                = 27
+    NAME                         = "SPARE2"
+    START_BYTE                   = 65
+    BYTES                        = 2
+    DATA_TYPE                    = MSB_UNSIGNED_INTEGER
+    DESCRIPTION                  = "marker workd to easily id soh"
+  END_OBJECT                     = COLUMN
+                                                                             
+  OBJECT                         = COLUMN 
+    COLUMN_NUMBER                = 28
+    NAME                         = "N_FOLLOWING"
+    START_BYTE                   = 67
+    BYTES                        = 2
+    DATA_TYPE                    = MSB_UNSIGNED_INTEGER
+    DESCRIPTION                  = "Number of SOH records"
+  END_OBJECT                     = COLUMN
+
+/* End of format file CCAM_SOH_SCIDATA_COLS_V4.FMT */

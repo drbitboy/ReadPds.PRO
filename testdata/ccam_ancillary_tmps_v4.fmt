@@ -1,0 +1,183 @@
+/* CCAM_ANCILLARY_TMPS_V4.FMT.                                     */
+
+  OBJECT            = COLUMN 
+    COLUMN_NUMBER   = 1
+    NAME            = "MU_OBOX_TELESCOPE_TEMP"
+    START_BYTE      = 1
+    BYTES           = 4
+    DATA_TYPE       = IEEE_REAL
+    DESCRIPTION     = "Temperature from MAST_UNIT OPTICAL BOX TELESCOPE"
+  END_OBJECT        = COLUMN
+                                                            
+  OBJECT            = COLUMN 
+    COLUMN_NUMBER   = 2
+    NAME            = "MU_OBOX_TELESCOPE_TEMP_STATUS"
+    START_BYTE      = 5
+    BYTES           = 4
+    DATA_TYPE       = MSB_INTEGER
+    DESCRIPTION     = "Temperature status from MAST_UNIT OPTICAL BOX TELESCOPE"
+  END_OBJECT        = COLUMN
+
+  OBJECT            = COLUMN 
+    COLUMN_NUMBER   = 3
+    NAME            = "MU_LASER_IF_TEMP"
+    START_BYTE      = 9
+    BYTES           = 4
+    DATA_TYPE       = IEEE_REAL
+    DESCRIPTION     = "Temperature from MAST_UNIT LASER INTERFACE"
+  END_OBJECT        = COLUMN
+                                                            
+  OBJECT            = COLUMN 
+    COLUMN_NUMBER   = 4
+    NAME            = "MU_LASER_IF_TEMP_STATUS"
+    START_BYTE      = 13
+    BYTES           = 4
+    DATA_TYPE       = MSB_INTEGER
+    DESCRIPTION     = "Temperature status from MAST_UNIT LASER INTERFACE"
+  END_OBJECT        = COLUMN
+                                                            
+  OBJECT            = COLUMN 
+    COLUMN_NUMBER   = 5
+    NAME            = "MU_EBOX_HEATSINK_TEMP"
+    START_BYTE      = 17
+    BYTES           = 4
+    DATA_TYPE       = IEEE_REAL
+    DESCRIPTION     = "Temperature from MAST_UNIT EBOX HEATSINK"
+  END_OBJECT        = COLUMN
+                                                            
+  OBJECT            = COLUMN 
+    COLUMN_NUMBER   = 6
+    NAME            = "MU_EBOX_HEATSINK_TEMP_STATUS"
+    START_BYTE      = 21
+    BYTES           = 4
+    DATA_TYPE       = MSB_INTEGER
+    DESCRIPTION     = "Temperature status from MAST_UNIT EBOX HEATSINK"
+  END_OBJECT        = COLUMN
+
+  OBJECT            = COLUMN 
+    COLUMN_NUMBER   = 7
+    NAME            = "MU_EBOX_FPGA_TEMP"
+    START_BYTE      = 25 
+    BYTES           = 4
+    DATA_TYPE       = IEEE_REAL
+    DESCRIPTION     = "Temperature from MAST_UNIT EBOX FPGA"
+  END_OBJECT        = COLUMN
+                                                            
+  OBJECT            = COLUMN 
+    COLUMN_NUMBER   = 8
+    NAME            = "MU_EBOX_FPGA_TEMP_STATUS"
+    START_BYTE      = 29
+    BYTES           = 4
+    DATA_TYPE       = MSB_INTEGER
+    DESCRIPTION     = "Temperature status from MAST_UNIT EBOX FPGA"
+  END_OBJECT        = COLUMN
+
+  OBJECT            = COLUMN 
+    COLUMN_NUMBER   = 9
+    NAME            = "BU_CCD_VNIR_B_TEMP"
+    START_BYTE      = 33 
+    BYTES           = 4
+    DATA_TYPE       = IEEE_REAL
+    DESCRIPTION     = "Temperature from BODY_UNIT VNIR CCD cover B-Side"
+  END_OBJECT        = COLUMN
+                                                            
+  OBJECT            = COLUMN 
+    COLUMN_NUMBER   = 10
+    NAME            = "BU_CCD_VNIR_B_TEMP_STATUS"
+    START_BYTE      = 37
+    BYTES           = 4
+    DATA_TYPE       = MSB_INTEGER
+    DESCRIPTION     = "Temperature status from BODY_UNIT VNIR CCD cover"
+  END_OBJECT        = COLUMN
+
+  OBJECT            = COLUMN 
+    COLUMN_NUMBER   = 11
+    NAME            = "BU_SPEC_B_TEMP"
+    START_BYTE      = 41
+    BYTES           = 4
+    DATA_TYPE       = IEEE_REAL
+    DESCRIPTION     = "Temperature from BODY_UNIT SPECTROMETERS B-side"
+  END_OBJECT        = COLUMN
+
+  OBJECT            = COLUMN 
+    COLUMN_NUMBER   = 12
+    NAME            = "BU_SPEC_B_TEMP_STATUS"
+    START_BYTE      = 45
+    BYTES           = 4
+    DATA_TYPE       = MSB_INTEGER
+    DESCRIPTION     = "Temperature status from BODY_UNIT Spectrometer B-side"
+  END_OBJECT        = COLUMN
+
+  OBJECT            = COLUMN 
+    COLUMN_NUMBER   = 13
+    NAME            = "BU_CCD_UV_A_TEMP"
+    START_BYTE      = 49
+    BYTES           = 4
+    DATA_TYPE       = IEEE_REAL
+    DESCRIPTION     = "Temperature from BODY_UNIT UV CCD A-side"
+  END_OBJECT        = COLUMN
+                                                            
+  OBJECT            = COLUMN 
+    COLUMN_NUMBER   = 14
+    NAME            = "BU_CCD_UV_A_TEMP_STATUS"
+    START_BYTE      = 53
+    BYTES           = 4
+    DATA_TYPE       = MSB_INTEGER
+    DESCRIPTION     = "Temperature status from BODY_UNIT UV CCD A-Side"
+  END_OBJECT        = COLUMN
+
+  OBJECT            = COLUMN 
+    COLUMN_NUMBER   = 15
+    NAME            = "BU_SPEC_A_TEMP"
+    START_BYTE      = 57
+    BYTES           = 4
+    DATA_TYPE       = IEEE_REAL
+    DESCRIPTION     = "Temperature from BODY_UNIT SPECTROMETERS B-side"
+  END_OBJECT        = COLUMN
+                                                            
+  OBJECT            = COLUMN 
+    COLUMN_NUMBER   = 16
+    NAME            = "BU_SPEC_A_TEMP_STATUS"
+    START_BYTE      = 61
+    BYTES           = 4
+    DATA_TYPE       = MSB_INTEGER
+    DESCRIPTION     = "Temperature status from BODY_UNIT SPECTROMETERS B-side"
+  END_OBJECT        = COLUMN
+                                                                             
+  OBJECT            = COLUMN 
+    COLUMN_NUMBER   = 17
+    NAME            = "BU_DEMUX_A_TEMP"
+    START_BYTE      = 65
+    BYTES           = 4
+    DATA_TYPE       = IEEE_REAL
+    DESCRIPTION     = "Temperature from BODY_UNIT Demux A-side"
+  END_OBJECT        = COLUMN
+                                                            
+  OBJECT            = COLUMN 
+    COLUMN_NUMBER   = 18
+    NAME            = "BU_DEMUX_A_TEMP_STATUS"
+    START_BYTE      = 69
+    BYTES           = 4
+    DATA_TYPE       = MSB_INTEGER
+    DESCRIPTION     = "Temperature status from BODY_UNIT Demux A-side"
+  END_OBJECT        = COLUMN
+                                                                             
+  OBJECT            = COLUMN 
+    COLUMN_NUMBER   = 19
+    NAME            = "BU_DEMUX_B_TEMP"
+    START_BYTE      = 73
+    BYTES           = 4
+    DATA_TYPE       = IEEE_REAL
+    DESCRIPTION     = "Temperature from BODY_UNIT Demux B-side"
+  END_OBJECT        = COLUMN
+                                                            
+  OBJECT            = COLUMN 
+    COLUMN_NUMBER   = 20
+    NAME            = "BU_DEMUX_B_TEMP_STATUS"
+    START_BYTE      = 77
+    BYTES           = 4
+    DATA_TYPE       = MSB_INTEGER
+    DESCRIPTION     = "Temperature status from BODY_UNIT Demux B-side"
+  END_OBJECT        = COLUMN
+                                                                             
+/* End of format file CCAM_ANCILLARY_TMPS_V4.FMT. */

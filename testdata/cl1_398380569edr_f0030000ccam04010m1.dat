@@ -1,0 +1,794 @@
+ODL_VERSION_ID                   = ODL3
+
+/* FILE DATA ELEMENTS */
+
+RECORD_TYPE                      = FIXED_LENGTH
+RECORD_BYTES                     = 2056
+LABEL_RECORDS                    = 12
+FILE_RECORDS                     = 44
+
+/* POINTERS TO DATA OBJECTS */
+
+^CCAM_LIBS_TABLE                 = 13
+
+/* IDENTIFICATION DATA ELEMENTS */
+
+ACTIVE_FLIGHT_STRING_ID          = A
+DATA_SET_ID                      = "MSL-M-CHEMCAM-LIBS-2-EDR-V1.0"
+DATA_SET_NAME                    = "MSL MARS CHEMCAM LASER-INDUCED BREAKDOWN SPECTRA 2 EDR V1.0"
+COMMAND_SEQUENCE_NUMBER          = 2
+FRAME_ID                         = "N/A"
+FRAME_TYPE                       = "N/A"
+GEOMETRY_PROJECTION_TYPE         = RAW
+INSTRUMENT_HOST_ID               = "MSL"
+INSTRUMENT_HOST_NAME             = "MARS SCIENCE LABORATORY"
+INSTRUMENT_ID                    = "CHEMCAM_LIBS"
+INSTRUMENT_NAME                  = "CHEMISTRY CAMERA LASER INDUCED BREAKDOWN SPECTROMETER"
+INSTRUMENT_SERIAL_NUMBER         = "UNK"
+INSTRUMENT_TYPE                  = "SPECTROMETER"
+INSTRUMENT_VERSION_ID            = "FM"
+LOCAL_MEAN_SOLAR_TIME            = "Sol-00010M12:31:56.075"
+LOCAL_TRUE_SOLAR_TIME            = "13:06:37"
+MISSION_NAME                     = "MARS SCIENCE LABORATORY"
+MISSION_PHASE_NAME               = "TEST"
+OBSERVATION_ID                   = "UNK"
+PLANET_DAY_NUMBER                = 10
+LOCAL_TRUE_SOLAR_TIME_SOL        = 10
+PRODUCER_INSTITUTION_NAME        = "MULTIMISSION INSTRUMENT PROCESSING LAB, 
+                                     JET PROPULSION LAB"
+PRODUCT_CREATION_TIME            = 2013-04-15T16:20:55.000
+PRODUCT_ID                       = "CL1_398380569EDR_F0030000CCAM04010M1"
+PRODUCT_VERSION_ID               = "V1.0 D-38107"
+RELEASE_ID                       = "0002"
+REQUEST_ID                       = "0"
+SOURCE_PRODUCT_ID                = "CL1_398380569EDR_F0030000CCAM04010M1"
+ROVER_MOTION_COUNTER             = (3,0,0,0,0,0,4,878,0,0)
+ROVER_MOTION_COUNTER_NAME        = (SITE, DRIVE, POSE, ARM, CHIMRA,
+                                   DRILL, RSM, HGA, DRT, IC)
+SEQUENCE_ID                      = "ccam04010"
+SEQUENCE_VERSION_ID              = "0"
+SOLAR_LONGITUDE                  = 155.965
+SPACECRAFT_CLOCK_CNT_PARTITION   = 1
+SPACECRAFT_CLOCK_START_COUNT     = "398380569.038"
+SPACECRAFT_CLOCK_STOP_COUNT      = "UNK"
+START_TIME                       = 2012-08-16T09:18:28.508
+STOP_TIME                        = "UNK"
+TARGET_NAME                      = MARS
+TARGET_TYPE                      = PLANET
+
+/* TELEMETRY DATA ELEMENTS */
+
+APPLICATION_PROCESS_ID           = 140
+APPLICATION_PROCESS_NAME         = "CcamSpectra"
+AUTO_DELETE_FLAG                 = "FALSE"
+DOWNLOAD_PRIORITY                = 56
+EARTH_RECEIVED_START_TIME        = 2012-08-16T12:48:17.816
+EARTH_RECEIVED_STOP_TIME         = 2012-08-16T12:48:21.098
+SPICE_FILE_NAME                  = "chronos.msl"
+TELEMETRY_PROVIDER_ID            = "MPCS_MSL_DP"
+TELEMETRY_SOURCE_HOST_NAME       = "mslsmsampcs1"
+TELEMETRY_SOURCE_NAME            = "CcamSpectra_0398380569-38270-1.dat"
+TELEMETRY_SOURCE_TYPE            = "DATA PRODUCT"
+COMMUNICATION_SESSION_ID         = "30102"
+EXPECTED_TRANSMISSION_PATH       = "3851"
+FLIGHT_SOFTWARE_MODE             = "8"
+FLIGHT_SOFTWARE_VERSION_ID       = "141801503"
+PRODUCT_COMPLETION_STATUS        = "COMPLETE_CHECKSUM_PASS"
+PRODUCT_TAG                      = "0"
+SEQUENCE_EXECUTION_COUNT         = 1
+TELEMETRY_SOURCE_START_TIME      = 2012-08-16T09:18:28.508
+TELEMETRY_SOURCE_SCLK_START      = "398380569.038"
+TELEMETRY_SOURCE_CHECKSUM        = 35190
+TELEMETRY_SOURCE_SIZE            = 65665
+TRANSMISSION_PATH                = "65535"
+VIRTUAL_CHANNEL_ID               = "0"
+
+/* HISTORY DATA ELEMENTS */
+
+GROUP                            = MSLEDRGEN_HISTORY_PARMS
+ SOFTWARE_NAME                   = MSLEDRGEN
+ SOFTWARE_VERSION_ID             = "V1.0 04-01-2011"
+ PROCESSING_HISTORY_TEXT         = "CODMAC LEVEL 1 TO LEVEL 2 CONVERSION
+                                    VIA JPL/MIPL MSLEDRGEN"
+END_GROUP                        = MSLEDRGEN_HISTORY_PARMS
+
+/* CAMERA MODEL DATA ELEMENTS */
+
+GROUP                            = GEOMETRIC_CAMERA_MODEL
+ CALIBRATION_SOURCE_ID           = "0"
+ ^MODEL_DESC                     = "GEOMETRIC_CM.TXT"
+ MODEL_TYPE                      = "CAHV"
+ MODEL_COMPONENT_ID              = ("C","A","H","V")
+ MODEL_COMPONENT_NAME            = ("CENTER","AXIS","HORIZONTAL","VERTICAL")
+ MODEL_COMPONENT_1               = (0.622245,0.645692,-2.058)
+ MODEL_COMPONENT_2               = (-0.921916,-0.282826,0.264695)
+ MODEL_COMPONENT_3               = (6580.82,-48406.1,77.2208)
+ MODEL_COMPONENT_4               = (22821.1,3183.7,42968.1)
+ REFERENCE_COORD_SYSTEM_NAME     = "ROVER_NAV_FRAME"
+ ROVER_MOTION_COUNTER            = (3,0,0,0,0,0,4,878,0,0)
+ MODEL_TRANSFORM_VECTOR          = (0.804636,0.559444,-1.90608)
+ MODEL_TRANSFORM_QUATERNION      = (0.0687287,-0.246261,-0.0185184,-0.966586)
+END_GROUP                        = GEOMETRIC_CAMERA_MODEL
+
+/* COORDINATE SYSTEM STATE: ROVER */
+
+GROUP                            = ROVER_COORDINATE_SYSTEM
+ COORDINATE_SYSTEM_NAME          = "ROVER_NAV_FRAME"
+ ROVER_MOTION_COUNTER            = (3,0,0,0,0,0,4,878,0,0)
+ COORDINATE_SYSTEM_INDEX_NAME    = (SITE, DRIVE, POSE, ARM, CHIMRA,
+                                   DRILL, RSM, HGA, DRT, IC)
+ ORIGIN_OFFSET_VECTOR            = (0,0,0)
+ ORIGIN_ROTATION_QUATERNION      = (0.562815,0.0142017,-0.0352224,0.82571)
+ QUATERNION_MEASUREMENT_METHOD    = FINE
+ POSITIVE_AZIMUTH_DIRECTION      = CLOCKWISE
+ POSITIVE_ELEVATION_DIRECTION    = UP
+ REFERENCE_COORD_SYSTEM_NAME     = SITE_FRAME
+ REFERENCE_COORD_SYSTEM_INDEX    = 3
+END_GROUP                        = ROVER_COORDINATE_SYSTEM
+
+/* COORDINATE SYSTEM STATE: SITE */
+
+GROUP                            = SITE_COORDINATE_SYSTEM
+ SOLUTION_ID                     = "telemetry"
+ COORDINATE_SYSTEM_NAME          = "SITE_FRAME"
+ COORDINATE_SYSTEM_INDEX         = 3
+ COORDINATE_SYSTEM_INDEX_NAME    = "SITE"
+ ORIGIN_OFFSET_VECTOR            = (0,0,0)
+ ORIGIN_ROTATION_QUATERNION      = (1,0,0,0)
+ POSITIVE_AZIMUTH_DIRECTION      = "CLOCKWISE"
+ POSITIVE_ELEVATION_DIRECTION    = "UP"
+ REFERENCE_COORD_SYSTEM_NAME     = "SITE_FRAME"
+ REFERENCE_COORD_SYSTEM_INDEX    = 2
+END_GROUP                        = SITE_COORDINATE_SYSTEM
+
+/* COORDINATE SYSTEM STATE: REMOTE SENSING MAST */
+
+GROUP                            = RSM_COORDINATE_SYSTEM
+ COORDINATE_SYSTEM_NAME          = "MAST_FRAME"
+ COORDINATE_SYSTEM_INDEX         = (3,0,0,0,0,0,4,878,0,0)
+ COORDINATE_SYSTEM_INDEX_NAME    = (SITE, DRIVE, POSE, ARM, CHIMRA,
+                                   DRILL, RSM, HGA, DRT, IC)
+ ORIGIN_OFFSET_VECTOR            = (0.804636,0.559444,-1.90608)
+ ORIGIN_ROTATION_QUATERNION      = (0.0687287,-0.246261,-0.0185184,-0.966586)
+ POSITIVE_AZIMUTH_DIRECTION      = CLOCKWISE
+ POSITIVE_ELEVATION_DIRECTION    = UP
+ REFERENCE_COORD_SYSTEM_NAME     = ROVER_NAV_FRAME
+ REFERENCE_COORD_SYSTEM_INDEX    = (3,0,0,0,0,0,4,878)
+END_GROUP                        = RSM_COORDINATE_SYSTEM
+
+/* COORDINATE SYSTEM STATE: ROBOTIC ARM */
+
+GROUP                            = ARM_COORDINATE_SYSTEM
+ COORDINATE_SYSTEM_NAME          = "ARM_FRAME"
+ ORIGIN_OFFSET_VECTOR            = (1e+30,1e+30,1e+30)
+ ORIGIN_ROTATION_QUATERNION      = (0.998226,-0.000558331,0.0529417,-0.0272484)
+ REFERENCE_COORD_SYSTEM_NAME     = ROVER_NAV_FRAME
+ REFERENCE_COORD_SYSTEM_INDEX    = (3,0,0,0,0,0,4,878)
+END_GROUP                        = ARM_COORDINATE_SYSTEM
+
+/* ARTICULATION DEVICE STATE: REMOTE SENSING MAST */
+
+GROUP                            = RSM_ARTICULATION_STATE
+ ARTICULATION_DEVICE_ID          = RSM
+ ARTICULATION_DEVICE_NAME        = "REMOTE SENSING MAST"
+ ARTICULATION_DEVICE_ANGLE       = (0.16777 <rad>, 1.08711 <rad>, 0.1704 <rad>,
+                                    1.0913 <rad>, 0.395955 <rad>, 0.872957 <rad>,
+                                    0.170438 <rad>, 1.09127 <rad>) 
+ ARTICULATION_DEVICE_ANGLE_NAME  = ("AZIMUTH-MEASURED",
+                                    "ELEVATION-MEASURED",
+                                    "AZIMUTH-REQUESTED",
+                                    "ELEVATION-REQUESTED",
+                                    "AZIMUTH-INITIAL",
+                                    "ELEVATION-INITIAL",
+                                    "AZIMUTH-FINAL",
+                                    "ELEVATION-FINAL")
+ ARTICULATION_DEVICE_MODE        = DEPLOYED
+END_GROUP                        = RSM_ARTICULATION_STATE
+
+/* ARTICULATION DEVICE STATE: ROBOTIC ARM */
+
+GROUP                            = ARM_ARTICULATION_STATE
+ ARTICULATION_DEVICE_ID          = ARM
+ ARTICULATION_DEVICE_ANGLE       = (1e+30 <rad>, 1e+30 <rad>, 1e+30 <rad>,
+                                    1e+30 <rad>, 1e+30 <rad>, 1e+30 <rad>,
+                                    1e+30 <rad>, 1e+30 <rad>, 1e+30 <rad>,
+                                    1e+30 <rad>)
+ ARTICULATION_DEVICE_ANGLE_NAME  = ("JOINT 1 SHOULDER AZIMUTH",
+                                   "JOINT 2 SHOULDER ELEVATION",
+                                   "JOINT 3 ELBOW-ENCODER",
+                                   "JOINT 4 WRIST-ENCODER",
+                                   "JOINT 5 TURRET-ENCODER",
+                                   "JOINT 1 SHOULDER AZIMUTH-RESOLVER",
+                                   "JOINT 2 SHOULDER ELEVATION-RESOLVER",
+                                   "JOINT 3 ELBOW-RESOLVER",
+                                   "JOINT 4 WRIST-RESOLVER",
+                                   "JOINT 5 TURRET-RESOLVER")
+ ARTICULATION_DEVICE_TEMP        = (-21.444<degC>, -21.8583<degC>, -13.3818<degC>,
+                                    -18.9412<degC>, -26.1588<degC>)
+ ARTICULATION_DEVICE_TEMP_NAME   = ("AZIMUTH JOINT",
+                                   "ELEVATION JOINT",
+                                   "ELBOW JOINT",
+                                   "WRIST JOINT",
+                                   "TURRET JOINT")
+ ARTICULATION_DEVICE_VECTOR      = (0.0631004,-0.0421811,0.997115)
+ CONTACT_SENSOR_STATE            = "NO CONTACT"
+ ARTICULATION_DEV_INSTRUMENT_ID  = "DRILL"
+ ARTICULATION_DEVICE_MODE        = "FREE SPACE"
+END_GROUP                        = ARM_ARTICULATION_STATE
+
+/* ARTICULATION DEVICE STATE: MOBILITY CHASSIS */
+
+GROUP                            = CHASSIS_ARTICULATION_STATE
+ ARTICULATION_DEVICE_ID          = CHASSIS
+ ARTICULATION_DEVICE_NAME        = "MOBILITY CHASSIS"
+ ARTICULATION_DEVICE_ANGLE       = (0.875179 <rad>, -0.872494 <rad>,
+                                    0.175172 <rad>, -0.170528 <rad>,
+                                    0.16777 <rad>, 1.08711 <rad>,
+                                    1e+30 <rad>, 1e+30 <rad>,
+                                    1e+30 <rad>, 1e+30 <rad>)
+ ARTICULATION_DEVICE_ANGLE_NAME  = ("LEFT FRONT WHEEL", "RIGHT FRONT WHEEL",
+                                    "LEFT REAR WHEEL", "RIGHT REAR WHEEL",
+                                    "RSM AZIMUTH", "RSM ELEVATION",
+                                    "LEFT BOGIE", "RIGHT BOGIE",
+                                    "LEFT DIFFERENTIAL", "RIGHT DIFFERENTIAL")
+ ARTICULATION_DEVICE_MODE        = DEPLOYED
+END_GROUP                        = CHASSIS_ARTICULATION_STATE
+
+/* ARTICULATION DEVICE STATE: HIGH GAIN ANTENNA */
+
+GROUP                            = HGA_ARTICULATION_STATE
+ ARTICULATION_DEVICE_ID          = HGA
+ ARTICULATION_DEVICE_NAME        = "HIGH GAIN ANTENNA"
+ ARTICULATION_DEVICE_ANGLE       = (-4.45237e-05 <rad>, -0.784997 <rad>)
+ ARTICULATION_DEVICE_ANGLE_NAME  = ("AZIMUTH", "ELEVATION")
+ ARTICULATION_DEVICE_MODE        = DEPLOYED
+END_GROUP                        = HGA_ARTICULATION_STATE
+
+/* OBSERVATION REQUEST */
+
+GROUP                            = OBSERVATION_REQUEST_PARMS
+ SOURCE_ID                       = "GROUND COMMANDED"
+ INSTRUMENT_COORD_FRAME_INDEX    = 0
+ INSTRUMENT_COORD_FRAME_ID       = "NAV_GOAL"
+ INSTRUMENT_COORDINATE_NAME      = "UNK"
+ INSTRUMENT_COORDINATE           = "UNK"
+ DARK_SPECTRA_MODE               = "NONE"
+ GAIN_NUMBER                     = 0
+ GROUP_APPLICABILITY_FLAG        = "TRUE"
+ INSTRUMENT_FOCUS_MODE           = "AF_OFFSET"
+ INSTRUMENT_FOCUS_DISTANCE       = 1581
+ INSTRUMENT_MODE_ID              = "SPECTRAL_DATA"
+ LASER_MODE                      = "NO"
+ N_SHOTS_2_IGNORE                = 0
+ N_SHOTS_2_AVG                   = 0
+ N_SHOTS                         = 5
+ OFFSET_MODE_ID                  = "0"
+ SPECTROMETER_CONTROL_BYTE       = 2
+ SPEC_IMAGE_TYPE                 = 2
+ SPECTROMETER_SERIAL_CLOCK       = 1
+ SPECTROMETER_SELECT             = "UNK"
+ ICT_DIVIDER                     = 2000
+ IPBC_DIVIDER                    = 3300
+ START_ROW_UV                    = 100
+ STOP_ROW_UV                     = 300
+ START_ROW_VIS                   = 75
+ STOP_ROW_VIS                    = 275
+ START_ROW_VNIR                  = 100
+ STOP_ROW_VNIR                   = 300
+ OBS_FROM_LIMIT_SWITCH           = 0
+ STACK_1_LEVEL                   = 100
+ STACK_2_LEVEL                   = 60
+ STACK_3_LEVEL                   = 60
+ STACK_DURATION                  = 145
+ TIME_BETWEEN_SHOTS              = 244
+ SPEC_AD_CONVERTVNIR             = 5
+ SPEC_AD_CONVERTVIS              = 5
+ SPEC_AD_CONVERTUV               = 5
+ SPEC_VERT_CLK                   = 2
+END_GROUP                        = OBSERVATION_REQUEST_PARMS
+
+/* INSTRUMENT STATE RESULTS */
+
+GROUP                            = INSTRUMENT_STATE_PARMS
+ MSL:SPECIAL_LINE                = 497
+ MSL:SPECIAL_SAMPLE              = 532
+ MSL:SPECIAL_NAME                = "Location of the LIBS laser spot in the
+                                    RMI image described by the camera model"
+ INSTRUMENT_TEMPERATURE          = (-25.4198 <degC>, -25.4198 <degC>, -19.0249 <degC>,
+                                    -19.0249 <degC>, -19.0249 <degC>, -19.0249 <degC>,
+                                    0.392304 <degC>, 9.42664 <degC>, 17.5547 <degC>,
+                                    17.5547 <degC>)
+ INSTRUMENT_TEMPERATURE_NAME     = ("MU_OBOX_TELESCOPE", "MU_LASER_IF",
+                                    "MU_EBOX_HEATSINK", "MU_EBOX_FPGA",
+                                    "BU_CCD_VNIR_B", "BU_SPEC_B",
+                                    "BU_CCD_UV_A", "BU_SPEC_A",
+                                    "BU_DEMUX_A", "BU_DEMUX_B")
+ INSTRUMENT_TEMPERATURE_STATUS   = (0, -42, 0, -42, -42, -42, 0, 0, 0, -42)
+END_GROUP                        = INSTRUMENT_STATE_PARMS
+
+/* DERIVED GEOMETRY DATA ELEMENTS: ROVER FRAME */
+
+GROUP                            = ROVER_DERIVED_GEOMETRY_PARMS
+ INSTRUMENT_AZIMUTH              = 188.378
+ INSTRUMENT_ELEVATION            = -28.7647
+ REFERENCE_COORD_SYSTEM_NAME     = "ROVER_NAV_FRAME"
+ REFERENCE_COORD_SYSTEM_INDEX    = (3,0,0,0,0,0,4,878)
+ SUN_VIEW_DIRECTION              = (-0.410326, -0.0878916, -0.907694)
+ SOLAR_AZIMUTH                   = 192.09 <deg>
+ SOLAR_ELEVATION                 = 65.1885 <deg>
+END_GROUP                        = ROVER_DERIVED_GEOMETRY_PARMS
+
+/* DERIVED GEOMETRY DATA ELEMENTS: SITE FRAME */
+
+GROUP                            = SITE_DERIVED_GEOMETRY_PARMS
+ INSTRUMENT_AZIMUTH              = 298.344
+ INSTRUMENT_ELEVATION            = -25.4986
+ REFERENCE_COORD_SYSTEM_NAME     = "SITE_FRAME"
+ REFERENCE_COORD_SYSTEM_INDEX    = (3,0,0,0,0,0,4,878)
+ SOLAR_AZIMUTH                   = 311.437 <deg>
+ SOLAR_ELEVATION                 = 67.8801 <deg>
+ POSITIVE_AZIMUTH_DIRECTION      = CLOCKWISE
+END_GROUP                        = SITE_DERIVED_GEOMETRY_PARMS
+
+
+OBJECT                           = CCAM_LIBS_TABLE
+   COLUMNS                       = 139
+   ROWS                          = 1
+   ROW_BYTES                     = 65665
+   INTERCHANGE_FORMAT            = BINARY
+   DESCRIPTION                   = "ChemCam LIBS"
+
+   OBJECT                        = COLUMN
+      NAME                       = "SCLK"
+      DATA_TYPE                  = MSB_UNSIGNED_INTEGER
+      START_BYTE                 = 1
+      BYTES                      = 4
+      DESCRIPTION                = "Time data collected"
+   END_OBJECT                    = COLUMN
+
+   OBJECT                        = CONTAINER
+      NAME                       = "CCAM_LIBS_ANCILLARY"
+      ^STRUCTURE                 = "CCAM_LIBS_ANCILLARY_V4.FMT"
+      START_BYTE                 = 5
+      BYTES                      = 170
+      REPETITIONS                = 1
+      DESCRIPTION                = "Chemcam Libs Ancillary Data"
+   END_OBJECT                    = CONTAINER
+
+   OBJECT                        = COLUMN
+      NAME                       = "CMD_REPLY_BYTESIZE"
+      DATA_TYPE                  = MSB_UNSIGNED_INTEGER
+      START_BYTE                 = 175
+      BYTES                      = 4
+      DESCRIPTION                = "Size of cmd_reply packet"
+   END_OBJECT                    = COLUMN
+
+   OBJECT                        = CONTAINER
+      NAME                       = "CCAM_CMD_REPLY"
+      ^STRUCTURE                 = "CCAM_CMD_REPLY_CONTAINER_V4.FMT"
+      START_BYTE                 = 179
+      BYTES                      = 4
+      REPETITIONS                = 1
+      DESCRIPTION                = "ChemCam CMD_REPLY frame"
+   END_OBJECT                    = CONTAINER
+
+   OBJECT                        = COLUMN
+      NAME                       = "CMD_REPLY_CHECKSUM"
+      DATA_TYPE                  = MSB_UNSIGNED_INTEGER
+      START_BYTE                 = 183
+      BYTES                      = 4
+      DESCRIPTION                = "Second part of CMD_REPLY data: MD5 checksum"
+   END_OBJECT                    = COLUMN
+
+   OBJECT                        = CONTAINER
+      NAME                       = "CCAM_SOH_SCIDATA_COLS"
+      ^STRUCTURE                 = "CCAM_SOH_SCIDATA_COLS_V4.FMT"
+      START_BYTE                 = 187
+      BYTES                      = 68
+      REPETITIONS                = 1
+      DESCRIPTION                = "Chemcam SOH header"
+   END_OBJECT                    = CONTAINER
+
+   OBJECT                        = CONTAINER
+      NAME                       = "CCAM_SOH_TO_RCE_CONTAINER"
+      ^STRUCTURE                 = "CCAM_SOH_TO_RCE_CONTAINER_V4.FMT"
+      BYTES                      = 100
+      START_BYTE                 = 255
+      REPETITIONS                = 1
+      DESCRIPTION                = "ChemCam LIBS to RCE structure.
+       Includes arrays ccam_DPU_LIBS_struct and ccam_MU_LIBS_struct."
+   END_OBJECT                    = CONTAINER
+
+   OBJECT                        = COLUMN
+      NAME                       = "CCAM_SOH_BEFORE_CHECKSUM"
+      DATA_TYPE                  = MSB_UNSIGNED_INTEGER
+      START_BYTE                 = 355
+      BYTES                      = 4
+      DESCRIPTION                = "MD5 checksum"
+   END_OBJECT                    = COLUMN
+
+   OBJECT                        = COLUMN
+      NAME                       = "CMD_REPLY_BYTESIZE"
+      DATA_TYPE                  = MSB_UNSIGNED_INTEGER
+      START_BYTE                 = 359
+      BYTES                      = 4
+      DESCRIPTION                = "Size of cmd_reply packet"
+   END_OBJECT                    = COLUMN
+
+   OBJECT                        = CONTAINER
+      NAME                       = "CCAM_CMD_REPLY"
+      ^STRUCTURE                 = "CCAM_CMD_REPLY_CONTAINER_V4.FMT"
+      START_BYTE                 = 363
+      BYTES                      = 4
+      REPETITIONS                = 1
+      DESCRIPTION                = "ChemCam CMD_REPLY frame"
+   END_OBJECT                    = CONTAINER
+
+   OBJECT                        = COLUMN
+      NAME                       = "CMD_REPLY_CHECKSUM"
+      DATA_TYPE                  = MSB_UNSIGNED_INTEGER
+      START_BYTE                 = 367
+      BYTES                      = 4
+      DESCRIPTION                = "Second part of CMD_REPLY data: MD5 checksum"
+   END_OBJECT                    = COLUMN
+
+   OBJECT                        = CONTAINER
+      NAME                       = "CCAM_SOH_SCIDATA_COLS"
+      ^STRUCTURE                 = "CCAM_SOH_SCIDATA_COLS_V4.FMT"
+      START_BYTE                 = 371
+      BYTES                      = 68
+      REPETITIONS                = 1
+      DESCRIPTION                = "Chemcam SOH header"
+   END_OBJECT                    = CONTAINER
+
+   OBJECT                        = CONTAINER
+      NAME                       = "CCAM_SOH_TO_RCE_CONTAINER"
+      ^STRUCTURE                 = "CCAM_SOH_TO_RCE_CONTAINER_V4.FMT"
+      BYTES                      = 200
+      START_BYTE                 = 439
+      REPETITIONS                = 2
+      DESCRIPTION                = "ChemCam LIBS to RCE structure.
+       Includes arrays ccam_DPU_LIBS_struct and ccam_MU_LIBS_struct."
+   END_OBJECT                    = CONTAINER
+
+   OBJECT                        = COLUMN
+      NAME                       = "CCAM_SOH_CHECKSUM"
+      DATA_TYPE                  = MSB_UNSIGNED_INTEGER
+      START_BYTE                 = 639
+      BYTES                      = 4
+      DESCRIPTION                = "MD5 checksum"
+   END_OBJECT                    = COLUMN
+
+   OBJECT                        = COLUMN
+      NAME                       = "CMD_REPLY_BYTESIZE"
+      DATA_TYPE                  = MSB_UNSIGNED_INTEGER
+      START_BYTE                 = 643
+      BYTES                      = 4
+      DESCRIPTION                = "Size of cmd_reply packet"
+   END_OBJECT                    = COLUMN
+
+   OBJECT                        = CONTAINER
+      NAME                       = "CCAM_CMD_REPLY"
+      ^STRUCTURE                 = "CCAM_CMD_REPLY_CONTAINER_V4.FMT"
+      START_BYTE                 = 647
+      BYTES                      = 4
+      REPETITIONS                = 1
+      DESCRIPTION                = "ChemCam CMD_REPLY frame"
+   END_OBJECT                    = CONTAINER
+
+   OBJECT                        = COLUMN
+      NAME                       = "CMD_REPLY_CHECKSUM"
+      DATA_TYPE                  = MSB_UNSIGNED_INTEGER
+      START_BYTE                 = 651
+      BYTES                      = 4
+      DESCRIPTION                = "Second part of CMD_REPLY data: MD5 checksum"
+   END_OBJECT                    = COLUMN
+
+   OBJECT                        = CONTAINER
+      NAME                       = "CCAM_LIBS_HEADER"
+      ^STRUCTURE                 = "CCAM_LIBS_HEADER_V4.FMT"
+      START_BYTE                 = 655
+      BYTES                      = 32
+      REPETITIONS                = 1
+      DESCRIPTION                = "ChemCam LIBS Header"
+   END_OBJECT                    = CONTAINER
+
+   OBJECT                        = CONTAINER
+      NAME                       = "CCAM_LIBS_DATA_CONTAINER"
+      REPETITIONS                = 5
+      START_BYTE                 = 687
+      BYTES                      = 64440
+      DESCRIPTION                = "Set of ChemCam LIBS spectra,
+                                   one 6444-element spectrum
+                                   for each of NSHOT shots."
+      OBJECT                        = COLUMN
+         NAME                       = "CCAM_LIBS_SPECTRUM"
+         DATA_TYPE                  = MSB_UNSIGNED_INTEGER
+         START_BYTE                 = 1
+         BYTES                      = 12888
+         ITEMS                      = 6444
+         ITEM_BYTES                 = 2
+         DESCRIPTION                = "ChemCam LIBS raw spectrum"
+      END_OBJECT                    = COLUMN
+   END_OBJECT                    = CONTAINER
+
+   OBJECT                        = COLUMN
+      NAME                       = "CCAM_LIBS_CHECKSUM"
+      DATA_TYPE                  = MSB_UNSIGNED_INTEGER
+      START_BYTE                 = 65127
+      BYTES                      = 4
+      DESCRIPTION                = "MD5 checksum"
+   END_OBJECT                    = COLUMN
+
+END_OBJECT                       = CCAM_LIBS_TABLE
+END
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              ╬нак[я    ак[яЪЪЪжа≤2Ж    а≤2ЖЪЪЪжа≤2ЖЪЪЪжа≤2ЖЪЪЪж>хэ    Aс┐    A▄p    A▄pЪЪЪж        >.}V?▀╞╦       -                  пД d, K d, Bх  Bp  Bp  ▒Т   R≤5Aзo┤ь   ╗R╗5   °U╙     ■╬л) ║y i   B B     : :   	 ! "     7     0╪╫  ║v╔  и е к я k ` e╙ЮВd⌠ ┐E;.гWO
+N╬ 2Щы h-ЪШ<Ъ     
+   ╓ НDК;    X,Ш   R≤5з/┤≤  R╗5   U╙     Ь╬л) З7 m   J J     = ;   	 ! "    8     0╪╫  ╜"╔  и е к я k ` f╙ЙЬp ┘";.оW/
+O╬ 0.ь -ЪЬ<Ъ     	   V ╖BЛ;V  З4с  и е к я k ` f
+TЮЪe⌠ │G;.©WO
+N╬ 2щ fwЧВ:Ч     
+   ╘ СEК;    i	у≤   x≤5&/╜≤  Шьx╗5  Шлщ .  Шх У Ы┼   \[Z[[YY\Y[YWY\ZY]ZZZ[[[[ZWYWXWZZYZZZY[ZYYW[XYZ\^X[≤■²м╕и╧╬ЛЙф*C<F#|╕h∙┐╦²©▄═Ё╤эюрфпУЛББДУЖОУфКРж
+Хчцт ▓└╬ 6&{-H<O:╘▒┬╚▀╣лймсй╔дЖ
+-TsY<|╧╡О Ы]'iq╓╩Амьи╥(hn┐≥├²kv╕ъ╨²▐л+Wv╩╡г mk┬		!	Й	;	^	l	│	c	`	q	Y	{	╩	r	J	[	k	║	Ю	Ы
+	Е	╘	╢	щ
+ 	ы	к	Е
+:
+[
+C
+a
+I	К	б
+
+	ж
+
+
+	щ	о
+#
+L
+
+8
+Y
+╣
+х
+┘
+s	ц	T	0	k	▀
+W
+з
+ц
+	м
+M
+Я:⌡╩╕░╓╤эТЧ1В≈xsэTU▀ q8"n=└O"!4Hб@gSwцaf╕сЖ╨P·еСщьхе█CчЗятеЧН=	⌡╖ББЙkDгЙ]╒y┬⌡└╜NZ<ZO5Ь$]╨ПMqS9D7p▌Нe}┴`-й╬╘(TK,╝tФS
+Rц╛ДН:/kG@b*~O]<║зЕы╢{~Ъ%{hЁщ,i=:nQa>XQ]#я;yDЙ≈e5╓{i\оq╣▓9U─╕	,p╒вЛ█═nG`йjПГ├Ё╡ь&n╘нКбв║┌=╫▌К5mX│KЦ
+EФС%ф;sJ│a┌9┴0c_ёе■wYlДн╛┐Ъ╣ЁмДxx^(ПОc┌А▓Шш─0╛7╜D/≥ 3 c ╬ r └ И ⌡ ░ ═!!┤!Е"?"б"у"ь"О##+"ф"М!У эд °!Y!c"О#╫$$$$#К#░$$:$c$;$i#ж#к$$I$7$≥$√$C$$#║#ы#Ы$$b$z$J$}$D$,$E#з#║#÷#╜#╥#@#W#≥#╩$#ё#ф#W#b#p"П"т#0"И"Ъ"ь"├"▓"л#X#ё#▀#╞#ц#Я#ы#▌#⌡$#╨#═#з#A#K#█# #┐#!#÷$#Ш#ы#Г#u#D#z#V#l#е#H#╤#└#╤#s#=#2$$,$e$0$!$#о#╒#Щ$$4$$ $ #K#т$f$╧$ч%%$╬$╫$a$X#╤#╘$▓$Щ$е&%О%Ч&L&╡&≥&╞&┘&p&m&Е'┌'Ё'▌'м'М(0'П'©''┴'▄'о((1((='╨'э(p(D(K(t('Ю((_(2'Й(%(╚),)┌)t)≈)А)н)т*D)О***Q*:*)ш)Щ*9)│)g)y*5*█*O*)╚)┼)r)╫*8*B*╣*≥*Y*\*a)я)╫***:*Х*t*р*%*D)й)Ф*)*t*█*И*р+#+++*Я*Щ*Ч+*°*E)Ъ*6*%)Ш*|*O)Щ)В**.*▐*I*@*y*Л*Ъ*▌*Q*╔*╡*>**+*Э*┼*u*N*⌠*h+E*щ*h*x*ы*Ш*Д+(+3++%+$*©+F*щ+)╙))*╙*к+ё+V+Ё+s+т+┐+Q+_+P+~+z+B+▌+╫+ч+▐+╒+⌠+n+S*Э*C*E)e(░'!%ъ#ы"╫%▐(8)╬*z*╣+r+╔+Ы,+У+ш,+∙+z+Б,│,·,н,с,w,┌,┐-\,Ц,Э-S-%--,У,х,у,k,╠-v,Т-,Ю-▓-┤-Г-я-м-{-P-,М-R-⌡-▓-и-r-A--▒-Ж-а-К-А-╨-▀-;-R-╚-▓-~-&-7-\,О-	,╗- -R-)-ц-╔-╝-u-║-*--`-@-4-,╨,с-y-v-o-│-K-`,Ц-q,╕-=-U-<-,ч,╝-,й-X-,w,В,╒,╓,Я,j,g,,┴,Z,├,┬,P,d,H,B,,M,g+т+╣+$*Е++t+б+r+√+d*Т*л+#+■+с+∙+╣+©+m+X+w+*О*Ц+[+▓+▒+≥+┴+)+p+m+++$+/*Р*т*┴+*У*╣*т*╪+1++*у*Ч+C*╧*К*╕*╘*╩*Ъ+*Х+++7+├+X++!*Ю*а*┌*0)Ж*Р+{+@+^+:+░+R+o+*▀*╖*┐*s*л*╩*Ц*≤*a*г*ь*х*≥+`+A+3+@*м+N+┼+╜+я+Б+У,+{+┘+ъ+j+m+n+I+n+h+у+н+Ю+ж+╣+p*ь+m+Q+a+S+⌠+\+к+╨+п+╘+я+m+&+B++B+;+++*я*Ю*в*г++l+;*Т*ё*j*)ч*ъ*м*■**X*)q){**>*)∙)Q)(Y(( '╙'╛'о'√'╩'д'л'3''	&╝'/'A''&─&┌&*&.&г&╚&─&┐&T&R&_%Д&&%С%©%╘%≤%Х%а%─%ё%Ё%╖%Е%╖%ё%h%A%s%N$о$≥$≈$R$$g$╘%G%%$║$╘$"$C$$w$t#╞#ш#M#"≥#$#ъ#з#т#⌠##ю$Z$4$C$N#╧#═#╛#Я#■#e#S#^#╢#r#╒##!#>#L"o"_!╠!j!Ы"░"%"M":""!╝!╧!l!8!h!{!m!e!.!╦"┘"Н"п"©"М"Р"p"▒"!╔!t"
+"≥"n","`"!Ё!╞!Ч"{"G"" "!"""B""8"X!у!N!!╛"&"D"!╟!▄!6 ╞!T!И"!Х!w!S!P!╬!≈!n!Й"4"E""F"!г"'"R!К!╛!!╡!У"9"
+!к!b!©!b!к!Ь"Z!╧!0!!j"E"_""m".!Ё!р"!ш"%!Р"G!О!1!+!{"L"8"3"├"="k"p"!""J"x"у"├"░"3!╪!	 █ щ Ьж ²!ю!Ю!ь"""!╔!s""H"!┐ Я!e!О!6!!а"!Ф"!'!J ? ∙!╛!5 Й! П! !u!▀!x!╦!╦!q п Ю ┬Ю |!)!.!!	!@! в! © 6 -Р j @  y ├  _ ╞ ║ S╙ь  
+Ы═≈╞©шХ╧╝О╡Е(▀1Ы·S<AЗUфкн IH;╩▓└[V^JХъэПМИ╥Zkc.+Y_║Pз█fwB9D═╖хЖЕ╫Х©МУж╣}=┐┼H▓▌,dPИё"▓╖└≈▒▐p≥┤v8L°╪1═Ф╜к%ZQ9wHzsIоТтБ	с·TР[Si/I[r@I4@GO%9A*Ъ%%&ЩМПЩЖЯэив≥║┬q c├Aмх╛ВzGУ▄╘гU+OA┬ЗЗO·щkg.cчЛ╟╝IXm┴Q1≤≈BNpO7DG,╬ФСЧм▒╘▀Хгц▓щeS.ДР<:чDo≥h_СУИ╩Ьмабб√┐NЪлзкЭС╔═pILт·≈⌡TКпоЮ|>пь└^ЫМ▐ё
+╨⌡GиB▄
+╘
+	ъ	└	
+╣xЁvИ▓)ИЬ╢∙"#я╡vvЧиТГЯ╥╓≥╢═╤├⌠o╣Бми╡╪ё╨цж╙╫┼╥[ld▀6oD#ХШ>0ВЬГ+├ЫЫУЕ	F 4:%P?I∙F▒axQm{▓j└≤к≈≈Ё╕qg╕│▄∙б╪ц╞╩н╞╤НИЦ=):lu┬╠ыКD>az°ЁА@(B;▌╧┴ь╤сы9║i╘╠╚УЬЬ ЪЩ-OUT<Mg>IZH{%5;
+СЪЫ6зЦшКх╧вв├⌠╢^e9%ъХ╨Ё811ЕЦ ╙_┐H[Фд©√╡@A9ЩЫИыбЁ┬╗{v| S²?C4*/'9В<Ч(ХЖ4С
+К^[\YZ\\[\[[\ZZ\\[[[ZV\YZZ[Y[Z]\\ZZ\\]ZZX[[Y]Z[[]\]noqssopsqvspqtqsspqqtvqtrsupqqppsrrrrrrssrqoqtrqps= ЖJИ)ЧЫJЛ" РОМВЖЛЙ:(ВЯАъРК7ЬnЪ!Б	ЬШГ=E'/aO,p=e+BF",%-E∙-"+'3!%3$НIП9V@JG;N0G /.r$]1(8+>=Ж##J<d2cM1:9%G\;/F&+[-^/4146&>(Y,4NDcNQ@5e=8XTc┬vs█D6AU╔SGU?=c>HiE.4_^HlZZxrh─k┌▌_a╓nxhРws▄i│`c]\gPYA┌X┼9≈b6F-.`^k"*ЯТ&.ЬТ.Р 0(>:55fI^~>X{Z&Y|▓⌡v≤┌▐g┘└█╔Ё└²▐┼z▌│┼ё╜▒Е┬vп≤╩н■╚т╖{~gbqLkX6^%И7╟=ISivfu▀▒╤╞╥╥Ю╨еЕИэШЖъБтЖТчзЕс+!	C%4),6f(Щ?ШWР:oXQ┼-KMGZ=DТЩЖ##!>>?>c9<LVfDBo<4V┌└cHa?5lg]iCFk?oxL~oC4pMys╡▌╖b╡Ku%&N^%c$4Ez┌°  u÷w~Z┴Zё┌m}OhJщВеэ/[lr┼bR▌║▀}IMY┌N,=S|^GY+FJIx│ cuj*ХЛюv⌠H<5@O┐╔ё∙l61a*4┤╔kxaVe6?:_I╘┬║┘╠▓═╞╡≈`q~``}°yЛ╠кг2Те≤⌡╦ ╝÷°┬²Ф┤aj└f▒⌠{aZ▓ZH#ОЪV3^`n┐⌠╟╙°╖╤┴≥щ╞ис Ё╡╛⌡ёбэАб©РъеИжНв└╖╥сИйълД╥╝гШ
+МшАь+есдзлшЭшъа}│═лЦеггУС$+qЧшр╦y╕r²СЩКЦОШФЩ *Тсв╪╞
+ЕнкжБНТЫC 6Л.g'(E6!, 'И╡Ш	ЧП╨²┐╣еянвНЮЧшЬБ╙ШЯ ТэмГСZьЯЧйис┤╦м%$Я╫"6?NЬЙ╦╣К7р╤≤≤·╕ъб©╗╬╘ё╙рж(З'
+Щ	ЫЛDЬFМЗП≈╛янМл
+Л Ч	.ХБ	╥ ≤z_FCGЩIyбзчвД(	ЪКФ╔╨сХХг┘∙║╬▓╣╠╣Э⌡╬╦лЯ"О╛²кУЯБщ╥═м╡▀▒┤u┴╜ИГн╜╗÷яЁедКЗПз╦╥°└┐q⌠╜╚эМП0П	ЪЭv╩пш©сЛ╗╓ь┼`19Z▒╕╨q╚y┌╔ЗА,ЪЮР╝│²╥иУЯтИВхб╔▐≤╩щЁАЮ├╟IV┼ ≈жйпгД╧≤╙г╧┤u]t~_/
+%AuE5Cmf@tqcCzQ-УЯ╓ U3<Mee бч╜С0aP Z[]`1c+х⌡┤│d7√D╨⌠сU7.EШ5Ы-DU517GL)'Чу╙╣с╜ }r<Q┌╖жХибмЗ$+#Я()1OdЦФм╖╒х	%U?ct
+n")K┘w6rGrn█ZX<NA(Ы6/K":G╝9-ъЦз╨ЩЕЬ=JG/JS+>"й┼┬88`┌°АЯ	ЦС;шЫОСуЗ5-Рщъ=2+2й06YДГъ"?xш╝{▓╫ьЬчФ'&~4/\kdP{{═R9ЭзъС*=U[eYw┤hhVlH1TV6CLA╖FfoxY6@Rga6I>3	Дз&OMa▓Y█╕GVe=*Ш:КТ*⌡J√`V3'1┐J├aII;B@8wAU│C%Иэо!ШЪУ ЪЯ1Ш2KQq<fPU9II+&LJK(>O©⌡uli┌v┴riq}zy┘x▐zMbйS!!'(9,oH│]Rr█|┼▀y└o<FH%cHUQ▐Yл\/h6CsdHq=qzmn≥t├qOcsEd≈╗╨⌠ЁЪя÷≥Ё√╦│╗rgч≤▌╕о■o┼²▐d⌠╙tkRx╘u┬n█┴l√┤┐k▓▒mё▌fr▌f┼{Th<5DF>;&Щ0L5%V{Oн=NJHG]&W4o▄∙┌xz}├[l]Pjg└Ijs┘gFv^╘b `PQJ_%1?7KKRS8J5LXQ4+yBYWDY\ytab÷┬∙dnvv`cQ*TS7C:jFh_ZhOqZ\wlk30A┬Zr╖}l╟t}▌─p┼екO▓U;J\;5:*3"g:HK:9F4].V\gNuSI2- ;"/50`H7
+58340O "&U3▓*5HS3-qZn,2<=:EO╧T?(
+F.│$42+h#UCpFlbB5&Ш\?ERX5Ve+SK988)7Ь;QA>F\!(!O">√!PD+Э26КМ7@С/ *2ю+,";&<.змэЬяыЧЫМУЪП;	+АЬЫНЕТЗ'+6E?-!$:*ШЛ/О ьз╡КкВ╣кгМьПГЗЧТсШНН["'-ЖФТъЕЧИгЦфэщ	щМНА7ЬЧortpstuusvrtsqtpsurtrtvrqtrqqtxqqsutuqqqsqrrpstvswZcaccddecebfccddc`cfcccabedbbeabb`fdfeefeae_ccdgdg²Д║╢╠╛≥╖╞⌠сё╟╦%≤б╜╙к╗╜╤╞╙≈╡╧■≥╡╢ддСиэ╕╗╨Ё╩°Й╠╡ ║╥╞╚р╡ С╓╖▒гг∙╨е╟╨╩ёеьлнаХЙ╚жию╘╤╔²бШГ╩╫с╜ эха╙╒ю°╛ж²┼╩░и╬╣К╫═о ╔■с╥кж╤╧©╙╦╠╛й·╙╛Ц╞с╡░фв╝╙╘°ъ╞А°Ё╛ы√юЁ║ж·║╔я÷╥·╗╒ц╟╝║гац╝╗╨фэ╥Ы╔б╥с╓ё≥╥╟╬≤╣▓╥÷Й║╣╘╝⌡╙Укф╧╥╝о©╚╪╦╔╣≈╚е╟ю║√╥≈╦ю╨╕╝ ╓я≤≥╠╝╖╛ЩвЁ╕т╩═≥иуб╥∙с╧Х√╞╛Еп⌡∙©╗ы╫Шиъ°╩╤ж╕╣╡╤д╥о╣ънщы╟╡╣╦а÷б
+╢ ▒щд╚ч²╝╫╜▌ё╙╝╨╒╞сиХыанвюа═бг°╧⌡╙╓Е╞п╒╕╠Ё╞Ув╤╓╖б╜о╬е╣пУ╛э╧Ю╠╛╘╙║╓╖╙╝╗╓╕▄╜■╒≤°а╡⌠н╠° ЯЁе╗╓мцЫ╖╫я╤╨е·╟▀≥╛фА╪╔╚эа╪°╪ф╧╢г╟╓мс·р╠╛╤и╙е╛╡е╙╩╒╣©╚╕÷уб╚╡ял²бд╒╛╙т╞к╗╘д╜Аш╖щ╗ л╞╢╤║╥ш∙╬Хжо╙²цю²к╞л╛ч╥╢╛а╩Я╓п▀╖╣Ж╛оДмг╬╪░о╣╗
+⌡хя╡▒╞к й╛Ьб╥╩гз╙╢Й©╞Е╟■и⌠║сх╣╜╡о╬╙╜╓÷╖╣у╘╗╜Ё╕╔╪ще╟╝║╦╣╩т╦м⌡ц╚СёЦ╞ючу╘©╨м╦║кхЧюд╨╦╚Ё╫╝²л╤╔╤╥©ай╩╤■╕пц╣║Я╞÷мв╚╝ ╨ц╡Дё╧╬у╕╠Ё╡╕╝©г≤ц╙ё╬ву╗жн╡хЩЮЛц╢╧яй╞╡с╓°╘ф╓и©бм╗╕╫╠╧╓²К╬╚╣Ж╙╘и°╡╘╔╦ф╛хпн²╠·ж╦╙╤ы╡щ╨п╨╤П╩м╗а╤мебМ╬╕л╞Цм©е╨╠╖мрё╣╣╗К═╙╛жфх·рБ╣╚╤еп╝╞┐ю©штн°╓²║°щ╓╪╨жи╗╨п╩С╟╥╘╓╝╨ч╠ёш╗╛е╣╩ьцэ╞╪ае╘╣ддсГ╓╓а╜кЁ╨╢мЙ║рп╚╔╩╧а╡╡ца╩╥ъ╨инж╖╓╗ж╩пвк╦й╡влеС╚иу╬╨ц#©╞╟╢╟╜╛╖≈п≤х·╚╢вж╝╔╬А╗ъ╝╚╨╚╤╬ею╡фхэо╕╬╛ьи╪л╬цц╞жз©╫нц╝ёо╖х╧оаЁк©╫╓╬≤Ао╖Л╓4[╫╡╧╢Г╩ФЬ©╟шоззел╤╠леЯцп╛Гг╚БыюФ╪б╟Ёа╧©йЭвщнбЙшбюЧээp╨╪П╪╪то╤Щ╧ж╜бех╥ОФчщЦЖ╧Б╩╧окпФба╢од╢бСn╫э╨кнеэнцПАхвц╠шхжпфн═Ев╫ЕАд╝╘ыуц╡убяП╫С╥иькТЙАс╩зацФащ╠рвйшц╦Жо╣дЦЯяБпЮ╩Ед╧на!©║╤╤неЕ╠Ёи╩ёЭцЕп╢ИыхАмйВэ╩ Ээ╧Бюж╧чН╟вЁгль╪Е╥╚р╟г╫ък╠╜фЭ╠оЙ╪и╤тЪ╩╔╧ли╜и╩фэ╛Д╞бэмЮМ╣нпЧР╤╟х╨╪╪╘уиЗ╢╒оааМп╥х╩╚╔АоА╨иП╬эаъЙжяр╤Ь╬чАщЫНхлгшДЦЪ╫ш╖эфмГЮМ╢╙чыъЖпДеб-╢╠у
+юфХЯО╦аЛПр╧рмД╩Хи╧дО╨ю╬Л╗кэИХшХИ3х╣╡ПШ╖жрсцдИмнППХьтюФбяГ╜Ый╧ьбЕЩПЛ©маИ*КщчЮФеобХФчКв╬СтмиЕ╠ФшмЕЭйрь╧╜ц╝аCКДЮКпФПмэщИпШхьнъдМквавэН╨8ОбунъзЛфэ╫лКМгЦ╠╬╢цСеДЯОУьЯнцыз╢д╠╝ьчЦрхсСГЮб ЛЙьэжиЕшЁо	Ёхсерпл╫ИРош╧яоНэщЙЕцюЮТзШ╡еЯфт╦тшмжсГ╤юхКЬ╜йЧоыгсТ©тшь%,%ГлРэслсЯзй╧рШ╫Бю╥	ххл╫звв йвПюП╣ЫЫУсПа╪Юухзтз╠╬нЦмняРРнуЧоМвюМВя	эГэЙФъъЙЕЁЕвБгсКиу╨ВспЛм╥ффуЬПАч©Н╬БйуЛагшМщщОжек ╫р"вЕГюБэцЫтЭъЗПц╦ВРцБр╜М ИЫ╨Ко╡ЫсБ╬ЯЩюЛ(╫ыГ╝ЙАкГгую╪ЩЪыо╩ЦЫъъ%чЗдГчГЯЕжуУрщВвЭ
+ТзЕыУшМЫьЫЩ╧ЩЖГвККСКЙФщКДГМЩщХКпхDЙСАОЫЯЛВзЕЛХВЖШччСПГВЬцэвчьФЦзЙлЭЙЭю╩укВО(Уеящ ╩ЯялоБмлэР(яЯЕНСбнКйД╠"ж╬РЮРьЮА2кчушЭБуоо мЙ,ОА#╩Ащс╪ЮъйнЬХп©Унщ╬тыщЦыЮЩеДйЯюъ╧ЛМжаЦшОМсцАМеиВнжбРгзснпЖъРЛуПАИФЁЁУдтшИАъЖф╫АьЛГнШчЕэхиКднх╪╛мцйлкшэопйЪгсужвЬЩщЛмд╠╬оиртыьn╢цЁЕш╢юк╦╝╛Ё╬РБ╠$нодФГачcecbbcdaad`edac`d`d`bcadabdaccda_acfccbc`cabcaecddXXZZYYXYYZZYYXWZYWUYWXYYZZXXYXYYZZZYXYXXXXZXWXY[YZ⌠═≤ц⌡х╡╠ъэгЩ&C=G'r j┤┐╚█╒┬∙╞╘в╥Б╨ьНЙшГХМЪЛо+ВЮш
+ШКч╨о⌡├┤иЬ3Ъ9h8D)V8╒~▀╙▌╛ц╩гр╧╕╨С,RybQu╢╙З
+Ъ\)─q╒╫еЮЧчп╥EbXm ┌ёm┼≤Ж╧ё дE|╦╡╦≥ae▐		 ТБ	&	c	{	v	Y	c	p	o	t	╪	┐	J	O	c	▄	й
+
+	С	А	╠	⌡	я
+	ь	л	К
+9
+Z
+E
+N
+3	з	э
+	ж	Щ
+
+	Ц	ц
+/
+E
+
+:
+j
+╥
+╔
+▌
+└	©	c	 	V	┘
+3
+к
+г
+	╬
+b:к╘r∙╣пЭДР6∙│sФХ0pY│╞Z5,kaq!j	FBфDia■÷?v╖ЦщяO≈фУЧмуцс}HъжЭУВ╙ГЩSc⌡ЯВЛT6╠пL╣²⌠▒┐÷┌_9%	CEЬ{╘КfsH=[`R█Ь^²⌡g>ш#гм6&ozФjN╝╠У,hjN,r[`eQ°нбОР═}▓У!~V╜РХQ=]▀6QAuBrО'RMп┤eА&┌┐IW╝s~╒/j▐^├╣°╒_LNоT╦╨▒╜лЬ"W╬©рг╬·┴х=╬▌)kFn2к]бДN$;me┐qWE╘@r┴▐Ё▓─@nЮуфhИюруЭ²ga8ВJvЙ░ГвsF╤L°@*╞  ├ ф ┘ ▐! ╜ ░ ╞ Л!{!О"J"╓"Г"Л"ы##R"у"щ!Я ╞з ~!d!q"Б#е$Y$${$#Я#╟#Щ$3$$R$O$#ъ$$$:$╫$Ё$G$;#Ч#╣#а$#У$S$S$\$$U$√$K#ч#х#┴#{#╙#G#F#d#В#Ю#п#о#L#╧#Y#"Э#-"м"з"²"┬""╫#L#√#├#·#Х#С#в#s#░$#А#╦#╜#┤#U#┼#║#▀#S#⌠#в$#я#ь#d#9#|#z#]#═#√#╙#╓#м#░#!#$#З$7$H$$#й#r#и#б$!#Щ$;#ж#s#╜$s$═$п%>%G%,$╥$G$y#ч#≤$·$Щ$У& %╠&&*&─&╓&╜&┘&r&0&м'{'╧'['■'у('╤'М'│'w'г('Т("(('╙'╛(l((S(t'В'в(/(\(M'╥'Ю(t)0)})▓)╡)ь)О**4)х*2**S*5*E*%)Г*F)╜)K)^*D*m*J)щ)╥)c)[)╥*.*d*─*╖*r*D*W)о)║*%*:*Y+*ё*Т**\**)Х*c*╟*╘*о+*И*Ч*Ю*╬*с*Й*Ж*{*>**Q)Я**|*Z)Э)в)Г*"*]*q*"*╘*Х+ *▄*b*▓*∙*q*L*л*ж*ы*^*P*÷*X+*х*U*H*к+1*ж*т+F++e+*и+0*с*≤)╘))9*╓*с+k++п+ф+y+╞+W+)+┌+╪+f+\+d+х+ъ+┐+▓+┌+b+*д*N*\)⌠(▀'&#╧"я%╟()╓*u*З+x+█+╡+Ё+Л+И,+А+p+б,N,\,о,╢,░,█,▐- ---.-)-0-&-*,й,Г,@,┤-#-_-,Ш-├-j-╣-└-ш-n-H-T--W-N-i-╠-{-)-J- -Я-Я...-╡-M-2-╚--┬-9-?-r-#- ,÷,Г-:-5-м-═.-╒-╓---ё-─-U-6,у,╤,╔,Ь-X-█-o-7-[,о-n---q->-@,Е,Ь,Ъ,╡-%,н,o,∙,╕,╘,ё,6,X,╤,│,,f,{,=,,9,N,,J,:+ь+█+%*°++≈+╧+╔+y+a*М*щ+++b+÷+╜+с+o+t+`+G+++4+P+²+о+~+1+a+V++V+-+Z*В*е*q*А+#*С*ю*п+++3++6+*ы*╨*░*╢*·*╨*ъ*Ц++T+5+h+0+9+*╚*┴*W)А*Т+T+&+J++╟+R+>+*┬*≤*╒*─*╩*≥*Й*┌*╔*к+*с*╖*Ц+M++4*р+e+⌡+©+О+ш+╨+Ш+R+▓+╨+∙+i+t+Z+L+Y+°+ё,,+и+H+1+2+ +y+f+j+╓+м+·+╨+╥+▓+}+9+N+ +v+E+++6+*д*н+x+4+8+*┼*v*)н*m*Г*╨*O*e)Л)X)|**R*)╢))(a'П('²'╤'д'═'е'у'╬' ''&├''t'>&е&w&+&-&ь&о&g&n&G&)&:%э&%Э%к%о%▐%▐&%Е%√%д%≤%ё%ч%√%·%d%F%┐%@$╞$▌$╗$Y$'$%$н%E%%$А$╠$5$$+$w$#╬#Д#`#>"├#-#╠$#а#╞#P#╫$`$)$E$J#┘#u#░#Ъ#╖#e#J#v#Е#l#╪#┼#0#j#Y"ъ"8!н!┘""╕">"й"G!ь"&!Д!ф!Y!W!k!■!u![!@!Ы"╓"Щ"╜#"ж"щ"├"g"!╥!}!В"d"@"^"o"
+!~!|"4"r"G"(!П!ъ"""1"<""">!г!U!!▓!т"!З!╘!A! ъ!1!Ё" "!╓!?!╨!м!▒!╓"""c"/"#!Р!╫!Ь","!╬!║!╠!в"J"!б!_!е!Z!К""~!╟!6 Д!L"W"L""5"!Н!П!К""E"2"[!П!+!!■"P"$"1"┼!Ч"/" "M"*"["o"р"{"²"H!с! ╜ ▄ ъж ·!╨"";"
+"!л!√"!"L"!│!!k"!X С!Б"""!!) o ╓!─!P!!4 У!-!╥!╕!√!Н!⌡!a у С ░  ╗!!!/!!%!8 Э!" Ц Y    ` H 
+ └ ═ 2 I └ ╖ )╒ёС Рmx╗╩гжуеХ╨╚ЩA┐HVГЫ╘XFILУи√diЬ╢╜^P/Y5`ЙщЗКЙЬ╞}PM5└x░:ж┼YoAUaы еЭПЙ╛ФАеЧк©O┼]U\{m>DmсН·7#┴╪P▀j▐├j▒RGZ╒╔╢ОВУё Б#J*√h≥iXА$Ая:Д▓[Р█⌠OЪЧ^51IM=-U4^#4DЧ9Ш9ЭАЩФэзёс┬╖≈oбs▌`п╧ж	┘B╣│©ГB^M┌ФG*ёе(7Q6┌2Г╡:) о	НbK3F┴=;h┐`A3W+hmЫМяфъяХ╜⌠╒нрллЯl9
+В
+3ВМTёqr"ярЁВ╥Цж╗╫}xYНЙУЫмзЫ║├^L3кГб│╗CЗ!╥к┘UрыzBРХ▓⌡2╕┘)еQвv 
+╥
+C	Г	]	╣X╜Uч╓М
+·┘ с╜xi	ПюЗЯМ╫╔√╧╕╗┘┼t╖ълд╥б═╠йы╓╤┘╤^c`▒2n>ЧАЪ<0ЖЗХ#┼ЫУЧЖ	И
+J 52.M=F┤G┘axUhs≤f}▓н⌠▓╢╕ng╗}└▓╫©л╜╚с╒╜СГА8+>d▀┬╘МжИ%C4`u°╨ы.$6>~·yтюсЪт7²x²═╫ЕДЙDeTAJ`,AVJh%1/	Т;жНвзш╝но■≈╠a▀ оЕе╣H1АХ║╙i┤HcЪФ╬г⌡╟?28 Ьчу╥╠┴╛yi░≤N╖B;5,,%.Ш	Ч/У2ШГЯ2ВИ[[\\\Y[\Z\Y^Y]]ZZYY[_YXZXZ[[YX[WZYZXXZZYYX[X\ZXXZZnorvoqprqtspqrsrrroqrsqponqrppqrsspqqsqqqqpqoqrrqq.ПLХ&ШЗLП ВТМБТШКК=*ВРЮХЖН	7ЫeЫЦ
+ШВО2?/aS1m;p,:@"2"6B▓63#") $#&Р@Ы8TA>@EM0N:0n.Z3()%<?Т$"E8c1`@+<7'>]=0D$│%^1h282 00&B*O.-ECjNM@4iD5VLh├mn▐C8<PёY<H58gCGh>,.b\Mi^[vpt┌z│▀Ze²o|aИnr▒i─_hSTdRN?zW▀7≈f/<#=\Vd*#ОЯ%'	ЯЖ,П/'C74>aL]}8Yua#X|▌▐w≈│┤a│z∙≥╞─√√┬x┬┐░╛╗█ыyк≤╦ф√╗я╔y┴hdoGeQ1S!&ВЙC╛:JKqwfq▀■╨╗Ё╫же╩чЙоХСЬШ
+ДДзУЖНчшх :,GР",-!-dCЖQ Ы,AeUX┬$=RAE;HШ"!:1:6Z?>>NgG@m?8WuzbKP;2l]lY<2{LpsP{j2:lK┘c╘▓╞_╪Pk&"!&IPd,/Fs└²⌠╔├≥fZ▐_╣ut─HdKЮЫив1dts▀fNv÷┬tBRM─V.2O│b@N&0JIs┬█_s`"!ЫЕЧф▌;69UI┤√k▌tD8["2┌·tt]]`573TI÷┌║░√▌╕╙а░_x~aYv▐А╤м╥╪ад┬╒а°╝·▒∙⌠э╕yfv~_╓░{P[⌠RH"ЩЩQ7Waj▌≈╜╤║╓╝√≥Ф╖фй≤╙╘╦²╖яуЦф╢НзлшуУм▐╙╪цАмГлв©╜пЫ
+ Ячщс╫у╪й╫узЕ╬└s╔нэвнеГЫ.	mъч╖z▌z╒ЬЭППКТз	(нь╖╠ХнаэРФХAЭ=М$\)"?-!$7	Бх3Ь"А╠·┐╤╨иулЗлУАРы²	ГПМЮдЧСТVзШЬгюв▌╤тШ Дц0%/<О╤╜ъ8зц╓²░╒жм╧╠©╡╦╘ятН*
+КТ>ZЫМЯГ⌠╦жичяЗДИ,Ц#з╫÷▒[U@F8└пчьэЙ('ЬЗшГё╟гшБюs⌠≈Ё≤╖╙ЁИ ╫егТТ⌡÷нШВЮв	Р╟╗ц╪█√|c├╕ФН Ьй╕╙╨ф╚емМЬЙ╨╚╔x┤q■╫°жЗП2ПМ
+mкмяфяБ╢╜ш├`9:X■╛╟z║│q╣ЗНЭЪ!ВСШ╞└═╢чЛДйЫШТ╫╬ё▌≥бс©ЯА╠JJ┌▐÷поынГ╥·╝ж╧▓pRvmd3
+ DgN2└FloDcjoCx?В║$T6Ldn⌠пэ╢Р5b["aUca:q%Ъ)&
+е▀└┬m5▓D╧÷оВY>JH1Ы;3O!=!?O>3&Чл╕╩щ╖√┤v?#M█·шЙщ╩уЫ/3Р28@a,ЪЦЦг╓╞к
+
+ ЬM7ceh"V{o9`@i t┐_F9CFз?%C3KT╖v6+	жАзаВБЖ 1LJGS8и█▀55P─▐жН
+СУNзПОщ	ИЬ<-
+ЛАЧC2"A╡*3HЦНт!>lв╖─ ерЩЪЗчБ ,v-7TejYz²_ЬчвФ+:OZ_g{░jmElG(ER A:D≤4`gc<1 HaWcC>9$+ЬСзЩ$\^R▌]│ Cih*#Т1 Р ²H∙kQ+"/┌IVLLIIE:mIM{5(ИжАЗР ЫШ0Ь(.@RTC^7L:9S+->MB$@Lм°XgZx^ykbwy┤⌠■m ▓VfиL,!'#..hEgc[o≥n┬┐~sg?;X/`:XU▓bнT=T;H^a:kEowx▐┬N^fCa▐╕Ё┘²л√∙╞°╢▌╙thс▌┼╔е║}█√┼u~ oxVz╠┤▄vT─{e≈▀┬n~┬r╒▌ax▄a~sZ^H6;9>?(Я']+<OuUю@ND7MgUH{■°▌proxVrL[d_└Lwx}d9x]╚T≤`M_GE#)90UKBG=BEGP\> p WWaVbiis\`·┤⌠cx│┤Y[V*Td,!?cB{^]\Sx^fwgz(*@yLs s[╖|w∙┘k∙╬юUvXI8M>?0!;;`?<$D9	@=;N8PZUP┐RU<6'..'LC9+8;,)LЗО,)>&■%NS+5uB\,1FDE=KбP>4D*|aAKpN]i<'*Ыi>;OV:PZQH/BH*8'KF:?j*"5P$J■VNЪ"Ъ& **ФПЩ7;Л) *%!╡7' ':6+3ЮосШ╩сУХЩЩХ.?('АВУчьМЭР:3IA*+K:ТХ-ЪОБ щ╥А╣╟фцЮКДЗЧЭчПИЭ ЬFЧ&3"ЪАРщДЬКдЮШояБ
+ЖПжФГОAЯЧэmssspoustqopsrutqrqursppuqquoqsrutrrpsqprsossrrrusYcaea_`^ccaa`aacdbd`_eea`cdbagdbeceb`bdbfeddcae`ag≥Ц╒╤╣╝▓╒╞√т⌡╙╡÷ю╝╠ц╔╜╚╖╗■╡╥■≤╝╣ц©Яхэ╘╖╩╡╪≤Д╠╦≤╒╤╛╗л╡ Н°╙░ми⌠╩б╙╨╦·цтйиеЮГ╙ума╙╧╓÷гЩХ╥╦я╜Ушг╧╓╕╫║╔ж ┼╦▐е╫ЁФ╥°м≥╟⌠я╠яу╢╧╪╓╩╢╓й⌡═╚Л╡ьЁ▌ат╘╟╖°К╟Е°╠╗с√б╠╒с²²║с°Ё ╕÷е╠╞║а╬а╘╔╤╫вЁУ°╧╣у╚²≥ ╧╞ц■Ё■╢║И╖╤╚╔√╒Р╧и╫╦╜о╥╛©Ё║╠∙╔и╟╪÷≥╥▓╧©╦║╚⌡╔п ≤╙╙╛╛Щс╟═о╥·√йт╫╫⌠т╣Б▐╛╞щй≥█дёыаЖяз·╣╧ь╙╜╢Ёд╪н╥вевш╜╛╧╪╫═б╤⌡≈чг╝ж·Ёю╝▌·╖╟╪·╗тйДвюин╨а║ак≤а²╜╒Ю╕и╓ё╜╤╝Шж╦═╘╦╢г╫д╜гП╜э╢ш╟Ё╙╗╘╖╗╕╜╔·╘▄╔▒═≈°к╥⌠п╞≥≤О╜б╚²й╩С╜╪я╡╣г²╡┬≤╖цз╣╔╘вю© ╪╩╞╡ю╛═кт⌡й╜╔╦к╔©╟╣г╘╫°╧╨╛═²т©╗╠ик°╬й║╙╓р╜л╓╘ф╚ья╕А╚⌡о╙╤╥÷Ёр░©Црл╖°юа÷г╝ф╟ь╤╣╡ц╫Й·м┤╙╨У╢рЦкф╨╪░ф╙╕
+≈ел╙█╛я°д╒У╪╞©ан╗╤А╨╗Ю╝▒д≈²сф╢╞╠к╫╘╙ё²·╡у╔╖╞╠╗╓╢шх╝╛║аЁ╦м╤д²╬╟Р╕Х╛╪шу╗╩╪л╨ёихЗб©╤╨╖╩╩Ё╓и
+╢║╣╨╬бп╪╨▓╔ли╢·Ф╚╔хя·╢÷╥д╛Д═Ё╬ьё╢╤╣╘╠╬ц°╪╟╖╩эу╗зк╝фЪчБ©╜╣пю╕Ём╗≥╖й═г╬бй╒╔╦Ы╢╢║≥Й╩╞ЁТ╙╘ф≤╙╚╕╥е╚╬ии ╧²я╥╚╦п╞Ф╧н╦╠Т╧м╓╬╦кгдЩП╦╕м╟Ег╦г╣╜╗ия╒╞╧╘К╓╖╙пхи²зЦ╤╗╠ек╝╟┘©©Аив ╙²°²щ╕╫╩щп║╨п╤Ь╟Ё╛╓╧╥в╢╖Д╕╚а╠ажнЮ╞╬гю╕╢мцрЕё÷ю╙и╜╤╟пМ²уо╢╖╩╫╩╤╙©ю©╦ш╢кят╜╕╓т╪яжг╦ф╠ькеК╚ердаф©╥╤╩╞╘÷╘≈м°б≥╙╣уы╚ёюЦ╕Ц╠╕╬╛╛юд╪╢дЖйше╕ю╜уи╩я╬фк╛чщ©╤ог╟╒и╗м╤хг╦и╬╪╒╨°Ют╕Й╖+a╦╟╧╠Ц╦АУ╫╠Аужэмп╤╝уцП╨х╗Б╬╛чв╫И╫и╟╡╬╡еояЮобХыебЗшАs╡╦М╡╤нл╤Ш╥ж╘ахг╤ТЕъшЦВ╩ч╣╩идкБцд╦ма╥цОw╧тюфобщн©Тчгчг╟ылсядя╖Фр╧АЮф╙╛зуа╟ыашН╨Я╪хчоНГЮп╢оа╬К╦з╗тшхыф╢Со╡гХКлХсз╨эдЁна╩║╦╪ибД╞╡х╪ёЗсБт╤Б
+ымЦнйПы╦ЩА╤эаоюжОЁж╤алу╪Ю╫╟с╥к╧ьк╡╚кЯ╦яГ╫и╦сЭ╤ё╩фя╔г╨кч╜Ц╛╬уеБЯ╡хкЭЯ╟╙е╣╦╪╗жкВ╤╓жфбИу╨г╥╖╛Юяъ╤мМ╤ч©ччжрж╨ШажщАЬИхегжщЦ╡ы╘шфдРуР╟╙ээжВиъхю3╡╟пюлъУъ╢цЛЛо╧жтЮ╥МдбдХ╤╬╩Т╘льДФшНА0б╧╞МШ╘эоуюдКитГПФчв╪М©тЙ╡Мф╦п╩ФЗЬ НЛ╩кбХ(ИььщБ ао╪БЕЮПз╪ЖриеО╟ЮссХЩуноЁ╡а╘а:МЦБЙрДЯфзэЙтЖюэмФдРдз╪очН╧7ЛезйвыЦхш╬б	ГМиХ╝╩╤бЙбЕПНМшРбючв╢д╚╚щщщжинИХчюИДпшукАА╚я ╜длепхм╪ЛНйы╦мсХБЮФИцюАСэ ╡бПдп╦яжрЧькД╨╫еЛЗ╜и пк©тС╤яьэ ()АлЫПынйтОчх╥тТ╪Ф╦╝Зцфт╨сьтюэТ╬ЯЁТЫКпНа╨чь╬ущьЁ╨	сБинзОКхзЩнХшаНУкЮэыЦАьэКИЁАсЦ©оъкн╩МэпЛт╧ц	гяУГБА╤Х╫щглЧГкцжЛЦчЬъ╪лЭ╧н#оДГ╪ЦуиЪЬпЭвЭО
+к╢ВРбАь╟ХГЩ╨Йл╡ЬьЙ╥Ж аЛ©жФ╙НЦйБцжб╬ЭЧшп╨ыЛЮЮ'ЧжТеКАКСБвяРрвЯжСщГАКвЙЯуР	У╬ЪП
+ьоХГРНщАвОХЕУ зАНлеCБПАЙРЕКНшФМФРЗЗызСЙЕЛЭ╬шзъжЦБжКмЯКЩ╬╨уйПН"Одьэ╦МлкфД глвЯжСЮЛЛ╬оЕйСЦ╡жхМзОэЕЙ*цчпзЧъпяоЗкК0МЮ"╧Ювз╩шЦоьЫЙяюУпч╬пввщэшЖащкЯ╩ИЁПЛь╧ЕщЙ ЙьдвАхйУоз╪НцькгуЖЛЯХяЧЯГИъ╛╞ПеншЦЦшНе╫ьрЕГхЬэЮзйдХцуф╫╠кбекиууяуаЭилзьуЭ зКлб╡цгелещьl╦а╡ЕА╣╪к╨Ё╗ЁеНД╥#ау©чЛ╪шfecb`bbcacabdca`a`_dcaa`ddbacceec`a`efca`cecccbbccYXYXXZX[YZXVYWXZ][WZ[Z[XXXYXYXWYWYWYYYXX[XYX[ZZY[X▀∙╔й°ц╩╜Йзк	#5;J+z≤g⌠┬╓≈╠┼≈╜╘эхп╪сФМиЛьРРЭВЕр!ЩГФэВГХцж▓▓─ЁНЧ'(n:<=V:═~╖┘╠р╫авп╗╬Я.V}bCs╨╝Ъ%T0v│╖╫ДЕ 0ое╪:ta|░v≤ix┘П╣ │к#X≈╕мм≤mT▓З	Шя	:	M	X	└	V	W	w	t	w	·	l	K	H	_	⌡	Д
+	Я	О	ё	·	ы
+7	Ю	и	Л
+*
+L
+^
+O
+:	О	ц
+	щ	У	Ь
+	м	ж
+3
+=
+*
+)
+S
+╝
+╚
+i
+o	д	i	)	T	┼
+F
+о
+ш
+		м
+R
+Ъ
+И
+ЯD■ф║┌▌╙ФТЭ-П╣wr ь$gU├▓uC+YWrВZ
+Ь0FFуSiQ┐╦*4h═мЮм@═╢ЛБК╧цfBСЙнТзвО*Hx°ИЖэU5Ч╗ГK ≤⌠░≈·]dA"B9 e÷Я*lc@:Bs─М6├╜│!©©╥#F*% vГEY╤╠Ы'jVKm9YsXS╔Ы щв▓Dx│ёьU,xK0uv2rЕN^Eпrwы█u!_иy▀▓>b─#┬
+mR═Б╕█yQ`бhЦмs╢╟е\`а÷Й╨╚ ≥О#╪kl1\A╞Ъj$ЮЙ&Тg-\█┬█iY█<]h╝╝▓┼GnЙГ╩hОЕДХАw│rFФNz╒+М╩h.÷▓Lh╜Ы ┼ ╠ l √! ▌ ╣ ╙ Щ!╛!ш"W"∙"Т"в#	#$#N"т"х"
+ ЦЙ ╧!z!K"н$$*#Ш$7$$#╔#ы$e$K$#$b$ #╡$($$L$▌$m$U$%#Р#╬#ц#Л$$A$]$S$l$B$W$#Ц#╧#s#⌠#═#∙#K#{#ы$#╓#╞#∙#┬#°#"#	#"н"ч"о"П"╟"ш#Q#j#ё#ы#в#╓#╦#÷#⌡$$#≤#╪#z#}#r#▀#╥#z#┴$!#Х#л#ф#≤##q#┤#│#е#r#═#╝#к#°#/#G#ы$$7$o$#З#а#o#ъ#К$$B#Ш#д#b#х$J$©$ъ%▀%$Ч$И$┼$\#Ц#└$█$╡$Ч&%х&&?&┐&c&─&╘&M&Q&З'n'√'g'к'╔'Ф('Д'╔'e'⌠'╒'ъ(;(3'С'╝'м(N(8(3(┌'Н'б'Ч(Y(N((:(╤)=)E)m)й)╤)ъ)З*^)Е***@*A*B***)╖)c)j*X*`*1)Р)√)m)A)╞**w*≤*{*O*)*r)y)в*.*D*M*м*√*╫*3*0*)Я)Ш*E*╞*л++'+H*Б*к*с*╥*╥*з*▐*[*6*W)Ь)╤*m*U*&)Б*0**▓*G*d*⌠*П*Ч*÷*b*⌡*╡*K*E*Й*у*и*Q*b*i*c+*╩*c*■*╝*О*╔*д++F+,+**ы*Д*И*ё)о))	*▒*н+h+÷+╓+t+°+i++#+=+▓+b+K+[+▐+и+╙+╙+{+÷+*╩*S*v)╖(╒'%Д#О"²%▐(j)╫*`*╥+q+⌡+Ю+ю+Й+Н+Л+╬+│+ь,D,≤,Л-,},⌡,≈-'---C--$-%- ,М,Н,p,⌡-.,Н-,ч-╘-│-╣-У-м-]-M-B,К-U-O-╕-■-╩-q-0-╤.-щ-У-ч-ю-╦-9-@-╫-q-i-┌-A-╚--,ж,щ--┐-╥-М-й-╣-W-_-²-z-Q-\-
+,╙,щ-9-x-y-_-P-,Р-],ц,Ц-V--2-,н-,з-I,и,╕,Ю,м,╣, ,D,┼,e,╘,s,┘,w,u,E,L,[,.,,P+й+┼+**╧*Ч+≤+╫+}+h+b+*к++│+╙+z+й+Ё+W+┘+;+W+5++3+[+┐+o+R+²+r+U+.+-+2+8+-*ж*▄*©+4*Ы*╬*ж*Ц*Е*О*Я+1+/+*я*▓*≤*Г*ф*╣*г++F+8+}++&+*╥*g**#*е++r+O+-+}+y++*⌠*²*╠*z*╨*Д*╦*═*│*©*ч*Ы*л++a+)+!*е+G+]+╞,+╩+А,+a++С+▄+]+_+┌+▀+o+п+К,+и+г+|*к+7+\+W++s+└+╥+╧+Ф+╨+⌠+e+"+\+#+H+/+*с+**з+
+*ч+▐+B+G+*х*╟***Б*р*x*i*)у)y)~**)х)▒)(А(L'П('▄'а'В'▐'ф'Ц'╪'$'A&р&y'<'N'_&м&}&&&&÷&х&c&▒&G&&%Ъ%Д& %ж%ё%Ё%√&%╢%╥%i%▒%⌡%Д%≤%⌡%F%W%]%@$═$⌡$▐$<#ш$#$э%Q$Ш%+$╫$©#З$ $$B$n#Ю#и#p#-"╡#"#з$#╨#╕#x#╫$Z$$($#╠#╖#▐#Ь#х#╚#L#·#д#U#▀#g##U#l"╤"@!╤!к""▌":"╖"Y!Ш"V!ч!╪!?!f!_!t!┼!P!-!Л"╔"У"╕"б"╡"ж"═"°!ь!═!╖!Ы"≈"q"L"t!ъ!▐!©!Ч"v";!Ш"!в""
+""&"*"l!щ!8 У!╦!т"!!в!╗!z!5 Ц!?!╙"!х!╦!R! !о!░!└"""h"&"f"!Й"
+""!╫!╦!╨!╧"""!i!л!m!г!Ы"m!╧!) ╙!i"3"G"!"\"!э!З!Д"">""4!Ц!C Н!┘":"="6" ""U"Y""
+"2"z"╞"■"█"2!╣!4 ╜ ╜ ╥Ф ы!з""";"9!╨!≤""W"!╔!#!╜"!A!!щ"	!с"9!7!d Z к!e!4!!6 Ъ!!█!▒!r!╬!▌!_ я Ж z 4 n!N!5!O Ф!!5 Ю!2 Е B - E D " 4 ▐   N S ▒ ╥ 4╘╞С *и│╨йОМО╡иР²yю[╙'<Р ╔f/;3;дт²u	┤ы╛_>m1` РЙтЧВРкёMH8 ⌠┤█!А▒[┐.c`╒╙гБ)ш╚╚╘щ╬╜w└eBScoN+ОУе:⌡оc┼z┼x}faIы⌡ювД│	ш	B5tImc1вЩщО()щ┘~ц╛jBQ &\U+ *X`S?jH`#'0/>ДЮДЯКррон ╠÷}╛m÷6╤ф╙СU;©M╣ЙL_≈G┘ш.╠щT=┐Т@у╝Ъ,ащ[]- ─DZz~HBoEGhyЩсЦЪФъщВ┘⌠▐Энэ≤ГP6'
+*ЕЖN?"ч:v■O2ИУхОЪщвт╝┬mOЪяфУщНчЛ╤÷6dыЕ╖▄▄bФчяa"Б╠wBзФ▐┴б∙H╜9Й~
+Щ
+╦
+5	ъ	|	╠qаxН▓#ъ ╛|!т╘snхУНЙ╧╔■╡╜╝▀u╤ыик╫╬╔╥му╕╥┬╡[jf▀3q@Ч
+чЩ C7	ВНХ ▀ЪЗЖЕG50'I9B┴A▀evUo│▓hu┴т■▓╡²jn╖─┴⌠╦юе╜╡ф╡╓ЕФз=.G^r~ёОяР2=gm╖юь8<}╥└ч╝иСЧФ)╕u╓╕╟ТТЩ=?Q,QWb8GNA_.?ДMиьГьб╩жк╙┤╗])#Узвб╜@>5А	Х╙╒^┐GWч╡и°╠F18Мщы©╥░╕v└≥S÷I>9-+#6УЪ6У&Ч
+ЛУ/РКX\ZZY__[]Y\Y[Z\YX\\\[]XZZZ_ZY[]\Z[ZYZ[\Z[ZZZ]Z[ZY[kppotorrsqqqpnqssrupsroorrprrprqrsqrpqqqqprroqqrqq3ОHФ$ШВJИ ЪТРГЬЖМБ6Ъ/РРКДТИ	=ЫeВДШУДЧ7F#4`K+lDe-;@'04A┼7$3$.#!%(Р=У9[HA;<I3G67t(e$+(#*6?З%H:`,aG0I=&E[<4>(│$f3[.;673*=$T/3J@qPOC0k>0PT_┤qu▓H3?V╔NRO86j@Ia3&8[bSfSZswpyou▐YY═s┘dВqt▄hychb^]UPA~[⌠9▐\3?'4_Xf$#СУ"# ВЬ&П-.7<11dHZp>ftX$Z|░≈q⌡}r█w√·╖┴⌠└█u█▀≥╙╟▒Д~nш ╩р÷╖и═|│faxEpK9Z$ТС C╗=CSstXq┌░╜╚╨юш╨╪ЛГшПШЖЧГятЯЫХЦЕк&.JЭ-4&Fc-AЩT
+Ы>dca├5PECC:?"ЖВЖ ,I1?:^>GKQZH5n@$Z├~mYW>;bek\B3~CssIy[8=iE┐s╙▒╙eЁQw0%<S_$*8L─┼≈░≥┐■wzN■W╟{p┘M\@эЬры0ksu▓gXs▄▓┬xAJ\┬W<9X~YSW0;IEwv┐hld)#ККюz┤I3ADG┌└┴qN9p%0┴ l├┐ai9:	?UG·╤▌·├■╞╦≤gyza^x▓─Ц╤дЁб©╡⌠┬╧▌╡╝⌠~²Ц▓qbmm░■xdT┌OA'ЪTCOZf┐≈╖╤╠╕╠≥∙Я╜╪а⌠╧╫╛⌡╔крЕюфНэтсоКй⌡╣ебОдЦйж╨╔хЪНААЮбы╫и╬рщМ╢|o·тооягЯ**З─оъ╬┬┴~╒ЗЯЫЙш	-$Твр╓╧
+ЮйлФКДПH AУ"p#+C-*#*ЪЮл&МЯЧэ╛≤│╥анйпОъЫтТФ÷ВКЖ"ТФ©		КЬXьТЪепФ∙©гШ
+Д╢&/*>Н╧╡Ц=пб÷█⌠²шр╡╖©╟═╞лзЧХ.ВКЩAУSЪОШФ°╝лкЙъМУЪ,Жшыг°√┌WK=OЩ:▀╫ььБЦ0ГК╚╨эшФцy░ёц╘╛╗╟Й║╣фуР!П°·пВжАЛ╤╕ф╤├▓zo┼╓УЛЖЦ╝╞╝п╕╩яГЭБ╥╢÷┌▌l√Ё≈ьЕЕ0ЦП
+kкйыфмИ╚╕в└f87Z═╔╚~Ё┌i╢ВщЩ"Ч Я╗▄║╤вЕФлПУШфг╟▒■╧йюУо├╘NY┼÷²урсуК©⌡╝е╧┴wQv[+-1hF%qG^XHbYp?~A'ПР╕ "P);P[k▒фэ╡Д$V_$b\Z\<n&	!%Ч╩▓┘|e;▐C╗ё╫ c"8=-:Ъ&&IM(;%7EK;"ь╓╞оё∙┐k5$L│∙ъыоййУ 6Н-*Of+ ДДнё╤а*	6ЧЬO@\hl(Puj?l@z$i┼^LFB>Д1+O4DL╚s:0БсГ╧ШЙН 7UA*JX-3г┤~-7T~■КППРCГОХЙХЖD#	НФЛ7%+8ю50D#ОЫ	у:lщ╡z┴╨рШэь#┐5:\kZKs┬╖Y'ЪлжБ$ 2IW]aw┤i[MdC!o0NZ">D(⌡6Xe{X#ScVbLC5(ЫФЦWKk┬a─²Ehe8,М*С)═E┼_U4*(┘G▄W@JU<H9qKHjC+АДиШУЫ
+	Ы*ЬВ.* LM\GR@X(;O&,FGR 
+!9Lд÷dh_i[┐{uu~v}▓~═z]c╩S3!+)\Hkjay┤v─tjoA;F/X>OF k╫kE`+T\qMg?d|m┌⌠v┤sH_lNo▒°╧▀═я÷⌡╝░с├≤{fД╒√⌠х⌠─└▒▀|│ uqV─║├▌h└{r÷▓≤]|∙m²≥Zeё]yjXoF:FAT?0Н)]06QV╧HM[MKb'Z 7─≥═▀myhvCqOJZaxGsx▄^O┌f╘V°SPOFPH0`FOEA?CVRV9aNZ^N\iqone█├▀[v─l\a]6XS55:c7[cgQn[orge*-Hsay╖q[ё~vu└m▒╪яY▌Y1=R<3,0-7nFHO81W+Y1NNZRfGX?!- ,87YI?30<-F
+СЗ,@*┐ 4GS78nOL 38;.KEц[:%"K8m*' )m!A:│Bir1.5ЩfC/XO@YjXT5CD	!@7TJFAj"fL²RD%(
+#)ВЪC0CИ+$#'ю&,&9,O>ЕзЧжЮтВЭУСЧ0A'5ЦЯСХъЖСВ+7) A:#10Х:ШМШмщ╫Сю ╝цбЪьБыЯЭРчВФ
+ПK'0%ПБЩДсЗчхХТеыьТШБЙРП4УЗkprrrtuusrotrsrsqrwssspqssurrrusopqpsuspqttsrstqqtY_a`cabbgca`ebe_fabccgc_a`aba_bebg`baa_cbcbbdbbcf^≤ы═╥╟╡≤ё╚√я═╘╟≥б╕╜фё╝╜╙╚∙╤╤≤⌠╣╥д©Кфш╚╓╣╦╦⌡Е╢╣■═╩╛╚п╜ И╔╗▒йб⌠╩ф╗╠╤═фрпк©чБ╕тхю╙╣╓°дБЁ╫м╗Ьжл╦╘║д²╓ж≤█╣■е╦╢Е╩÷г≥╚░я╤он╣╣б╓╤╩╔х ё╘Г╠н╠▌ду╙╛╕°щ╡э║╟║н≤╬╟═т°·║т═╥≤╔·е╜Ё║б╦б╚╘╨╧я╣Я²юЁж╕║²Щ╥╟╬▓╡√╢²КёЁ╔╕≥╒Ж╫к╩╦╜йЁ╜юЁё╣∙╝цЁ╬·≈╧▐цю╥╓╗≤╗т° ╠╛╒╜Ьв╟╔т╥⌡∙ена╧√п╥Б⌠╠╡щм°▐д╔ы╫Рсч ╥╥ж╔╜╟╣г©х╡тгсэ╞Ё╥а╫⌡д╧≤∙ьиЁс·╡©╞▒ёёЁ╩╔╚жнИь╬ит╨б║╫к⌡а²╙╕ч╛й╓╗╝╟╡Сж╠÷╘╨╟хай╞пН╛ь╡щ╡╟╗╘╚╖╔╘╡╖·╗┴╙▓°° ю╤▒к╣≈≥И╛х╔·и╪У╙╤лЁ╩а·╟┤⌡╖хЮ╩╒╛чю╦≈цг╤Ё╫╚≥рт·м╚╗╦ф╗б╘╨д╚╧÷╤╩╜÷║ью╖╤ак═╪
+г°╜╔п╠х╗╓ц╗ву╖ч╛ н╗╢╧║╦р√╬Цви╘≤╫╫°н╞е╝Б╦╢╝©╥Х╒м└╘╦Ь╝нЦйб╥╨∙г╚╓⌡гй╚▄╟н≤х╓Шц╡╩ер╔╞Х╬╞Ф╨■ф√
+≥он╣╠╡кд╙╛╕║═Ёв╔╕╞╣╓╔╨жеЁ╜²юЁ╫р╥к·╬╛ЬёЕ╜╬жр╖╧╪д╤╒лфЪ©╪╫╤╘╣╫╡°н╡ ╦╥╤аи╤Ё≤╔нюЁ╔Л╝╖йоё╜≥╦ю╡Е÷Ё©с÷╡╧╟╓╟аб°д╛║юзр╓шр╟юЧъГ©╠╢пе╕╢п║°╖хёф╬юг╓╘╩ ╟╦÷⌡Г╩╖╠О╘╗д⌡╝╚╛╧к╕гок≤╟·т╩╘╧у╘ш╦ь╤╧Ж╩п╗╪╤хф©М╦╗п╛Фф╦бЁ╝╙ги═╠╧╓И·╖╙тбф÷ьЦЁ╙╥фл╙╞├╩©Юко ╖²²÷ъ╓юЁжи╖╬р╥С╡╡╛╖╠╨ж╟╙т╙╘ю╖бтлш╝╧бг╔╠ф╬пД╕╓╪╕к╚╫╡иАёся╙╚╥╧©╝╛ц©а╩ы╡ияя╘╙╗т╪рое╦ю╞тибМ╙цяфеф╬╪╤╧╛╚÷╕▐нёк÷╛╠ьь╜║юч╛э╙╔╫╖╢юц╫ЁдЬечо╕а╞тк╩й╫би╠ява╦кф╙║л═л╤мг╢й╨╫╒╢■ФнёЯ╔;_╤╡╩ЁБ╞ФЫю╟Цуэыхн╥╛саН©ф╛ДдЁЮя╪Л╨г╛╟х╪╫мШнЕмгКвбюУтшp╠╬Л╤Ёси╣Ч╣п╙©йб╤ЯМАщшЖ╧э╪╧мклИюд╩км╣╫Рq╥у╬ммцщй©РЕлжиЁуешмим╒чв╫Иза╗╙ту╫ЁрфпЖ╩У╩гъхЙГБя╦п╬╥Й╫э╜орйэа╦Вк╟бИЕпГтщ╩Ах╢м©╦÷╤╡о©М╜╟к╫║ЬуБь╧ЕшюЦлеЬв╦ЭЮ╦Цдт╩жК╟ж╜юнсюъ╥╝ы╟ц╩вйЁ╛гРЁпД╩м©сЧ╩╖╥фр╗г╨лз╠Б╚дэмыТ╢коЪК╨╛ц╥©д╕шиЖ╢ёмгфФр╥еЁ╘╘Фпщ╣лЛ╫ы╩ъЮпязЁЗбчжщСЕюгйщзХЧ╩ч╘щацХщХ╠╚ыЮъПпФфц1╤╟ж	юиЦМИ╣╨ПОм©ттЕ╥Де╫аО╪ц╥У╔йжНГзЕБ8д╡╚ИШ╗упрецДкяГСДьь╬ФювЙ╣Ы	л╪уеХЧВЩЯЛ╫иеЕ%КыЦы	ИШгя╬БХчПь╧ОойфС╝БыфГ сяы╢╜а╙╦>НЦИХэЕЙнжвДуУеыйГаНер╬ушО╧8ТажоъшХдэ╩ф
+ООрЕЁ╧╝©КфХЯННуЖбюЮш╡б╠╛вФэмдоЖЕщ╫ЙДпыпеЕы╢п╟ерхнно╦ЦЙгч╨мпГссХАгдГОщЬ╟бПцл╨озкЧьмЦ╦©дчЬ╠еЩймияУ╬пзв$$*ЦоШПтяопМче╩сЫцА╩лЗеий╥ввьЪмжЫ©П╝ЫЬКяМа╪Цтдржж╤╪ршекпПЯмжЗйИзбХВо
+шчшЛЕрщТА╣чоЦцнХлу╦ЯьхИо╢ееиУЛБз╪Н╬АнсЫФюеЮФМвТыцф╧утБА╪ЮшдВм уЫНо╬ТЛдчы╡КЙЬ╬Йл╞ЭуИ╧ЯЩаО"бсК╝НыкУыабЭУыр╫ыКчэ&ШьРкГЕХПЦвсМявЯзЭ
+УчХшРьПУнРЬЪ╨ВНФкЕП ПИэЦщОЪНъЛШтЕБнеGДУАГЫБМПщчЙФМЖ ъБВЛАПСцАуъвКъпТеВЧК ю╨виРЕ&Лияз╩ПхфиъфлвЙ!уУЦНЬ╬мХиЫБ╠жеИзОущМ'еъйчЭчсппВяФ)#Сз╧ъяр╫БДцрФи╦УсЪшюяьуДзщфИхУ╫Ю╤ЙЛы╬СшИ
+Жв©вИ╬бПойПаъпккСФНФвСБОЦ╚╝ПйьыАъвМг╪ЮнХЮиЧьЕзгдИцтаб╚р╫йоиьяптг циуььЗУвНеи╠диййрврm╥ц╥Дэ╤╩я╦╛╘╢╪ЛЦ╡гн╩АКютbd`a_bfedc`abebcebedea^`bbe`bc`bd`b_bacb`bddcdabcaZWZZYYUYZYVVYZYZYYYYVZZXYYXZXVYYYZWWYX[XXYWYYVVWXZ▒≈√й≤гю╙Фщс22$<3j┼l▐┘╗≥╡▒▒╘╦к╥с╡еЛЯнЙАУДРЯОГДЦжщН╫н⌠┌цПЖ7
+2d,D9O>╗▀│╡▌╡бб╦де║©Ф,Sqm>u╘╜щЩ  W%{w╛╧ыЛЖА╦Ё/W]d█░√hy▄Ф╒⌠╔е#N▌ё╪а▌]c⌡		%	у	0	O	a	├	x	f	j	│	─	╣	{	2	j	V	²	р	О
+ 	р	б	 	©
+	Ю	й	я
+ 
+a
+U
+9
+J	Я	Ф	Ш	П
+	Ш	Т	з	╤
+8
+I
+
+C
+Y
+╡
+ 
+m
+r	╪	n	/	u	}
+N
+в
+я
+	ж
+X
+Р
+Ч
+ЗM┴м╠v║╖мЙА0Ь╡x└сaa┌~p"6iXl"f0?и@iEk╚Bj╟ьЙй.°╞ъфФ╨╪b>ш оШи╬ч=│╘ЮФФQJФ╤ьJ╙▌─┴v╦┘^33&=Чh▒К@┐Y&{?aqА_~{cCб╬╡3;& ·©R^╤хЯ
+,gcSqHx┬\]╕чНаg├Ж!g\╚я Ыw3>],.D`?┤ГM8дuHИЩkY`^й·⌡═s┬Gz$q┐╙НЕ┬■KAф─х©v гнoл╖ш╦╧╓╙Ак≈ГУ▒4▒/═!1ВлБ"э>(?─e░r=╡WM┘╖├bwЯк⌡`ы╣яыМ├4AхЧ2CtЩ╥=чк[=╧I▌t╛ # i ╠ ┘ ┌ ж · с ²!!g!ю"T"▒"т"н"З##N"г"П!с од ═![!i#
+#у$4#Ь$>#З$%#╜#т$D$5$┘$4#Г#н#Щ$M$9$╛$█$k$B#с#я#ж$#я$2$\$A$}$Q$O#Ь$#╖#k#▐#╜#T#3#c#р$#╟#Ю#m#│#B#"э#8"О"ш"а"д""ъ#V#e#▌#К#ь#╗#ч#√#╛$$#ф#╘#═#j#1#t#╚#е#*#▐$#Д#к#╙#]#A#n#7#x#A#d#╨#Л#й#∙##I$#в$O$Y$ $#ю#p#ж$#$W$$<#З#;#╬$Q$÷$щ%:%$б$╟$z$j#Ц#h$ $к$Ф%о%ь%ю&m&▄&&z&╡&╟&F&╠'├'▀'k'■(	'С('ф'╕'~'┌'У'ь(H(!(@'й'═(M(;(:(9'Ы'м(((&'Б(/(u)2)[)╒)╬)╫)╚)Д*/)п**!*>*d*8***0)╖)▀)▄*-*╒*_*	)╩)S)#)╕**~* *╒*F*/*)╕)╫)В*M*N+*┐*п*^*-)Я)Ш)К*w*y*И*щ++:+!+8*Р*о*Ъ+1*╓*:**)╠)Н*}*~)Ф)к)э*0*▓*e*I*m*╨*Ь*╫*h*╝*╧*s*.*т*Ж*╦*\*▓*╤*|+;*ю*√*q*╢+*Г*╤+&+2++9*Ц+*с*∙)а(К)H*╪*╒+┼+├+╡+v+с+F+0++j+{+2+_+~+╣+╧+╞+ы+╨+╜*Ы*Я**I)╫(┐'&#Х"╟%w(A)▓*`++k+л+Й+╗+К+Э,#+щ+█+Ю,6,u,Ъ,╣,├,ё,╪-&,Д-<-M-7,Ь,Я,Р,х,П,R,▓-+,Я-E- -й-╖-у-²-╪-█-M-5,И--^-Y-е-═-O-a-╧-Ы-И-М-╥-О-▓-D-c-w-╠-^-X-B-c-&-,╬,А-<-k-м-U-╣-┘-╙-M-m-X-	-?-',о,╤-G-w-Y-p-G-N,д-[,т--E-P-8,Ш,Ф-&,ъ-,Н,д,т,╓,╥,▄,╧,y,≈,{,g,k,╣,t,=,,5,,8,e+з+▐+$*╩++z+╝+╙+{+w+++E+с+ю+╓+╓+Д+'+╔++5+/+T+Y+D+a+л+G+.+Q+a++$*В++*Ч*Ч*°*╫+
++*©*А+
+*з+&*С++X+!*╜*┐*Ё*║*м*ь*ж+B+"+-+F+9+*ь+*├*K)щ*╓+K+#+7++e+e+*О*╓*╔*╘*M*═*╧*⌠*z*b*╔*г*╫*в+&+V+&+*м+7+╖+╠+ч+М+а+Ж+\+├+ъ+╒+u+a+w+│+j+ф+═,+Б+я+e*п+A+^+S+l+┤+°+б+я+а+▄+╤+Q++b+ +5+<*Э*Ю+*и*р*Ф+~+E+H+.*┴*─*)Ч*≥*ъ*ч*{*┬)А)2)z**2)ж)Ё))(>((='·'╜'Б'╓'╞'к'ю''.&╬&╧''D'H&⌡&∙&
+&Y&╘&┘&i&O&e&&6&&%Т%Ф%╒%·%═&%╤%▓%|%╜%▌%╦%╩% %_%T%L%`$╦$╓$┌$Z#Н$-$й%P$Ы%$╣$╞$$$$,$n$Y#ь#╢#j#"c##в$#╡#ё#V#р$;$$$#∙#e#╢#Й#я#X#`#R#╔#k#в#f#N#O#D"╥"J!╡!╜""ё"^"┐"I!Б"!Ц!╚!\!P!_!^!▓!T!R!Ц"╓"Щ"г"л"Й"╬"╟"└"!▌!┬!у"\"▌"k"r!Ы!═!h"" "]!З!Ь!У""C"+"""*"E!Х!T!!~!Ъ">"	!╜!T!: ы!G!╣"!Ф!─!q!▄!А!!x!Ь"R"c";"U!Ъ""3"@!ш!©!м!п!у!Г"!!Ь!k!Р!n!ю""c!Н! я!u"H""="j!Ч!И!З!Ф"!Э":"!и!- ы!k""M" "┌"/"v"i"""7"n"╫"|"√"B!Й!< ╜ ▀ и╕ я!у"/""&"/!Г!f"$","!┼!&!─"!A!!╜""" ! !a _ б!p!E!!*!!N!x!╜!W!э!⌡!D ч Й █Ч k!!K!"!.!;!1 у! в * .  ▄ ,  ╕ ц ) ` ▒ ■ <}╬ Э {╖yо╠ ╢жк÷мдy┐
+√GY=&Мя╞┬/┐м┐N$sNYF
+кПЯ-врbwn1МrY╥"ь┴hzF\iц╡фБТАЕ╬╘ЁМ╩╩RmmOQla"47╢╔Ж²║■|u█n≥P3[юЁ╤ЩЬЧя╛C╖7N>`S┴▌iи©ж4Жх┐─П∙▄CJШ+#%E>@D\4T939"""
+!еЭзжа╫├╦┬w▐E≤~ИкжРcH╔u╩УcX_MVПМ"╝иXM{С=Я√UеКДA?HQ┐1>░n@HB=,│nОГйф#МВВзВv╞∙Рпщ╟л┴!ВвСМ)4вEl≥wEЬАиММжяеФ┌■5ЬкФИадШ╠}_NAтшу▐▀l
+с╗iХъyLНЦ≥╟ё╝Bчx
+Ъ
+╪
+1	ж	┴	Ёcбcп░&ГШ╗∙д╢bЯфЫПХЁ╓√╡╘╨│┼k╙	зхд╨б╛╢ху²╠┘╞Wfd5rB
+Д	E1ЫМЦ(┼СЬЩУЕA!)
+6'K6D┴;└a|Wnz┬o|┴д⌠░Ё÷ilё}▀ ц©к╝╖н╜╡ФАЕC#E]w|╖ЕжО':hu≤╤Е00┘╒wщ╝гВЪЦ╕s·╩╣вШМ у'ZWF>Qa448MV3*@ЬФ 7ъЭОЦАы╢ящ┴┼╛ta?% ны╢╨O9ГЩК╕║b└AYы╪и ╝K5;Муж╧╟▐ёq┌⌡N╕<@8'5%1У	3Т(ЫЩИ	
+В.РНZYZ[]ZZZ\Y]\Y[[[X[YXY[ZZ[[ZZ[YYYXY\YYZX]\WZZXZYYY_norpqprqppopsrrqrporrsrtqqqpqrsqrvqmrqprqrprqpsrpp(О	CЛ"ЭEК"ЧЫНКВЗХЦ92УРЦЕУЯ
+8ЫbЬИЩЖЙ:8 %^M5l4	p%BC&% 2F├1&3)1 % ' 
+П6У=W@F>8K:E 6+k6X,$%$>CР !K1S0YF(E0';Z?2A%|"#`2X,00,,%7"T,+A>lRTD0n?+TS\▐ek▀H=?S╔PIJ8:l>Kf<(1\ZVc[Vtph}q█▌^W°rxaПwo▄g{^_`PaOS8{V▌8┤d.9)5^`a!&НШ -УЯ+ЪЛ,':693`FYz7YoZ&Wp▄■q▌─┌h┌{■╒╚{⌡█┐t▒┤═╛╙√Д▀vы▒╥г≈≥с╙s┘e_uIhN5ZЬО#@╤;IJp╛Yw┬░╕╗╝╦ыф╟ЦОэАОТАчтГ"Хчън)* JЭ( !,9g,ЫCXЩЫВ<gbP┌ LWBH;DЬЬУ#'?869i0ARLk0@kA!U┘}`PJJ9f]f`L9wEgwGym77iLqoё┴╛^╩Lf"'@MW!!6Eo┐²√░z█py]├X╕fomH^GЕХньdpv┼o^x█°≥~5W[}W79LuMQX%:J>zz▓gbe3ФХа│▓C0*FM█▀x░q?1k',}ёsuUbe2A:WL²}╒√╔⌠⌠╜╥■[{─`bo▐sэ╡ц╛╦╪я■÷╦ё╘⌡≈▀≤Ц∙q\i└k▌▐xWL▄P@Т JAT]Q┼▌╗╜· ╞≥═в═ат√Ёг╣═╚акЮ╩╟ИшцъиМп|╓дбФлш╩шЁ╡еЗ	
+Йччп*бк╥яюуъъе─j╘ыыдхн$ЯЬ$uДи╤┘≈├° ХЫшЗБЫ$Зьь╛╤ФнлъЪЛуСPAО=i3H...$;Жэц,ЭШП%И╢░▀ЁежзшСъУщВП╕ЧМ$НГ╬ОПWуЗЖриА∙╨нТ#ул'A#9ЪН╬╩ж<Ббё≤╓╒джа╦╥╓╕╚куЖЧР,ЫЪЪЫКВЩ<ЧЫXЖНЛ·╒йтДшРДОВ(ыжм▓⌠}ZB:FJ▄цЮЮрЯ%Ъщщ╙╧уЙщхs²²╢╜╜ё╝С▒╙╦хЬУ╙°л!ШПьР╗ёя╦▐▓}j┼╔ББЪя╚╗╒к╟╩мАМЮю╧┴x├`╗╖╗жЗЦ-сЭnхгнльК╦·й┤^<=\▄╙╞r╖sj╧ЬИ
+ЫЭАЫ╓÷╟вГМпКЩМ╬╛║■╚╣нюЦы{╞MU}▒·нжчпЕ╩⌡╝╫ц■}K└pZ.GjC6│BW\@wmnQ~;#ЗР°Ж"[&8O[j°╤ж╚ Я\S-cg{S,f-╪▒▄┐i.▀G╢≤еЭP8;9Ь7@EI-0-;72(/Эр╡╞э╕⌠s|7/N|▓кыл╣гЖ*=С+Es/ЗЮщг╘╤х%ЪjF\m!M┘+eBw&h▐Z[9?7'Г>*@'=?╛x9"ъыЦ©ПЛП!9T?A	Y'@ш┴┼13Z▀∙ГЛзЛBуКОЫьО6ЛБД6+3<Ё*6DБЭж:x!ь╖t■╥р	ГФ&u5-NOZPq{ \'ьсГ!*PVlcv┐WmNm"=j*Ga,AG0▐:[prV*AXQd1<@1ЧЯМFLR{]▄Jcm95Т:
+Э╒J~[T%2┼N┐OHF7:F=_\E┌96МЦйЧМ
+,С+З'&";Kc@YCK=EE"JM@ ATЁ▓aYnna{vmrrp∙zs╘~RaбQ&'',&cD`lKa┴i░┤udm?8<1"SO[O≈fфrO_ Hbm8\7qVi┼█{wGdoIr°·╬⌡╞Зм·⌡ц≈╣{═yeЛ ┘ёц≈├│≈└└▐⌠mmH|╒w▌}b▀█o⌠⌡└Vx⌠k╓╗hm}bshCgM+JC@B"ЪO!$R}RдF:A9Ic#ZBv▄╒┼y|u┤O{LMcc└Nqk┐dJyi║W∙SOZI[%*▌LJEGSID;SFZ:f8b]Hgat~`i°┘┴T}~c\VK6eR-0Fc=ub_bVvg_gho10A~\n╘xd╒hq┐┐l▄хаP{Q.-O= Э4<4/f:HaJ9E'O6NYTNpED.(>.#0>SE: --*,!MС/#K!≈&)AN6/pOT#+Q1*:Q╩LL5$B7█+'eJC^<niC$(e2<RS5W]NM40:.0!K;P9mT"N≈KB&Ъ&/МЛ9?Е)Ж#(╦(!%83H>эт	уЭинЪШГШЫЫ+9
+--ЕЗМХьУ8"*>E.'6/УО/ЬЭШкш╩ПюЫ╠╨гЪФХъЯ ъЬОЧЙS3!ПыЕжщПсфЕКмиЫьГ
+СщЙХИ5ЧЖПiqpspqqqrtrsrqrtqtqorqporpsssqsppsstrprsrosqrsusps]`baabcf_c``cbcdb`dbaebebbcd`aaddcacdcdbedcaccbadb≤з╓╟╡╜ ╓╛░п║╙╤≥е╖╠ц║╛╠╗╘▒╠Ё■▓╠╢д╬Йез╕╒Ё╢©°Х╟╜≥═╤╚╘р╞ К╔╕▌цц░╣ц╛╡╥═гяййюКЮ╖пи╬╚╢╒°╫ Е╢╣я╚Ттл╬╜÷д°╖у≤█╧▌д©╢Х╬°й∙╗▒р╢пн╜╡╬╙╣Ё╖й√═╗К╟в╠▒бт║╞╓⌡Ц╜э²╝╗м∙╥╞·с°⌡║н·╧≤╚·д╜╠ ╬╠╬╚ёЁ©я╝Й⌡д╣у╖═°╡Ёа√╜⌠╣·Иё╝╜╖⌠╕Ьцг╦╤╚р╨╚╪╟÷Ё∙╚ц╠╪⌡≥╦■╥╩╥╓╖ ═р≥√╚╞╖╛Ьп╟╒р╢÷∙иоб╦≥в╨ш■╓╝Юй·▌д╘з╪Ынщ°Ё╦с╔╜╤╢ц╨и╧тгов╘╠╤╨╫·ц©⌡▐уа╜ь ╢ц╛▄÷╚╝©°╝вжГу╬мт╢а╒иц≥╬²╟║Ю╙её║╜╛╥Пу╞╒╓╬Ёй╥и╠мП╙в╠ЮЁ╙╚╚╓╖╓╔╙╘⌡ё▐╙▓≥⌡║гЁ▐х╛∙≈Н╘ц╕≥е╦Т╜╢р╟╦б²╞▀√╕иш╩╒╒т©╤≤╨ю╣Ёю╛÷фс⌡к╘╕╦ф╘╫╜╡©╙╦·╧б╟╒║з╪╘╜гк°аг²╖╖п╕гё╖ц╖ут╚ъ╙≈й╙╝╪·Ёо√©чрл╘≈╬©≥и╘е╞ъ╦╠╛ц╥И║л┬╖╨М╠счкг╥б░х╜╘ ек╝├╟п∙цёВ╪╠╨ас╙╞К╦╞А╤░ю≤°нхЁ╘╡ию╘╙╖║║╤т╔╔╛╡╘╒╫ые╜╟║╩Ё╧л╣д║а╞Р╕Ф╟╪зо╔╪╤л╩÷г╬Эа╤Ё╤╔╣ю╟÷г╠═╡╣╩дяя∙╔хи╢╖М╖÷моЧё╜ ╦ф╚Ю ╞╦ж╒╡╡Ё╓╤╪г═б╜╒дчу╛уоЁкШчАа╡╣ню╚Ёт║°╔х бю©м╕╓╪╜╠╔■Х╧╜╤Я╛╕и⌡╟╚╘╡г╗ене²╤·в╣╗╤у╝Ю╧т╢╠У╩м╒╨╦йбюШН╬╘л╞Йе╧а╦╛╙фк÷╛╤ёГ·╔╖яди≥яч╣╗╢хм╘╝└а╪зхн■╜²⌠ ш·╥╡си║╧у╡В╞╡╘╒╢╩в╚╓ь╗╜д╠юяды╠╩ю╫╓╤июяХ╔÷╫╚й╛╢╟мГ÷по╤╖╦╧╥╡╚цб╫╩щ╡цсс╗╗╖р╨оог╢г╠ьгбО╟аоиах╬╢╞╥╟╔╔╙■д≥й·╗╤сс╝║бъ╗ч╛║╧╖╞╪ц╥ЁбШивг╖ю╞сф╦и╤бг╟ры╪╠нг╙╒л²н╥йц╠к╨б═╞ Йл÷Я╒0Y╦╡╫╡Ю╣АПа╞Ютьтди╢╝с╪О╨о╔ъф╚чуюГ╩©╖╟х╥╥фЧсэл©Фжю©Тжъq╣╩Л╤╠ри╡Ь╢у╗бод╡ЯЦъАъН╪Ю╪╣мфиЮца╡йг╟хУvюя╪фо╫ям╫ВЮеэц╟зивоцтёьв╣Юьг╗╞внц╣рдсО╣Ы╤йшцМХшт╧л╬╩А╨ь╞мумчд╧Ти╜юЕГкАвз©щю╩ое©═╡╦хбГ╙╢к╧═Ълшх╤ХжцчлйЖь╨ Шщ╥шбя╫тК╞п╢©н"о╤ъ╩╛р╜©╩укЁ╕бШ╤нГ©ц╤т ╧÷╤енёг╢йы╙щ╜╫ьхъТ╣гяЧЫ╡╞е╥╫╦ёриЯ╥╕р©еФк╥ф╥═╓ФсА╩дФ╢ы╫Юзмкы╥ЗажьФНЛдфншъч ╤вёщдфИвЙ%╠╗эъзОмч!кд0╢╞у
+©фЦСЙ╦╬ФЯп╧ррч╩ХцафК╤д╤О╕гзЕЕъДД/©╤╘К ╘якжедЦмсИОГзо╧Л╪тЕ╜Пх©ядБЖЪСЙ©лфК"Дычч	КЬцр╫АКчПз╩ЖнххП╞Буоч ярт╞╛ц╛╧?ОГЮЕрГНнсьФжСдЪжлГцЙеш╫ызЛ╦6КбтжщуФаы╤фЛОдА╡╥╝╬НюБОЙИсШа╫чв╝╪Ё╙шчъмдхИГы╬ОъвэпкБш╠м╠гк©миф╢ЙМпъ╪ннЙывЙЕхеДСыЗ╡гЖюн╣ряйьиЦ╡ефИЯ╞рЬнрфиЯ╩изь '%чкШМзлеьКыд╥вС╬Б╨фЩфгп╩твсЫйсУ╪Н╞ЖШСтМа╦шрюссж╥╦
+уАдгзКПкс	мЙваКТл
+эчщЕщььЕА╤ЮвЦюиФиу╧ПукКо╡цггЬЯъы╥ЕюэгрЭА╫бвГщчСсцф╬ртХБбДэйЬЬуЧуЫЛ	к╣ВМичы╞ХЮЫ╤КнЁТсГ╨ПцР$╩рЙ╝Лъич╫п╬аЗВьк╫щПзэ$шМйОЦГЛъяуПпэЬьЧУвЮзЯзЛЬпЛ	ВаУРшмБГЫСЬшФзПЪМчЛШсАФрдFЦЛЦОПДОЙчзКЦМП	ШээННЦДТ╬ГызвГьтХмВ НВ©©впНИ!Рфяэ╧КгилЮхйщЛуНИОМ╪нЙфШъ╣ьдФэЯжзЦ.©ьпщЪЦзнтСнЕ*!Кщ$╩ыту╬ДЦижЩЛя╦Жпш╬ньвЕвъЬ╩чфС╩Ю╢ГСуцФшОХьювДхмПоэбЛцэонгУФОЛс	ЙъМБ╞╛ЖетзЮзьЙда
+ькЛАфЩэщжпюЛдкф╣╝мюгегвжйла есоупЩВьИцю╝╫егкмыоk╛цЁДв╞╣б╪╜╟Ё╥НД╤ фн╩эНдч`acdc_`^a_dbaceabbacbc``ebcddc_`_``_b`ccc`db_aaa_bZZWWYX[ZYXYYZZ\YZZ[XYXXXZZYYYWZ\ZZVXVVZWVY[WXWYXYY░⌠≤б·е╬╙Йвф	)=5F$r╕f█┬°≈╞┴ё╚╖ш╣ф╤яЙЦоЮФШЖУОсПАьшщ╨щ⌠░~фЙЧ2Э:h7H5N7²┌─╟v╥ф╧йуг╙аЦ
+?qhAy╟╨АЧ!
+Y3oo╔╧ЕпНгхе*kas ▀├`}√зб═▓шUy╝ои┼`O█Щ	Въ	+	I	[	·	Z	P	r	b	_	╛	{	V	J	]	║	б	О	Ж	м	╡	⌠	ю
+	я	ф	ъ
+
+P
+W
+-
+C	Й	к	Ж	з
+
+	
+	й	н
++
+;
+/
+9
+R
+г
+╗
+┤
+~	н	x	)	T	▌
+E
+к
+х
+	ф
+C
+Ы
+Е
+ВA|╣иh╫·ИяЪ ╧udыwg_▒\2FnWwv"A:Ё=├wa╙8t└ФРж1╞гЛиА╝м]?хПя$!МрчC!{⌡АНя_8╡эP║≥yl╔vn=%2LВЫ~╥чЧ9pH2U2BvъWx|{)в1╓╗Z<Gё▒шZШf╒аД0-▐fPd;^Z_M~╬АЯЩ╨s|н)1qm╚сKeiiU|Eyх=UN÷saВ{iQRм┌├ёlp╧3┌Z╜Йз▄╕>;>╤Iщз┬╨лщi╔хщх╜│hКь▄шЦ%═-p8иЧyЧФ"Gvfp└l8╦Ivm╟х²┴:fХЙ╫▐ЪщдГу┘|W6КT▌а шМ|R∙d┴T╦Т b б ▓ ▀! ╞ ╩ i!!z!╨"J"√"е"в"Ы"Ч#n"о"Ы!Ь ╞╝ ╓!i!"Ф#Д#З#Ь$#З$)#╨#Ц$R$[$Y$]#К#л$$6$U$▌$╟$g$(#Г#К#÷$(#З$W$H$m$y$<$l$c#Х#╡#E#ю#╫#M#m#⌠#к$,#⌡#Ц#q#√#/#&"ч#"Ъ"Ю"а"д"n"я#k#|#─#╠#ч#Ф#Л#л#░#э#ь#╓#й#6#W#z#█#|#Z#┬#е#г#Ф#ю#└#I#≤#q#u#°#C#ф#║#≈#╢##@#З$$R$e#с$+#Ф#├#С$$$R#Ъ#п#i#О$D$²$Ю%%$Ю$╩$M$K#з#≤$©$Ю$ф%Ч%т%Е&┼&ё&г&╫&├&r&5&с'┤'▄'`'н'Е'р'к'ц'║'s'╠'У'Л(3(('°'Ф(l(:(*(Q'У'ш((*(P'а(I(═))k)q)∙)▓)╧)в*o*)М***[*?)Щ**V)╕)M)[*Q*Z*X)ъ)И))O)╜**Z*е*░*F*'*J)╥)э**┤*U*Т*l*р*M*"*)Ь)Ъ*U*├*Д*╞++I*Щ*П*З*в*Е*Ь*х*=*#*)Э**r*})Т)А***╓*b*9*q*г*ь*╒*x*╦*╔**C*г+*╚*T*1*╒*┘+*╔*U*^*ч+D*╛*б+T+5+Q+6*н++*х)╧)*)]*≈*╨+a+≥+╚+·+т+v+"*Ф+q+z+W++x+╖+╖+²+╖+©+Z+3*╬*d**)(■'0%÷#Ф"║%▐(A)╒*j*Ю+k+╘+╨+М+Ъ+п+И+е++⌡,.,≤,К,Х,■,б,y-$,я-8-I--3-1-,б,т,M,g,М,И-,ж-╔-├-с-╪-а-c-c-V,Ч-E-z-s-╟-J-,-V-╜.-Е-т-и.-√-∙-V-∙-╠-a-3-P-d-_-2,■,г-K--и-g-э-{-{-2-┌-p-->-;,╣,к---T-[-▌-I-└,ы-≥,щ,Р-`-=-#-^,╓-
+,я-,Ц,й,╧,й,╠,у,h,S,┘,j,x,┬,⌠,},4,5,8,,,X+║+°+*╦*э+u+©++}+⌡*В*Р+#+≤+╒+m+╕+Е+}+╓+9+5+++A+S+W+▒+7+3+Y+K+0*Э*Н+'+*л*z*Ю+8*М*╜*ф*н++K*Р+<+=*и*д*┬*╢*Й*Н*э*к++3+C+Q+++*Ю*x*1**с+]+^+N+#+█+G+@+*≤*░*Z*█*┘*Ж*г*≈*∙*ф*с*░*╚++R*ч+S*к+^+┴+ы+У+ю+у,+K+∙+а+r+┬+N+[+┐+v+╥+и+ш+л+═+?*Ы+J+o+n+:+∙+▌+э+ю+Б+е+╣+N+B+a+!+P+h*В+++*г*и+D+z+B*Е*≥*u***█*в*ю*o*8)ь)$)i**-)О)╫)):(5(((&'╝'▒'и'╛'√'О'Ц'1'"&а&┼&Р'G'&╜&b&B&=&·&╖&`&x&l&@&3%Ы%К%Т%Е%т%╕%g%Д%с%╕%h%д%▒%щ%╦%√%@%|%.%P$д$x$w$;$$!$╗%>%&%0$с$╞$?$$$╙$▀#ч#й#z#"≥#3#°#З#г#╣#j#Е$]$>$$B#÷#─#╖#Ц#╝#^#B#a#у#F# #h#3#E#5"©"\!з!⌡"7"┘!Л"═"N""!е!╘!G!s!(!≈![!M!q!О"Ё"р"ц"щ"╦"з"√"c"!а!└!Ж"f"⌠"5"i"&!|!x""▌"N""!щ""" "-"G"┼!Ь!Y!!√!Р","!щ!│!- ╩!K!╡"!у!≤!a!╪!у!b!p!Э"(" "+"I!Щ!у"/")!С!°!а!╙!П!Й"	!Ф!~!д!e!÷"!"Z!·!1 ь!["K"8"$"""!╗!ч""	"P"("!з!V!!z")"4"2"∙!Ж"^"P"0"0"E";"╦"└"╕"d!≤!. ╩ ╘ р 
+ Я!г"#""9"!╨!■"">!Л!╗!!!°!Э!K Р!э"!П!Ы!7!p y ╥!├!T!'! П С!a!╕!w!Д!┘!^ с ц ├Щ ▓!!!!;!:!!# р! л :  ! n ;  ≥ ю  " ║ ▓ ]█ЁМЭО├║юдЫДб╔жг╝╤ki&KбН╞BB>+Феx Ж⌡ею└%TZj<&рФГДЮ©▒T~>59│q%сrttc$Q╬╙бР%ОЦтб╒╡Щ│rcm=hSl&Щ╤╟J'▐р┴┐yq╩≈┴jxGаё
+█МО	·╤84bLzS8ИАыNЮЫц²└╡a└AZ:%9DBT6WXy3G$Щ"0КПОЗььА⌡ш≈х┼m╜U╖~а╠а]@эu╫ИJ;[-pВЫF·ь1`:5`М)╡Э"╞
+gf33zFAjёIOCWEh>ШЩйЫЪыУЮЙЬ⌡╢═Н╨Ъ∙с▓: ЫМ<7щ]m╢QPЭБНяизяю╪∙vI#Чи	
+ДьЗё┼LPЭХ╦|░_УС╚уdDКаr,НЯ█▌╥╖'≈=Дw
+╡
+!	Я	⌡	╤^©iН²#чН╖└+м╛sv	ЫгЯЛЕ╢║≈╖╖╣z█m╙ШГфц©©╖╚пж═╡┬╤Vba▌0m9ЩАC.
+ЗШФ#┴ШЬ
+РАЪF"61)M2F┌A░frPfw└_~█ж▌■╞╜ij╙z┤⌡╧бй╙╝о╗╗ГАъC	(EVs█╖ХяЙ;Auh╚╣т<I┐╖┘уимНТ Г4╖l╔╣╙ЙЮЗ6IZN5^M-9SKL8:!	Р'тЩИшЦхифы░▀╢_┌+"ИаЁ╘?-Е
+Н°╕i▓6W
+Ийб≤╖Q67Мзп╨Ё├╗}n┘╒Q╒>58+1#,З
+Ъ-	У(ЪЧГЗ2МИYX\[^X\Z[Y[ZZ[[]Y\\YZY[\YY[[ZXXVWZ^ZY[\YZXZ[YZ[XY\kpprqrrsnqrqqqtqotrrqrpoquupqnspsnooorrrorssnspssr3ЙJЦ"ЬЪЫGОШЖЖФЯЖОК ;
+Ъ6ОПЦЦИК	=ЭdВч
+УУФ5>#.[Q.g6e+B:!(6L█5,3+#%!М?Т>XACBAQ2H!80j([+!$"68В%%H5Y/_H&;/';_:-E#|"&_0a08859*C#M2,IDdOPC/c@4ULe┐er▀E9=[╗ZEI<4fERl=&4aeTb^Yxx{─s┐▄[Y█u{cГmd█q|dbcWXUT@{S▀5⌠i+A/3]`S &ЯЗ')ШПС-У(%5386^D_~BZn^$Z}░■p▓▀┘e┘s▒²ё≈▀█z├}■╚╚°Ф┤wу⌠╥о⌠÷е║p│marGfS6X.ВИ'=╚7EQkпbj~▌╜╤╧╢Ад╤ГЦуКЭЫАьоСШГсХк$1OЬ$36,e  <ЬZШ	ЩУ1eZQx*DLDL7IЩМЖ 7/?HV?HKNi=9i=3Q{_K\=3o^bU9@─;q}Htr26iNvt╗░╓g╬Io(.DUe"',Fy┼²▐■~▀n|X▒Y╜}w┌T]FФГлт dqt┬_Hm┬°~{1ITyI1,Xu`JU%EN>m{┘cia'ДГШ╩z∙8:0=G}▒┐≥|27b"1└ ds^`k5>?XE╔┘÷■°█▌╘╨√d┐[\y█wО©г╧╪╠╣▀√╬∙╘ё■├≥И▀─bj┌g▒▌wPW│ZB(Л
+UFVUg┌■╖·÷╙╠█╕Ю╕╬╪√╘╥╗⌡ёашГе╨РЮптмФн█╠дцЖишнБ╩╗дЧВМЦщз"╦пнсйжъщбyg÷япснхШ$&ЫsЮш╨┬▐y ВДЮПЮ#Ь$Сжс╝╖АэквОНЯDAМ>a&4,)&ЩщгЗ'
+ЖНБ╤°┐╨╬ндкЮТэОщ╡ЗЙЯКшюЪМА[пС цмЦ■╡йИВ$Й╨&+27Зч╝╚ч;в╧═√∙≥соЁ╚╢╡╛╠уэЛ:#ЩПЖГЩFXПРЩП═╠чнАъП'Я*Фъ©⌠▒y]P7E G▌╫эррА* Юз╗╤вЙыхx⌠═╢∙╦╛╦Й≈╡╢гЛК╒²╧ЬТАоЬбён╢▌■─h└═ГА н╚╘⌡л╕нйЕНш╚╠≥│┬g ╡·щПД.ФВ s©фвнуО╖═м~a>5]═■а┌╕vm╘УА	Р#СЦЧ╘├⌡╙мчКяЙ  ца╗▄≈╡и╫Фщ─═K_≥≥юмнлшб═╠кю├se┴yi+*<cD/~AjhMnyvMvF3ПМ╙!S ;X`h⌡юГ╦ЩТ&`H)WVd`;kЬ	!й∙─~g1≥K╦°бЪX$78>8<AT-<433=4%т╘╥с╟┬├z;,N|⌡пБн╪кЬ%1ОЪ)-%Ki"ББг╞╥р'Ъ	ОHKezw%!K┴┌&kEq!t└[S=KDК7)N3><╚~A$ЙяЙхЩП#1IH7N-Bь┘┌57J─ ЮТыХIчЛХЙЪЙО9ЫОч8"@╛&1VшЫв".p$М≥┬▐╣пЬЪАМ*fG6]a\G┐┐▒K2 грМ#(5a`VSz}ma=oЭCi)NX+09J√>WecB6$9rWW;>6%ЫДМЫ!YJ]┬U┌√>mn) &Й$·@░lN-!*rY▄PWGJ<G6oDMt9,БьзТН'ЬЩЩ+(К+'EYXGlUFEAJ1%@\N7K╣╔Kj\of{jr─tz┼▄r░│C]рQ-5-'[BpfWjzo░xvn99K([GIL▌fхX=i`чSeI[Mcd^│▄┐┘└UMuNf⌠·╩≥╜гё√╤⌠╡}°uoэ·█÷╨ z┼√√o│═pnSz╙z■{b│rc▒█┤k▀█|║░Vn┼RunIf?9@BHH6ЗU.0Q┤O╪KFO35P3PCv┘┴⌠i│xpJcA?je─@─y│kIpf╟L√b@VZT/=4UKAS8@FUFK)"g<Y[JXphqd`┼p░egtsSVD+_O2(AlBg`bv[zX\ofp &@qE}÷┐q╔└─│▀{┤╙д\zM1;P/-,I >_7BP8BGT/TP[R}HE?. 5<WJC+6#7AП&"F▌'87L6
+@iLQ'.DA?<<©N9(&79k  f3?j=if8*/Уd?A@O;_vPC,IЮg3&5JU;9U!OC█WO5%0#МЩ/LР$Ш	+)╢-'(.!-6эвжЪплЬТШЫСЩ"9Ы+ТЯ ЮЕД'<#@:!%-ВР,ЯУЫсс╩ЯцЫ╦©еЪМГяЖПАВЪЦЭWЖ*ЯФРчГ	жбжЫбьУсЭСъЩъОХ:КУЛkrtuutqrsstsprstqrrpsrsvrqrrqsrposrsrprruqtpprrrss[a_acffaa``cfddcbf`eacbcaebbbcbbbcaccccb`bfb`a`cbd ч║╟Ё╢°·╖⌠и÷╘╢≈ц╛╝б╒╙╚╘╕▒╛╢≤≈╣╠ю╪Яат╚║╦╣╫≤Ц╛╟√╓╧╔╔я╢≤Х═╔█цд■╨╩╛Ё╢÷╬жикюЮЮ╔як╪╘╢╔ ╪ЩБ╠╪й╚Шжй╨╚═а ╖т■▐╫▌ц©╟Иб°о ╘√оЁня╟╠╪╛╥╞╙н ÷╖Х╞ы╜▌бж╗╚ё╓Ю╝ч°╡╙л ╫Ё║п≥⌡⌡о°Ё ╕·╬╠╠²╫╥╩╘╘╥╬т╟Н═а╡с╓°°Ё╡ю≤╣▓╟≤Фё╛╕╗√╒Наи╧╞╙к╨╚╨╠║╤≤╔╩╞╥²⌡╧■╥а╥║╚ ╒п²≈╛╛╔╜с╝║п╤═≈фпю╧≤м╣ъ∙╚╝Фн■▓г╘ь╪Вхэ°╦╢р╘╞╟╪б╣к╣ражз╞╠╧╩╬║е╦÷■вх╚р║╙╧╗▌÷╘╟╫╔╟ьлЕу╧му╬а²ци≤╬⌡╛ёЙ╚г║╔╠╦╠Уз╠═╖╦╛дюа╝лР╟сЁнЁ╛╗╔╗╓═╖╙╘═║░╕▌· ÷х╥⌠н╞ ≤Л╝б╔²дюП╗╠м╣╦а≥Ё┴⌡╔еш╪╔╛р╬╨≤╧а╡╠╩╓═еп⌡о╝╕╥х╕д╜╟г╙╧⌡╤╫╞═²пю╚╣йх ╥╬°╝═л╜м╗╓ф╘зс╘ш╓⌡е╘╠╣═╟в≈юДпи╘√©©°г╜ф╜эЁЁ╘╬╨Х═и┤╛╪С╠лБяе╦©▓г╜╘∙ци╡▌╟г∙и╔Ж╫╜©╬п╛╥щ╤╞Й╝▒б▓
+ пд╠╠╞на╞╚╙║═Ёы║╔╜╣╕╕╫ь©╝╝║╦╢ар╢ц°а╘С╕э╛╩уь╘╫╪ф╪═сеЖ╨╩╥╠╙╣╧╟═й╥═╢╢╥цж╦╤⌠╕еб╠║Х╚÷нп╔╡²╤╫╜Б÷╤╥в╒╟╥╤╕Ёюд⌡Ше╙╙цут║зк╞кЭэД╬╡╢нб╘╝о╛÷╓а≤©╦аи╒╔╩З╣╣║≈Е©╝╟П╘╗ф ╟╘╕╦и╙еиг ╣°п╢╔╦э╛э╤п╥╩Ы©й║╨╩хфбШЕ╪╖р╜Ед╥й╣╟╛ир²╞╩╔Д═╔╗нбе╒тЦ╠╖╥фн╖╜┌б╫ьнр≥╔√≥≥Ю⌡╨╩ыл╔╬я╤П╜Ё╚╔╧╩р╡ёш╜╟ц╚╪уич╜╢ю©╓╡аапъ╓ё╥╘е╗╪╝гХ·но╜╖╫╪╩╠╣баю╨ы╢нйж╜╓ёс╪ктф╦г╟жи©К╖фпц╫юд╝╟╤╚╘╕╒≈к÷ф²╕╠рт╝║╫Ю╖Ю╝╖╫╜╟╬х╪╥а хыф╖ц╠ын╥й╪©и╜тФ╫╣но╝╓р╖о╥лг╣и╫╩²╤≈Йм╕Оё1\ю╟╤╜А╤ФЗюЁщсчыдл╥╜рцЯ╩п╛Дд╞щж©Лаа╡╡╪╨юеЩлшоюГьб╨ШвГe╤╥Н╨╡нг╣Щ╬у╛циб╧РФАьЕО╥э╨╩кййЦю╬╪кд╚╩Нy╢я©либый╬ЖБхзх╢згщтер÷Цо╦Дщб╚╙пза╚уюсН╥С╣нриЙФДв╫я╩юЙав╡квнэ╩╤Жх╜©ЦХгБвшюЮф╦йи╩²╡╡кфЛ╗╥ю╪═Жоый╥КябчииНрЁЖБ╦шфо╦вЙ╥с╠ейя╠ч╦╡у╞╨╫эмЁ╘аЯ╢яЦ╦е╥сЪ╧╘╤фп╚х╨из╝ъ╝╥ухэО╞хн Х╡╝е╢╢╪╚сфЖ╟╔пбфДс╣д╧╕╔ыяъ╧гС╫ь╫Фъялы╤ЖдшычСОигхэЦД╧щ╒Юи©ДсЛ%╟╚зщщЖйъф╫1╝╤яцйИСБ╧╬ИВя╦тпч╨Гб╪╫К╨а╢Н╕йвГБзДЙ2ю╦╟ГЩ╙ьряхфХхпБПБыл╦чюлБ╛Яю╤в╪Д ЬЪНКфхиГ)Гыщэ
+ГЩеу╩КБщНы╬СяккН╝ХзмЕяов╡╙©╙©=ХчъКрГЛптыФрЯкЮоЦ╫МеыбвжО╦:НбжсэуЕ╫щ╫йЧХЛдЮ╣╧╡╪ЙхЛЯХИрУгдыэ╡д╦╖зАчнцсЛИу© ЙДьссеДз╝л╡флюммм╫ФПущ╫кпХьшКАд©ЕОвЗ╛цСци╟мглЭупД╢╬дАУ╚л имгрПюусв &(ЦрЫМжпнрКыд╤уЬ©Д╥аг©х╥сырЗхьТ╬И╟ТЖНвОбЁЮобсжу╣аячдхвМПижВйНжаФПн	БчьЙшшьЙщ╞ЮсчблАгр╩ОзкЦс╩д
+енРКБэ╧ЛцэхнЖЦ©гуЛЦыЯьах╬лушГ╬БчиЯмЩсЬЯг╥ЬЕбэыЁГЙЬ╪ЛнЁВяА╪РЩ©Я&цпК╟ЙэлъбсюеВълючЛыЦ*сТгГшЙМФщиТоыОэЗЯъБЮЛяХШвУЧ
+╬ПЛАлХДЗЯХчДьКЦАЯШвЕЛнб@ИПИМЖИКУччЛЙРЗЫыэЙЛГИЯдшщчяФАрХфТРЦ	Ъ╬╨унНК#Ягнэ╪Мйфлшегч$ФсРДКЗ╪оИгЭЦ╠жцНъНьДЛ/фвтХЧьнлйУоА*Кщ!╦ьво╨БширЬАи╧РяЧБарсэАтвЬбэйЖ╨Д╞ЙНэ╨ЕшЛМыюьАггВпш╪ЙювпмоУАЛФзСФХА╢╟ПмушГъьПа╧ынАХиСъэжх©Ф╫мх╧╝кюегезвпнбЭфлыууЫтИию╡юлдгйппg╣ц╥Бз╠╩е╧╜╓Ё╪Ич╣фй╪шД╬жadedcae_bbcfa_edaaca`cbaabac_ababe`aa`chb_dcca_d_e≤╒A                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      

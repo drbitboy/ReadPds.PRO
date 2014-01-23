@@ -1,0 +1,418 @@
+/* CCAM_LIBS_CMD_ARG_PARAMS_V4.FMT                                          */
+
+  OBJECT            = COLUMN 
+    COLUMN_NUMBER   = 21
+    NAME            = "FRAME_ID"
+    START_BYTE      = 81
+    BYTES           = 4
+    DATA_TYPE       = MSB_INTEGER
+    DESCRIPTION     = "FRAME in which the RSM pointing coords are specified.
+                       This argument is irrelevant if 
+                       coord_type = JOINTS_*."
+  END_OBJECT        = COLUMN
+
+  OBJECT            = COLUMN 
+    COLUMN_NUMBER   = 22
+    NAME            = "FRAME_INDEX"
+    START_BYTE      = 85
+    BYTES           = 2
+    DATA_TYPE       = MSB_INTEGER
+    DESCRIPTION     = "Index of the chosen frame(n/a for many frame_IDs)."
+  END_OBJECT        = COLUMN
+
+  OBJECT            = COLUMN 
+    COLUMN_NUMBER   = 23
+    NAME            = "COORD_TYPE"
+    START_BYTE      = 87
+    BYTES           = 4
+    DATA_TYPE       = MSB_INTEGER
+    DESCRIPTION     = "Types of coordinates specified by coord1, coord2,
+                       coord3 args."
+  END_OBJECT        = COLUMN
+
+  OBJECT            = COLUMN 
+    COLUMN_NUMBER   = 24
+    NAME            = "COORD_1"
+    START_BYTE      = 91
+    BYTES           = 4 
+    DATA_TYPE       = IEEE_REAL
+    DESCRIPTION     = "X or AZ coordinate for pointing in frame"
+  END_OBJECT        = COLUMN
+
+  OBJECT            = COLUMN 
+    COLUMN_NUMBER   = 25
+    NAME            = "COORD_2"
+    START_BYTE      = 95
+    BYTES           = 4
+    DATA_TYPE       = IEEE_REAL
+    DESCRIPTION     = "Y or EL coordinate for pointing in frame"
+  END_OBJECT        = COLUMN
+
+  OBJECT            = COLUMN 
+    COLUMN_NUMBER   = 26
+    NAME            = "COORD_3"
+    START_BYTE      = 99
+    BYTES           = 4
+    DATA_TYPE       = IEEE_REAL
+    DESCRIPTION     = "Z or N/A coordinate for pointing in frame"
+  END_OBJECT        = COLUMN
+
+  OBJECT            = COLUMN 
+    COLUMN_NUMBER   = 27
+    NAME            = "FOCUS"
+    START_BYTE      = 103
+    BYTES           = 4
+    DATA_TYPE       = MSB_UNSIGNED_INTEGER
+    DESCRIPTION     = "Focus algorithm:
+                  0 = NO_FOCUS - Dosen't move focus (others mark CCAM unsafe)
+                  1 = BASELINE - use CWL to find optimal focus position
+                  3 = MANUAL - positions focus based on range argument
+                  4 = AF_OFFSET - applies LIBS offset from last autofocus 
+                      solution"
+  END_OBJECT        = COLUMN
+
+  OBJECT            = COLUMN 
+    COLUMN_NUMBER   = 28
+    NAME            = "RANGE"
+    START_BYTE      = 107
+    BYTES           = 2
+    DATA_TYPE       = MSB_UNSIGNED_INTEGER
+    DESCRIPTION     = "Distance to target for MANUAL focus, seed for BASELINE"
+  END_OBJECT        = COLUMN
+
+  OBJECT            = COLUMN 
+    COLUMN_NUMBER   = 29
+    NAME            = "DATA"
+    START_BYTE      = 109
+    BYTES           = 4
+    DATA_TYPE       = MSB_INTEGER
+    DESCRIPTION     = "Data Present"
+  END_OBJECT        = COLUMN
+
+  OBJECT            = COLUMN 
+    COLUMN_NUMBER   = 30
+    NAME            = "PRE_POST_DARKSPECTRA"
+    START_BYTE      = 113
+    BYTES           = 4
+    DATA_TYPE       = MSB_INTEGER
+    DESCRIPTION     = "pre and post dark spectra
+                       0= PRE_ONLY
+                       1= POST_ONLY
+                       2=PRE_AND_POST
+                       3=NONE"
+  END_OBJECT        = COLUMN
+
+  OBJECT            = COLUMN 
+    COLUMN_NUMBER   = 31
+    NAME            = "USE_LASER"
+    START_BYTE      = 117
+    BYTES           = 4
+    DATA_TYPE       = MSB_INTEGER
+    DESCRIPTION     = "0= no laser
+                       1= laserfired"
+  END_OBJECT        = COLUMN
+
+  OBJECT            = COLUMN
+    COLUMN_NUMBER   = 32
+    NAME            = "NSHOTS_2_IGNOR"
+    START_BYTE      = 121
+    BYTES           = 1
+    DATA_TYPE       = MSB_UNSIGNED_INTEGER
+    DESCRIPTION     = "Number of shots to ignor"
+  END_OBJECT        = COLUMN
+
+  OBJECT            = COLUMN
+    COLUMN_NUMBER   = 33
+    NAME            = "NSHOTS_2_AVG"
+    START_BYTE      = 122
+    BYTES           = 1
+    DATA_TYPE       = MSB_UNSIGNED_INTEGER
+    DESCRIPTION     = "Number of shots to Average"
+  END_OBJECT        = COLUMN
+
+  OBJECT            = COLUMN
+    COLUMN_NUMBER   = 34
+    NAME            = "NSHOTS"
+    START_BYTE      = 123
+    BYTES           = 1
+    DATA_TYPE       = MSB_UNSIGNED_INTEGER
+    DESCRIPTION     = "Number of shots"
+  END_OBJECT        = COLUMN
+
+  OBJECT            = COLUMN
+    COLUMN_NUMBER   = 35
+    NAME            = "STATS"
+    START_BYTE      = 124
+    BYTES           = 4
+    DATA_TYPE       = MSB_INTEGER
+    DESCRIPTION     = "Number to indicate whether statistics were 
+                       requested
+                       CCAM_NO_PROCESSING =1
+                       CCAM_MEAN_STD_DEV = 2
+                       CCAM_ALL_STATS =3"
+  END_OBJECT        = COLUMN
+
+  OBJECT            = COLUMN
+    COLUMN_NUMBER   = 36
+    NAME            = "GO_TO_WAY"
+    START_BYTE      = 128
+    BYTES           = 4
+    DATA_TYPE       = MSB_INTEGER
+    DESCRIPTION     = "Number to indicate way points
+                       CCAM_NO_WAYPTS = 0
+                       CCAM_WAYPT_1  = 1
+                       CCAM_WAYPT_2 = 2
+                       CCAM_BOTH_WAYPTS = 3 "
+  END_OBJECT        = COLUMN
+
+  OBJECT            = COLUMN
+    COLUMN_NUMBER   = 37
+    NAME            = "SPECT_CONTROL_BYTE"
+    START_BYTE      = 132
+    BYTES           = 1
+    DATA_TYPE       = MSB_UNSIGNED_INTEGER
+    DESCRIPTION     = "0x2 - enable spectometer clocks
+                       0x4 - enable temperature checks
+                       always enable both except when troubleshooting
+                       0x6 default"
+  END_OBJECT        = COLUMN
+
+  OBJECT            = COLUMN
+    COLUMN_NUMBER   = 38
+    NAME            = "SPECT_IMAGE_TYPE"
+    START_BYTE      = 133
+    BYTES           = 1
+    DATA_TYPE       = MSB_UNSIGNED_INTEGER
+    DESCRIPTION     = "(imageType <= 6),
+                       0 = 1D [dark] average, 
+                       1 = 1D [dark] single, 
+                       2 = 1D [passive] single, 
+                       3 = 1D average, 
+                       4 = 1D single, 
+                       5 = 2D [diagnostic], 
+                       6 reserved. 
+                       The [dark], [passive] and [diagnostic] are ineffective
+                       descriptors, only the Ds and single/average matter.  
+                       Usually 2."
+  END_OBJECT        = COLUMN
+
+  OBJECT            = COLUMN
+    COLUMN_NUMBER   = 39
+    NAME            = "SPECTROMETERSERIALCLOCK"
+    START_BYTE      = 134
+    BYTES           = 1
+    DATA_TYPE       = MSB_UNSIGNED_INTEGER
+    DESCRIPTION     = "(spectrometerSerialClock <= 15),
+                       0 = 2750kHz 
+                       1 = 1380kHz
+                       2 = 922kHz
+                       3 = 692kHz
+                       4 = 554kHz
+                       5 = 461kHz
+                       6 = 396kHz
+                       7 = 346kHz
+                       8 = 308kHz
+                       9 = 278kHz
+                       10 = 252kHz
+                       11 = 231kHz
+                       12 = 218kHz
+                       13 = 198kHz
+                       14 = 185kHz
+                       15 = 173kHz.  Usually 2 or 3."
+  END_OBJECT        = COLUMN
+
+  OBJECT            = COLUMN
+    COLUMN_NUMBER   = 40 
+    NAME            = "SPECTROMETERSELECT"
+    START_BYTE      = 135
+    BYTES           = 1
+    DATA_TYPE       = MSB_UNSIGNED_INTEGER
+    DESCRIPTION     = "(spectrometerSelect <= 15),
+                      Each bit 1 = enable, 0 = disable.
+                      0x1 = 2D enable
+                      0x2 = UV
+                      0x4 = VIS
+                      0x8 = VNIR.  Usually 0xE."
+  END_OBJECT        = COLUMN
+
+  OBJECT            = COLUMN
+    COLUMN_NUMBER   = 41 
+    NAME            = "ICT_DIVIDER"
+    START_BYTE      = 136
+    BYTES           = 2
+    DATA_TYPE       = MSB_UNSIGNED_INTEGER
+    DESCRIPTION     = "(ict_divisor != 0),Integration Clock Timer divisor 
+                       (for time base above) - for msec integration time. 
+                       Usually 600."
+  END_OBJECT        = COLUMN
+
+
+  OBJECT            = COLUMN
+    COLUMN_NUMBER   = 42
+    NAME            = "IPBC_DIVIDER"
+    START_BYTE      = 138
+    BYTES           = 2
+    DATA_TYPE       = MSB_UNSIGNED_INTEGER
+    DESCRIPTION     = "(ipbc_divisor != 0),Integration Period Base Clock 
+                       divisor. Range 0 - 33MHz. Usually 330 = 100KHz"
+  END_OBJECT        = COLUMN
+
+  OBJECT            = COLUMN
+    COLUMN_NUMBER   = 43
+    NAME            = "STARTROWUV"
+    START_BYTE      = 140
+    BYTES           = 2
+    DATA_TYPE       = MSB_UNSIGNED_INTEGER
+    DESCRIPTION     = "(startRowUV <= stopRowUV),Usually 0"
+  END_OBJECT        = COLUMN
+
+  OBJECT            = COLUMN
+    COLUMN_NUMBER   = 44
+    NAME            = "STOPROWUV"
+    START_BYTE      = 142
+    BYTES           = 2
+    DATA_TYPE       = MSB_UNSIGNED_INTEGER
+    DESCRIPTION     = "(stopRowUV <= 512),Usually 255"
+  END_OBJECT        = COLUMN
+
+  OBJECT            = COLUMN
+    COLUMN_NUMBER   = 45
+    NAME            = "STARTRROWVIS"
+    START_BYTE      = 144
+    BYTES           = 2
+    DATA_TYPE       = MSB_UNSIGNED_INTEGER
+    DESCRIPTION     = "(startRowVIS <= stopRowVIS),Usually 0"
+  END_OBJECT        = COLUMN
+
+  OBJECT            = COLUMN
+    COLUMN_NUMBER   = 46
+    NAME            = "STOPROWVIS"
+    START_BYTE      = 146
+    BYTES           = 2
+    DATA_TYPE       = MSB_UNSIGNED_INTEGER
+    DESCRIPTION     = "(stopRowVIS <= 512),Usually 255"
+  END_OBJECT        = COLUMN
+
+  OBJECT            = COLUMN
+    COLUMN_NUMBER   = 47
+    NAME            = "STARTROWVNIR"
+    START_BYTE      = 148
+    BYTES           = 2
+    DATA_TYPE       = MSB_UNSIGNED_INTEGER
+    DESCRIPTION     = "(startRowVNIR <= stopRowVNIR),Usually 0"
+  END_OBJECT        = COLUMN
+
+  OBJECT            = COLUMN
+    COLUMN_NUMBER   = 48
+    NAME            = "STOPROWVNIR"
+    START_BYTE      = 150
+    BYTES           = 2
+    DATA_TYPE       = MSB_UNSIGNED_INTEGER
+    DESCRIPTION     = "(stopRowVNIR <= 512),Usually 255"
+  END_OBJECT        = COLUMN
+
+  OBJECT            = COLUMN
+    COLUMN_NUMBER   = 49
+    NAME            = "OBSFROMLIMITSWITCH"
+    START_BYTE      = 152
+    BYTES           = 1
+    DATA_TYPE       = MSB_UNSIGNED_INTEGER
+    DESCRIPTION     = ""
+  END_OBJECT        = COLUMN
+
+  OBJECT            = COLUMN
+    COLUMN_NUMBER   = 50
+    NAME            = "STACK1LEVEL"
+    START_BYTE      = 153
+    BYTES           = 4
+    DATA_TYPE       = IEEE_REAL
+    DESCRIPTION     = "(stack1Level < 4096),
+                       0 - 4095 = 0 - 140 Amps. 
+                       For FM use 2778 = 95 A 
+                       and do not exceed this value at BOL"
+  END_OBJECT        = COLUMN
+
+  OBJECT            = COLUMN
+    COLUMN_NUMBER   = 51
+    NAME            = "STACK2LEVEL"
+    START_BYTE      = 157
+    BYTES           = 4
+    DATA_TYPE       = IEEE_REAL
+    DESCRIPTION     = "(stack2Level < 4096),i
+                       0 - 4095 = 0 - 140 Amps. 
+                       Use 2850. 
+                       For FM use from 1720 (= 60 A) to 2762 (= 95 A) 
+                       and to not exceed the latter at BOL."
+  END_OBJECT        = COLUMN
+
+  OBJECT            = COLUMN
+    COLUMN_NUMBER   = 52
+    NAME            = "STACK3LEVEL"
+    START_BYTE      = 161
+    BYTES           = 4
+    DATA_TYPE       = IEEE_REAL
+    DESCRIPTION     = "(stack3Level < 4096),0 - 4095 = 0 - 140 Amps. 
+                       Use 2850. 
+                       For FM use from 1744 (= 60 A) to 2789 (= 95 A)
+                       and do not exceed the latter at BOL"
+  END_OBJECT        = COLUMN
+
+  OBJECT            = COLUMN
+    COLUMN_NUMBER   = 53
+    NAME            = "STACKDURATION"
+    START_BYTE      = 165
+    BYTES           = 1
+    DATA_TYPE       = MSB_UNSIGNED_INTEGER
+    DESCRIPTION     = "0 - 255 => 130 - 200 usec (nonlinear). Use 65."
+  END_OBJECT        = COLUMN
+
+  OBJECT            = COLUMN
+    COLUMN_NUMBER   = 54
+    NAME            = "TIMEBETWEENSHOTS"
+    START_BYTE      = 166
+    BYTES           = 1
+    DATA_TYPE       = MSB_UNSIGNED_INTEGER
+    DESCRIPTION     = "(14 <= timeBetweenShots),
+                      0 = no control. 
+                      1 - 255 => 48.6 + (N-1)/254 * 950 msec. 
+                      Use from 14 to 255 (<=10 Hz). 15 => 101 msec."
+  END_OBJECT        = COLUMN
+
+  OBJECT            = COLUMN
+    COLUMN_NUMBER   = 55
+    NAME            = "SPECADCONVERTVNIR"
+    START_BYTE      = 167
+    BYTES           = 1
+    DATA_TYPE       = MSB_UNSIGNED_INTEGER
+    DESCRIPTION     = "(spectTrigDelays < 983040)usually 5"
+  END_OBJECT        = COLUMN
+
+  OBJECT            = COLUMN
+    COLUMN_NUMBER   = 56
+    NAME            = "SPECADCONVERTVIS"
+    START_BYTE      = 168
+    BYTES           = 1
+    DATA_TYPE       = MSB_UNSIGNED_INTEGER
+    DESCRIPTION     = "(spectTrigDelays < 983040)usually 5"
+  END_OBJECT        = COLUMN
+
+  OBJECT            = COLUMN
+    COLUMN_NUMBER   = 57
+    NAME            = "SPECADCONVERTUV"
+    START_BYTE      = 169
+    BYTES           = 1
+    DATA_TYPE       = MSB_UNSIGNED_INTEGER
+    DESCRIPTION     = "(spectTrigDelays < 983040)usually 5"
+  END_OBJECT        = COLUMN
+
+  OBJECT            = COLUMN
+    COLUMN_NUMBER   = 58
+    NAME            = "SPECVERTCLK"
+    START_BYTE      = 170
+    BYTES           = 1
+    DATA_TYPE       = MSB_UNSIGNED_INTEGER
+    DESCRIPTION     = "Vertical clock select usually 2"
+  END_OBJECT        = COLUMN
+
+/*NOTE this is not yet complete."
+/* End of format file CCAM_LIBS_CMD_ARG_PARAMS_V4.FMT */

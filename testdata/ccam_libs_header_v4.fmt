@@ -1,0 +1,210 @@
+/* CCAM_LIBS_HEADER_V4.FMT.                                     */
+
+  OBJECT            = COLUMN 
+    COLUMN_NUMBER   = 1
+    NAME            = "BYTECOUNT"
+    START_BYTE      = 1
+    BYTES           = 4
+    DATA_TYPE       = MSB_UNSIGNED_INTEGER
+    DESCRIPTION     = "Bytes to follow"
+  END_OBJECT        = COLUMN
+
+  OBJECT            = COLUMN 
+    COLUMN_NUMBER   = 2
+    NAME            = "RCECONTROL"
+    START_BYTE      = 5
+    BYTES           = 4
+    DATA_TYPE       = MSB_UNSIGNED_INTEGER
+    DESCRIPTION     = "RCEControl:
+                          contains: (8bits) Opcode 78 for spectra
+                                    (2bits) Error Control Type Flag
+                          00 = reserved
+                          01 =  The CRC error control algorithm is applied
+                          10 = The Checksum error control Algorithm applied
+                          11 = No error Control
+                                    (1 bit) Data Present
+                          0 = nodata
+                          1 = data
+                                    (21 bits) Status flags (as follows)
+                        bit 1 - command Reply Flag
+                                 (0- not cmd_reply, 1 - cmd_reply)
+                        bit 2 - notSafe
+                                 ( 0 - safe
+                                   1 - Bu doesn't know that MU mortors
+                                     are in sun-safe position)
+                        bit 3 - BootSource
+                                 (Which memory was used for boot
+                                  0 - Init0 PROMO
+                                  1 - Init1 PROM1)
+                        bit 4 - CommSide
+                                 (Talking with which RCE?
+                                  0 - RCE A or none
+                                  1 - RCE B)
+                        bit 5 - CWL_heater_notOn
+                                 (CWL heating loop algorithm off
+                                  0 - on
+                                  1 - off)
+                        bit 6 - Amp_heater_notOn
+                                 ( Amp heating loop algorithm off
+                                  0 - on
+                                  1 - off)
+                        bit 7 - OSC_heater_notOn
+                                 ( Osc heating loop algorithm off
+                                  0 - on
+                                  1 - off)
+                        bit 8 - RMI_notOn
+                                 ( RMI is not Powered
+                                  0 - on
+                                  1 - off)
+                        bit 9 - RMIdata_notOK
+                                 ( RMI off or comm with RMI not OK
+                                  0 - OK
+                                  1 - not OK, =1
+                                      when RMI if off)
+                        bit 10 - Spectrometer_notOK
+                                 ( not used should be 0)
+                        bit 11 - LVPS_notOn
+                                 ( Low Voltage (spectrometer)power supply
+                                   0 - on
+                                   1 - off )
+                        bit 12 - MAST_notOK
+                                 ( Bad communication with the mast unit
+                                   0 - OK
+                                   1 - not OK)
+                        bit 13 - LIBS_HV_notOn
+                                 ( High voltage to LIBS not on
+                                   0 - on
+                                   1 - not on)
+                        bit 14 - LIBS_notReady
+                                 (LIBS not in operating temperature range
+                                   0 - ready
+                                   1 - not ready)
+                        bit 15 - CWL_notReady
+                                 (CWL not in operating temperature range
+                                   0 - ready
+                                   1 - not ready)
+                        bit 16 - SelfTestFailed
+                                  (not used should be 0)
+                        bit 17:21 -
+                                  0 0000 - reserved
+                                  0 0001 - First time command
+                                  0 0010 - Retry command (cmd reply frame)
+"
+  END_OBJECT        = COLUMN
+
+  OBJECT            = COLUMN 
+    COLUMN_NUMBER   = 3
+    NAME            = "BYTECOUNT"
+    START_BYTE      = 9
+    BYTES           = 4
+    DATA_TYPE       = MSB_UNSIGNED_INTEGER
+    DESCRIPTION     = "Number of bytes "
+  END_OBJECT        = COLUMN
+                                                            
+  OBJECT            = COLUMN 
+    COLUMN_NUMBER   = 4
+    NAME            = "DATAID"
+    START_BYTE      = 13
+    BYTES           = 1
+    DATA_TYPE       = MSB_UNSIGNED_INTEGER
+    DESCRIPTION     = "id byte 0xdd for LIBS spectra"
+  END_OBJECT        = COLUMN
+
+  OBJECT            = COLUMN 
+    COLUMN_NUMBER   = 5
+    NAME            = "HEAD2"
+    START_BYTE      = 14
+    BYTES           = 1
+    DATA_TYPE       = MSB_UNSIGNED_INTEGER
+    DESCRIPTION     = "Used internally by DPU"
+  END_OBJECT        = COLUMN
+                                                            
+  OBJECT            = COLUMN 
+    COLUMN_NUMBER   = 6
+    NAME            = "SPECTYPE"
+    START_BYTE      = 15
+    BYTES           = 1
+    DATA_TYPE       = MSB_UNSIGNED_INTEGER
+    DESCRIPTION     = "Spectra type
+                        0 = 1D dark average
+                        1 = 1D dark single
+                        2 = 1D passive
+                        3 = 1D average spectra
+                        4 = 1D single spectra
+                        5 = 2D diagnostic"
+  END_OBJECT        = COLUMN
+                                                            
+  OBJECT            = COLUMN 
+    COLUMN_NUMBER   = 7
+    NAME            = "HEAD4"
+    START_BYTE      = 16
+    BYTES           = 1
+    DATA_TYPE       = MSB_UNSIGNED_INTEGER
+    DESCRIPTION     = "Upper nibble clk & tmp enable
+                       Lower Nibble spects selected"
+  END_OBJECT        = COLUMN
+
+  OBJECT            = COLUMN 
+    COLUMN_NUMBER   = 8
+    NAME            = "DPBYTECOUNT"
+    START_BYTE      = 17
+    BYTES           = 4
+    DATA_TYPE       = MSB_UNSIGNED_INTEGER
+    DESCRIPTION     = "Number of bytes following in DataProduct"
+  END_OBJECT        = COLUMN
+                                                            
+  OBJECT            = COLUMN 
+    COLUMN_NUMBER   = 9
+    NAME            = "SSTART"
+    START_BYTE      = 21
+    BYTES           = 4
+    DATA_TYPE       = MSB_UNSIGNED_INTEGER
+    DESCRIPTION     = "Start Time"
+  END_OBJECT        = COLUMN
+
+  OBJECT            = COLUMN 
+    COLUMN_NUMBER   = 10
+    NAME            = "SEND"
+    START_BYTE      = 25 
+    BYTES           = 4
+    DATA_TYPE       = MSB_UNSIGNED_INTEGER
+    DESCRIPTION     = "End Time"
+  END_OBJECT        = COLUMN
+                                                            
+  OBJECT            = COLUMN 
+    COLUMN_NUMBER   = 11
+    NAME            = "SNSHOTS"
+    START_BYTE      = 29
+    BYTES           = 1
+    DATA_TYPE       = MSB_UNSIGNED_INTEGER
+    DESCRIPTION     = "Total Shots"
+  END_OBJECT        = COLUMN
+                                                            
+  OBJECT            = COLUMN 
+    COLUMN_NUMBER   = 12
+    NAME            = "SNAVERGED"
+    START_BYTE      = 30
+    BYTES           = 1
+    DATA_TYPE       = MSB_UNSIGNED_INTEGER
+    DESCRIPTION     = "Shots Averaged"
+  END_OBJECT        = COLUMN
+
+  OBJECT            = COLUMN 
+    COLUMN_NUMBER   = 13
+    NAME            = "SSKIPPED"
+    START_BYTE      = 31
+    BYTES           = 1
+    DATA_TYPE       = MSB_UNSIGNED_INTEGER
+    DESCRIPTION     = "Shots Skipped"
+  END_OBJECT        = COLUMN
+
+  OBJECT            = COLUMN 
+    COLUMN_NUMBER   = 14
+    NAME            = "SPARE"
+    START_BYTE      = 32
+    BYTES           = 1
+    DATA_TYPE       = MSB_UNSIGNED_INTEGER
+    DESCRIPTION     = "Spare"
+  END_OBJECT        = COLUMN
+
+/* End of format file CCAM_LIBS_HEADER_V4.FMT. */

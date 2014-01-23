@@ -1,0 +1,497 @@
+PDS_VERSION_ID                    = PDS3
+
+/* FILE DATA ELEMENTS */
+
+RECORD_TYPE                       = FIXED_LENGTH
+RECORD_BYTES                      = 2056
+
+/* POINTERS TO DATA OBJECTS */
+
+^CCAM_LIBS_TABLE             = ("CL1_398380569EDR_F0030000CCAM04010M1.DAT"
+                                     ,13)
+
+/* IDENTIFICATION DATA ELEMENTS */
+
+MSL:ACTIVE_FLIGHT_STRING_ID       = A
+DATA_SET_ID                       = "MSL-M-CHEMCAM-LIBS-2-EDR-V1.0"
+DATA_SET_NAME                     = "MSL MARS CHEMCAM LASER-INDUCED 
+                                     BREAKDOWN SPECTRA 2 EDR V1.0"
+COMMAND_SEQUENCE_NUMBER           = 2
+FRAME_ID                          = "N/A"
+FRAME_TYPE                        = "N/A"
+GEOMETRY_PROJECTION_TYPE          = RAW
+INSTRUMENT_HOST_ID                = "MSL"
+INSTRUMENT_HOST_NAME              = "MARS SCIENCE LABORATORY"
+INSTRUMENT_ID                     = "CHEMCAM_LIBS"
+INSTRUMENT_NAME                   = "CHEMISTRY CAMERA LASER INDUCED 
+                                     BREAKDOWN SPECTROMETER"
+INSTRUMENT_SERIAL_NUMBER          = "UNK"
+INSTRUMENT_TYPE                   = "SPECTROMETER"
+INSTRUMENT_VERSION_ID             = "FM"
+MSL:LOCAL_MEAN_SOLAR_TIME         = "Sol-00010M12:31:56.075"
+LOCAL_TRUE_SOLAR_TIME             = "13:06:37"
+MISSION_NAME                      = "MARS SCIENCE LABORATORY"
+MISSION_PHASE_NAME                = "PRIMARY SURFACE MISSION"
+OBSERVATION_ID                    = "UNK"
+PLANET_DAY_NUMBER                 = 10
+MSL:LOCAL_TRUE_SOLAR_TIME_SOL     = 10
+PRODUCER_INSTITUTION_NAME         = "MULTIMISSION INSTRUMENT PROCESSING 
+                                     LAB, JET PROPULSION LAB"
+PRODUCT_CREATION_TIME             = 2013-04-15T16:20:55.000
+PRODUCT_ID                        = "CL1_398380569EDR_F0030000CCAM04010M1"
+PRODUCT_VERSION_ID               = "V2.0"
+RELEASE_ID                       = "0002"
+MSL:REQUEST_ID                    = "0"
+SOURCE_PRODUCT_ID                 = "CL1_398380569EDR_F0030000CCAM04010M1"
+ROVER_MOTION_COUNTER              = (3,0,0,0,0,0,4,878,0,0)
+ROVER_MOTION_COUNTER_NAME         = (SITE,DRIVE,POSE,ARM,CHIMRA,DRILL,RSM,
+                                     HGA,DRT,IC)
+SEQUENCE_ID                       = "ccam04010"
+SEQUENCE_VERSION_ID               = "0"
+SOLAR_LONGITUDE                   = 155.965
+SPACECRAFT_CLOCK_CNT_PARTITION    = 1
+SPACECRAFT_CLOCK_START_COUNT      = "398380569.038"
+SPACECRAFT_CLOCK_STOP_COUNT       = "UNK"
+START_TIME                        = 2012-08-16T09:18:28.508
+STOP_TIME                         = UNK
+TARGET_NAME                       = MARS
+TARGET_TYPE                       = PLANET
+
+/* TELEMETRY DATA ELEMENTS */
+
+APPLICATION_PROCESS_ID            = 140
+APPLICATION_PROCESS_NAME          = "CcamSpectra"
+MSL:AUTO_DELETE_FLAG              = "FALSE"
+DOWNLOAD_PRIORITY                 = 56
+EARTH_RECEIVED_START_TIME         = 2012-08-16T12:48:17.816
+EARTH_RECEIVED_STOP_TIME          = 2012-08-16T12:48:21.098
+SPICE_FILE_NAME                   = "chronos.msl"
+TELEMETRY_PROVIDER_ID             = "MPCS_MSL_DP"
+MSL:TELEMETRY_SOURCE_HOST_NAME    = "mslsmsampcs1"
+TELEMETRY_SOURCE_NAME             = "CcamSpectra_0398380569-38270-1.dat"
+MSL:TELEMETRY_SOURCE_TYPE         = "DATA PRODUCT"
+MSL:COMMUNICATION_SESSION_ID      = "30102"
+MSL:EXPECTED_TRANSMISSION_PATH    = "3851"
+MSL:FLIGHT_SOFTWARE_MODE          = "8"
+FLIGHT_SOFTWARE_VERSION_ID        = "141801503"
+MSL:PRODUCT_COMPLETION_STATUS     = "COMPLETE_CHECKSUM_PASS"
+MSL:PRODUCT_TAG                   = "0"
+MSL:SEQUENCE_EXECUTION_COUNT      = 1
+MSL:TELEMETRY_SOURCE_START_TIME   = 2012-08-16T09:18:28.508
+MSL:TELEMETRY_SOURCE_SCLK_START   = "398380569.038"
+MSL:TELEMETRY_SOURCE_CHECKSUM     = 35190
+MSL:TELEMETRY_SOURCE_SIZE         = 65665
+MSL:TRANSMISSION_PATH             = "65535"
+MSL:VIRTUAL_CHANNEL_ID            = "0"
+
+/* HISTORY DATA ELEMENTS */
+
+GROUP                             = MSLEDRGEN_HISTORY_PARMS
+  SOFTWARE_NAME                   = MSLEDRGEN
+  SOFTWARE_VERSION_ID             = "V1.0 04-01-2011"
+  PROCESSING_HISTORY_TEXT         = "CODMAC LEVEL 1 TO LEVEL 2 CONVERSION 
+                                     VIA JPL/MIPL MSLEDRGEN"
+END_GROUP                         = MSLEDRGEN_HISTORY_PARMS
+
+/* CAMERA MODEL DATA ELEMENTS */
+
+GROUP                             = GEOMETRIC_CAMERA_MODEL_PARMS
+  CALIBRATION_SOURCE_ID           = "0"
+  ^MODEL_DESC                     = "GEOMETRIC_CM.TXT"
+  MODEL_TYPE                      = "CAHV"
+  MODEL_COMPONENT_ID              = ("C","A","H","V")
+  MODEL_COMPONENT_NAME            = ("CENTER","AXIS","HORIZONTAL","VERTICAL")
+  MODEL_COMPONENT_1               = (0.622245,0.645692,-2.058)
+  MODEL_COMPONENT_2               = (-0.921916,-0.282826,0.264695)
+  MODEL_COMPONENT_3               = (6580.82,-48406.1,77.2208)
+  MODEL_COMPONENT_4               = (22821.1,3183.7,42968.1)
+  REFERENCE_COORD_SYSTEM_NAME     = "ROVER_NAV_FRAME"
+  ROVER_MOTION_COUNTER            = (3,0,0,0,0,0,4,878,0,0)
+  MSL:MODEL_TRANSFORM_VECTOR      = (0.804636,0.559444,-1.90608)
+  MSL:MODEL_TRANSFORM_QUATERNION  = (0.0687287,-0.246261,-0.0185184,
+                                     -0.966586)
+END_GROUP                         = GEOMETRIC_CAMERA_MODEL_PARMS
+
+/* COORDINATE SYSTEM STATE: ROVER */
+
+GROUP                             = ROVER_COORD_SYSTEM_PARMS
+  COORDINATE_SYSTEM_NAME          = "ROVER_NAV_FRAME"
+  ROVER_MOTION_COUNTER            = (3,0,0,0,0,0,4,878,0,0)
+  COORDINATE_SYSTEM_INDEX_NAME    = (SITE,DRIVE,POSE,ARM,CHIMRA,DRILL,RSM,
+                                     HGA,DRT,IC)
+  ORIGIN_OFFSET_VECTOR            = (0,0,0)
+  ORIGIN_ROTATION_QUATERNION      = (0.562815,0.0142017,-0.0352224,0.82571)
+  QUATERNION_MEASUREMENT_METHOD   = FINE
+  POSITIVE_AZIMUTH_DIRECTION      = CLOCKWISE
+  POSITIVE_ELEVATION_DIRECTION    = UP
+  REFERENCE_COORD_SYSTEM_NAME     = SITE_FRAME
+  REFERENCE_COORD_SYSTEM_INDEX    = 3
+END_GROUP                         = ROVER_COORD_SYSTEM_PARMS
+
+/* COORDINATE SYSTEM STATE: SITE */
+
+GROUP                             = SITE_COORD_SYSTEM_PARMS
+  MSL:SOLUTION_ID                 = "telemetry"
+  COORDINATE_SYSTEM_NAME          = "SITE_FRAME"
+  COORDINATE_SYSTEM_INDEX         = 3
+  COORDINATE_SYSTEM_INDEX_NAME    = "SITE"
+  ORIGIN_OFFSET_VECTOR            = (0,0,0)
+  ORIGIN_ROTATION_QUATERNION      = (1,0,0,0)
+  POSITIVE_AZIMUTH_DIRECTION      = "CLOCKWISE"
+  POSITIVE_ELEVATION_DIRECTION    = "UP"
+  REFERENCE_COORD_SYSTEM_NAME     = "SITE_FRAME"
+  REFERENCE_COORD_SYSTEM_INDEX    = 2
+END_GROUP                         = SITE_COORD_SYSTEM_PARMS
+
+/* COORDINATE SYSTEM STATE: REMOTE SENSING MAST */
+
+GROUP                             = RSM_COORD_SYSTEM_PARMS
+  COORDINATE_SYSTEM_NAME          = "MAST_FRAME"
+  COORDINATE_SYSTEM_INDEX         = (3,0,0,0,0,0,4,878,0,0)
+  COORDINATE_SYSTEM_INDEX_NAME    = (SITE,DRIVE,POSE,ARM,CHIMRA,DRILL,RSM,
+                                     HGA,DRT,IC)
+  ORIGIN_OFFSET_VECTOR            = (0.804636,0.559444,-1.90608)
+  ORIGIN_ROTATION_QUATERNION      = (0.0687287,-0.246261,-0.0185184,
+                                     -0.966586)
+  POSITIVE_AZIMUTH_DIRECTION      = CLOCKWISE
+  POSITIVE_ELEVATION_DIRECTION    = UP
+  REFERENCE_COORD_SYSTEM_NAME     = ROVER_NAV_FRAME
+  REFERENCE_COORD_SYSTEM_INDEX    = (3,0,0,0,0,0,4,878)
+END_GROUP                         = RSM_COORD_SYSTEM_PARMS
+
+/* COORDINATE SYSTEM STATE: ROBOTIC ARM */
+
+GROUP                             = ARM_COORD_SYSTEM_PARMS
+  COORDINATE_SYSTEM_NAME          = "ARM_FRAME"
+  ORIGIN_OFFSET_VECTOR            = (1.0e+30,1.0e+30,1.0e+30)
+  ORIGIN_ROTATION_QUATERNION      = (0.998226,-0.000558331,0.0529417,
+                                     -0.0272484)
+  REFERENCE_COORD_SYSTEM_NAME     = ROVER_NAV_FRAME
+  REFERENCE_COORD_SYSTEM_INDEX    = (3,0,0,0,0,0,4,878)
+END_GROUP                         = ARM_COORD_SYSTEM_PARMS
+
+/* ARTICULATION DEVICE STATE: REMOTE SENSING MAST */
+
+GROUP                             = RSM_ARTICULATION_STATE_PARMS
+  ARTICULATION_DEVICE_ID          = RSM
+  ARTICULATION_DEVICE_NAME        = "REMOTE SENSING MAST"
+  ARTICULATION_DEVICE_ANGLE       = (0.16777 <rad>,1.08711 <rad>,
+                                     0.1704 <rad>,1.0913 <rad>,
+                                     0.395955 <rad>,0.872957 <rad>,
+                                     0.170438 <rad>,1.09127 <rad>)
+  ARTICULATION_DEVICE_ANGLE_NAME  = ("AZIMUTH-MEASURED",
+                                     "ELEVATION-MEASURED",
+                                     "AZIMUTH-REQUESTED",
+                                     "ELEVATION-REQUESTED","AZIMUTH-INITIAL"
+                                     ,"ELEVATION-INITIAL","AZIMUTH-FINAL",
+                                     "ELEVATION-FINAL")
+  ARTICULATION_DEVICE_MODE        = DEPLOYED
+END_GROUP                         = RSM_ARTICULATION_STATE_PARMS
+
+/* ARTICULATION DEVICE STATE: ROBOTIC ARM */
+
+GROUP                             = ARM_ARTICULATION_STATE_PARMS
+  ARTICULATION_DEVICE_ID          = ARM
+  ARTICULATION_DEVICE_ANGLE       = (1.0e+30 <rad>,1.0e+30 <rad>,
+                                     1.0e+30 <rad>,1.0e+30 <rad>,
+                                     1.0e+30 <rad>,1.0e+30 <rad>,
+                                     1.0e+30 <rad>,1.0e+30 <rad>,
+                                     1.0e+30 <rad>,1.0e+30 <rad>)
+  ARTICULATION_DEVICE_ANGLE_NAME  = ("JOINT 1 SHOULDER AZIMUTH",
+                                     "JOINT 2 SHOULDER ELEVATION",
+                                     "JOINT 3 ELBOW-ENCODER",
+                                     "JOINT 4 WRIST-ENCODER",
+                                     "JOINT 5 TURRET-ENCODER",
+                                     "JOINT 1 SHOULDER AZIMUTH-RESOLVER",
+                                     "JOINT 2 SHOULDER ELEVATION-RESOLVER",
+                                     "JOINT 3 ELBOW-RESOLVER",
+                                     "JOINT 4 WRIST-RESOLVER",
+                                     "JOINT 5 TURRET-RESOLVER")
+  ARTICULATION_DEVICE_TEMP        = (-21.444 <degC>,-21.8583 <degC>,
+                                     -13.3818 <degC>,-18.9412 <degC>,
+                                     -26.1588 <degC>)
+  ARTICULATION_DEVICE_TEMP_NAME   = ("AZIMUTH JOINT","ELEVATION JOINT",
+                                     "ELBOW JOINT","WRIST JOINT",
+                                     "TURRET JOINT")
+  ARTICULATION_DEV_VECTOR      = (0.0631004,-0.0421811,0.997115)
+  CONTACT_SENSOR_STATE            = "NO CONTACT"
+  ARTICULATION_DEV_INSTRUMENT_ID  = "DRILL"
+  ARTICULATION_DEVICE_MODE        = "FREE SPACE"
+END_GROUP                         = ARM_ARTICULATION_STATE_PARMS
+
+/* ARTICULATION DEVICE STATE: MOBILITY CHASSIS */
+
+GROUP                             = CHASSIS_ARTICULATION_ST_PARMS
+  ARTICULATION_DEVICE_ID          = CHASSIS
+  ARTICULATION_DEVICE_NAME        = "MOBILITY CHASSIS"
+  ARTICULATION_DEVICE_ANGLE       = (0.875179 <rad>,-0.872494 <rad>,
+                                     0.175172 <rad>,-0.170528 <rad>,
+                                     0.16777 <rad>,1.08711 <rad>,
+                                     1.0e+30 <rad>,1.0e+30 <rad>,
+                                     1.0e+30 <rad>,1.0e+30 <rad>)
+  ARTICULATION_DEVICE_ANGLE_NAME  = ("LEFT FRONT WHEEL","RIGHT FRONT WHEEL"
+                                     ,"LEFT REAR WHEEL","RIGHT REAR WHEEL",
+                                     "RSM AZIMUTH","RSM ELEVATION",
+                                     "LEFT BOGIE","RIGHT BOGIE",
+                                     "LEFT DIFFERENTIAL",
+                                     "RIGHT DIFFERENTIAL")
+  ARTICULATION_DEVICE_MODE        = DEPLOYED
+END_GROUP                         = CHASSIS_ARTICULATION_ST_PARMS
+
+/* ARTICULATION DEVICE STATE: HIGH GAIN ANTENNA */
+
+GROUP                             = HGA_ARTICULATION_STATE_PARMS
+  ARTICULATION_DEVICE_ID          = HGA
+  ARTICULATION_DEVICE_NAME        = "HIGH GAIN ANTENNA"
+  ARTICULATION_DEVICE_ANGLE       = (-4.45237e-05 <rad>,-0.784997 <rad>)
+  ARTICULATION_DEVICE_ANGLE_NAME  = ("AZIMUTH","ELEVATION")
+  ARTICULATION_DEVICE_MODE        = DEPLOYED
+END_GROUP                         = HGA_ARTICULATION_STATE_PARMS
+
+/* OBSERVATION REQUEST */
+
+GROUP                             = OBSERVATION_REQUEST_PARMS
+  SOURCE_ID                       = "GROUND COMMANDED"
+  MSL:INSTRUMENT_COORD_FRAME_INDEX= 0
+  MSL:INSTRUMENT_COORD_FRAME_ID   = "NAV_GOAL"
+  INSTRUMENT_COORDINATE_NAME      = "UNK"
+  INSTRUMENT_COORDINATE           = "UNK"
+  MSL:DARK_SPECTRA_MODE           = "NONE"
+  GAIN_NUMBER                     = 0
+  GROUP_APPLICABILITY_FLAG        = "TRUE"
+  MSL:INSTRUMENT_FOCUS_MODE       = "AF_OFFSET"
+  MSL:INSTRUMENT_FOCUS_DISTANCE   = 1581
+  INSTRUMENT_MODE_ID              = "SPECTRAL_DATA"
+  MSL:LASER_MODE                  = "NO"
+  OFFSET_MODE_ID                  = "0"
+END_GROUP                         = OBSERVATION_REQUEST_PARMS
+
+/* INSTRUMENT STATE RESULTS */
+
+GROUP                             = INSTRUMENT_STATE_PARMS
+  MSL:SPECIAL_LINE                = 497
+  MSL:SPECIAL_SAMPLE              = 532
+  MSL:SPECIAL_NAME                = "Location of the LIBS laser spot in the
+                                      RMI image described by the camera 
+                                     model"
+  INSTRUMENT_TEMPERATURE          = (-25.4198 <degC>,-25.4198 <degC>,
+                                     -19.0249 <degC>,-19.0249 <degC>,
+                                     -19.0249 <degC>,-19.0249 <degC>,
+                                     0.392304 <degC>,9.42664 <degC>,
+                                     17.5547 <degC>,17.5547 <degC>)
+  INSTRUMENT_TEMPERATURE_NAME     = ("MU_OBOX_TELESCOPE","MU_LASER_IF",
+                                     "MU_EBOX_HEATSINK","MU_EBOX_FPGA",
+                                     "BU_CCD_VNIR_B","BU_SPEC_B",
+                                     "BU_CCD_UV_A","BU_SPEC_A","BU_DEMUX_A",
+                                     "BU_DEMUX_B")
+  MSL:INSTRUMENT_TEMPERATURE_STATUS= (0,-42,0,-42,-42,-42,0,0,0,-42)
+END_GROUP                         = INSTRUMENT_STATE_PARMS
+
+/* DERIVED GEOMETRY DATA ELEMENTS: ROVER FRAME */
+
+GROUP                             = ROVER_DERIVED_GEOMETRY_PARMS
+  INSTRUMENT_AZIMUTH              = 188.378
+  INSTRUMENT_ELEVATION            = -28.7647
+  REFERENCE_COORD_SYSTEM_NAME     = "ROVER_NAV_FRAME"
+  REFERENCE_COORD_SYSTEM_INDEX    = (3,0,0,0,0,0,4,878)
+  SUN_VIEW_DIRECTION              = (-0.410326,-0.0878916,-0.907694)
+  SOLAR_AZIMUTH                   = 192.09 <deg>
+  SOLAR_ELEVATION                 = 65.1885 <deg>
+END_GROUP                         = ROVER_DERIVED_GEOMETRY_PARMS
+
+/* DERIVED GEOMETRY DATA ELEMENTS: SITE FRAME */
+
+GROUP                             = SITE_DERIVED_GEOMETRY_PARMS
+  INSTRUMENT_AZIMUTH              = 298.344
+  INSTRUMENT_ELEVATION            = -25.4986
+  REFERENCE_COORD_SYSTEM_NAME     = "SITE_FRAME"
+  REFERENCE_COORD_SYSTEM_INDEX    = (3,0,0,0,0,0,4,878)
+  SOLAR_AZIMUTH                   = 311.437 <deg>
+  SOLAR_ELEVATION                 = 67.8801 <deg>
+  POSITIVE_AZIMUTH_DIRECTION      = CLOCKWISE
+END_GROUP                         = SITE_DERIVED_GEOMETRY_PARMS
+OBJECT                            = CCAM_LIBS_TABLE
+  COLUMNS                         = 139
+  ROWS                            = 1
+  ROW_BYTES                       = 65665
+  INTERCHANGE_FORMAT              = BINARY
+  DESCRIPTION                     = "ChemCam LIBS"
+  OBJECT                          = COLUMN
+    NAME                          = "SCLK"
+    DATA_TYPE                     = MSB_UNSIGNED_INTEGER
+    START_BYTE                    = 1
+    BYTES                         = 4
+    DESCRIPTION                   = "Time data collected"
+  END_OBJECT                      = COLUMN
+  OBJECT                          = CONTAINER
+    NAME                          = "CCAM_LIBS_ANCILLARY"
+    ^STRUCTURE                    = "CCAM_LIBS_ANCILLARY_V4.FMT"
+    START_BYTE                    = 5
+    BYTES                         = 170
+    REPETITIONS                   = 1
+    DESCRIPTION                   = "Chemcam Libs Ancillary Data"
+  END_OBJECT                      = CONTAINER
+  OBJECT                          = COLUMN
+    NAME                          = "CMD_REPLY_BYTESIZE"
+    DATA_TYPE                     = MSB_UNSIGNED_INTEGER
+    START_BYTE                    = 175
+    BYTES                         = 4
+    DESCRIPTION                   = "Size of cmd_reply packet"
+  END_OBJECT                      = COLUMN
+  OBJECT                          = CONTAINER
+    NAME                          = "CCAM_CMD_REPLY"
+    ^STRUCTURE                    = "CCAM_CMD_REPLY_CONTAINER_V4.FMT"
+    START_BYTE                    = 179
+    BYTES                         = 4
+    REPETITIONS                   = 1
+    DESCRIPTION                   = "ChemCam CMD_REPLY frame"
+  END_OBJECT                      = CONTAINER
+  OBJECT                          = COLUMN
+    NAME                          = "CMD_REPLY_CHECKSUM"
+    DATA_TYPE                     = MSB_UNSIGNED_INTEGER
+    START_BYTE                    = 183
+    BYTES                         = 4
+    DESCRIPTION                   = "Second part of CMD_REPLY data: MD5 
+                                     checksum"
+  END_OBJECT                      = COLUMN
+  OBJECT                          = CONTAINER
+    NAME                          = "CCAM_SOH_SCIDATA_COLS"
+    ^STRUCTURE                    = "CCAM_SOH_SCIDATA_COLS_V4.FMT"
+    START_BYTE                    = 187
+    BYTES                         = 68
+    REPETITIONS                   = 1
+    DESCRIPTION                   = "Chemcam SOH header"
+  END_OBJECT                      = CONTAINER
+  OBJECT                          = CONTAINER
+    NAME                          = "CCAM_SOH_TO_RCE_CONTAINER"
+    ^STRUCTURE                    = "CCAM_SOH_TO_RCE_CONTAINER_V4.FMT"
+    BYTES                         = 100
+    START_BYTE                    = 255
+    REPETITIONS                   = 1
+    DESCRIPTION                   = "ChemCam LIBS to RCE structure. 
+                                     Includes arrays ccam_DPU_LIBS_struct 
+                                     and ccam_MU_LIBS_struct."
+  END_OBJECT                      = CONTAINER
+  OBJECT                          = COLUMN
+    NAME                          = "CCAM_SOH_BEFORE_CHECKSUM"
+    DATA_TYPE                     = MSB_UNSIGNED_INTEGER
+    START_BYTE                    = 355
+    BYTES                         = 4
+    DESCRIPTION                   = "MD5 checksum"
+  END_OBJECT                      = COLUMN
+  OBJECT                          = COLUMN
+    NAME                          = "CMD_REPLY_BYTESIZE"
+    DATA_TYPE                     = MSB_UNSIGNED_INTEGER
+    START_BYTE                    = 359
+    BYTES                         = 4
+    DESCRIPTION                   = "Size of cmd_reply packet"
+  END_OBJECT                      = COLUMN
+  OBJECT                          = CONTAINER
+    NAME                          = "CCAM_CMD_REPLY"
+    ^STRUCTURE                    = "CCAM_CMD_REPLY_CONTAINER_V4.FMT"
+    START_BYTE                    = 363
+    BYTES                         = 4
+    REPETITIONS                   = 1
+    DESCRIPTION                   = "ChemCam CMD_REPLY frame"
+  END_OBJECT                      = CONTAINER
+  OBJECT                          = COLUMN
+    NAME                          = "CMD_REPLY_CHECKSUM"
+    DATA_TYPE                     = MSB_UNSIGNED_INTEGER
+    START_BYTE                    = 367
+    BYTES                         = 4
+    DESCRIPTION                   = "Second part of CMD_REPLY data: MD5 
+                                     checksum"
+  END_OBJECT                      = COLUMN
+  OBJECT                          = CONTAINER
+    NAME                          = "CCAM_SOH_SCIDATA_COLS"
+    ^STRUCTURE                    = "CCAM_SOH_SCIDATA_COLS_V4.FMT"
+    START_BYTE                    = 371
+    BYTES                         = 68
+    REPETITIONS                   = 1
+    DESCRIPTION                   = "Chemcam SOH header"
+  END_OBJECT                      = CONTAINER
+  OBJECT                          = CONTAINER
+    NAME                          = "CCAM_SOH_TO_RCE_CONTAINER"
+    ^STRUCTURE                    = "CCAM_SOH_TO_RCE_CONTAINER_V4.FMT"
+    BYTES                         = 200
+    START_BYTE                    = 439
+    REPETITIONS                   = 2
+    DESCRIPTION                   = "ChemCam LIBS to RCE structure. 
+                                     Includes arrays ccam_DPU_LIBS_struct 
+                                     and ccam_MU_LIBS_struct."
+  END_OBJECT                      = CONTAINER
+  OBJECT                          = COLUMN
+    NAME                          = "CCAM_SOH_CHECKSUM"
+    DATA_TYPE                     = MSB_UNSIGNED_INTEGER
+    START_BYTE                    = 639
+    BYTES                         = 4
+    DESCRIPTION                   = "MD5 checksum"
+  END_OBJECT                      = COLUMN
+  OBJECT                          = COLUMN
+    NAME                          = "CMD_REPLY_BYTESIZE"
+    DATA_TYPE                     = MSB_UNSIGNED_INTEGER
+    START_BYTE                    = 643
+    BYTES                         = 4
+    DESCRIPTION                   = "Size of cmd_reply packet"
+  END_OBJECT                      = COLUMN
+  OBJECT                          = CONTAINER
+    NAME                          = "CCAM_CMD_REPLY"
+    ^STRUCTURE                    = "CCAM_CMD_REPLY_CONTAINER_V4.FMT"
+    START_BYTE                    = 647
+    BYTES                         = 4
+    REPETITIONS                   = 1
+    DESCRIPTION                   = "ChemCam CMD_REPLY frame"
+  END_OBJECT                      = CONTAINER
+  OBJECT                          = COLUMN
+    NAME                          = "CMD_REPLY_CHECKSUM"
+    DATA_TYPE                     = MSB_UNSIGNED_INTEGER
+    START_BYTE                    = 651
+    BYTES                         = 4
+    DESCRIPTION                   = "Second part of CMD_REPLY data: MD5 
+                                     checksum"
+  END_OBJECT                      = COLUMN
+  OBJECT                          = CONTAINER
+    NAME                          = "CCAM_LIBS_HEADER"
+    ^STRUCTURE                    = "CCAM_LIBS_HEADER_V4.FMT"
+    START_BYTE                    = 655
+    BYTES                         = 32
+    REPETITIONS                   = 1
+    DESCRIPTION                   = "ChemCam LIBS Header"
+  END_OBJECT                      = CONTAINER
+  OBJECT                          = CONTAINER
+    NAME                          = "CCAM_LIBS_DATA_CONTAINER"
+    REPETITIONS                   = 5
+    START_BYTE                    = 687
+    BYTES                         = 64440
+    DESCRIPTION                   = "Set of ChemCam LIBS spectra, one 
+                                     6444-element spectrum for each of NSHOT
+                                      shots."
+    OBJECT                        = COLUMN
+      NAME                        = "CCAM_LIBS_SPECTRUM"
+      DATA_TYPE                   = MSB_UNSIGNED_INTEGER
+      START_BYTE                  = 1
+      BYTES                       = 12888
+      ITEMS                       = 6444
+      ITEM_BYTES                  = 2
+      DESCRIPTION                 = "ChemCam LIBS raw spectrum"
+    END_OBJECT                    = COLUMN
+  END_OBJECT                      = CONTAINER
+  OBJECT                          = COLUMN
+    NAME                          = "CCAM_LIBS_CHECKSUM"
+    DATA_TYPE                     = MSB_UNSIGNED_INTEGER
+    START_BYTE                    = 65127
+    BYTES                         = 4
+    DESCRIPTION                   = "MD5 checksum"
+  END_OBJECT                      = COLUMN
+END_OBJECT                        = CCAM_LIBS_TABLE
+
+/* ODL IMAGE HEADER DATA ELEMENTS */
+
+OBJECT                            = ODL_HEADER
+ HEADER_TYPE                      = ODL
+ INTERCHANGE_FORMAT               = ASCII
+ BYTES                            = 24672
+ ^DESCRIPTION                     = "ODL.TXT"
+END_OBJECT                        = ODL_HEADER
+END
+
