@@ -1,6 +1,6 @@
 #!/bin/bash
 
-### Usage:  $0 testparsepds.bash testdata/xyz.lbl
+### Usage:  $0 testparsepds.bash testdata/xyz.lbl[ | ./gdl > x.x]
 
 echo '!QUIET=1'
 for i in $* ; do
