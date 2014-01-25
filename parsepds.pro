@@ -61,8 +61,10 @@ PRO parsepds, lun, debug=debugArg, doubleDebug=doubleDebugArg
   doubleDebug = KEYWORD_SET(doubleDebugArg)
   doDebug = KEYWORD_SET(debugArg) OR doubleDebug
 
+  IF doDebug THEN MESSAGE,/RESET
+
   amdone = 0L                   ;;; Done, got the END
-  wantke = amdone + 1L         ;;; Waiting for KEYWORD =
+  wantke = amdone + 1L          ;;; Waiting for KEYWORD =
   wantv = wantke + 1L           ;;; Waiting for value
   wantvsu = wantv + 1L          ;;; Waiting for value or sorted list or unsorted list
   wantends = wantvsu + 1L       ;;; Waiting for end of sorted list, close paren or comma
@@ -172,7 +174,7 @@ PRO parsepds, lun, debug=debugArg, doubleDebug=doubleDebugArg
       stringLineCount += 1
 
       LsM = STRLEN(sMatch)
-      ;;; If we matched the whole string, force a readf on the next pass
+      ;;; If we matched the whole string, force a READF on the next pass
       IF LsM EQ LS THEN BEGIN
         LS = -1L
         CONTINUE
@@ -221,6 +223,16 @@ PRO parsepds, lun, debug=debugArg, doubleDebug=doubleDebugArg
 
       IF STREGEX(s,'^END$') eq 0L THEN BEGIN
         ignore = popstack(stateStack)
+        CONTINUE
+      ENDIF
+
+      ;;; If END_OBJECT/_GROUP is found without = ... then just take it
+
+      IF STREGEX(s,'^END_(OBJECT|GROUP)$') eq 0L THEN BEGIN
+        currentKeyword = s
+        missing = 'NO = <objectname> FOLLOWS'
+        IF doDebug THEN help,currentKeyword,missing
+        s = ''
         CONTINUE
       ENDIF
 
@@ -287,7 +299,7 @@ PRO parsepds, lun, debug=debugArg, doubleDebug=doubleDebugArg
       ENDIF
 
       ;;; Check for UTC date with optional time
-      sDate = STREGEX( s, '^[0-9][0-9][0-9][0-9]-(0[1-9]|1[012])-([012][0-9]|3[01])(T([01][0-9]|2[0-3])(:[0-5][0-9](:([0-5][0-9]|60)([.][0-9]*)?)?)?)?', /EXTRACT )     ;;; ( VSH
+      sDate = STREGEX( s, '^[0-9][0-9][0-9][0-9]-(0[1-9]|1[012])-([012][0-9]|3[01])(T([01][0-9]|2[0-3])(:[0-5][0-9](:([0-5][0-9]|60)([.][0-9]*)?)?)?)?Z?', /EXTRACT )     ;;; ( VSH
 
       IF sDate NE '' THEN BEGIN
         IF doDebug THEN help,sDate
@@ -297,8 +309,18 @@ PRO parsepds, lun, debug=debugArg, doubleDebug=doubleDebugArg
         valueCount += 1
         CONTINUE
       ENDIF
-      ;;; Preliminary check for floating-point (fp) value; may be an integer
-      sDbl = STREGEX( s, '^[-+]? *[0-9]+([.][0-9]*)?([E][-+]?[0-9]+)?'+unitsSfx, /EXTRACT, /FOLD_CASE)     ;;; ( VSH
+
+      ;;; Preliminary check for floating-point (fp) value
+      ;;; N.B. may be an integer; check later
+      ;;; N.B. Needs to be terminated by one of: 
+      ;;;      end of line; space; comma; close brace; close parentheses
+      sDbl = STREGEX( s, '^[-+]? *[0-9]+([.][0-9]*)?([E][-+]?[0-9]+)?'+unitsSfx+'($|[ ,})])', /EXTRACT, /FOLD_CASE)
+
+      ;;; Strip off termination character
+      IF sDbl NE '' THEN BEGIN
+        iwLastDelimiter = STREGEX(sDbl,'[ ,})]$')
+        IF iwLastDelimiter GT 0L THEN sDbl = STRMID(sDbl,0,iwLastDelimiter)
+      ENDIF
 
       ;;; Check for integer
       sInt = STREGEX( s, '2#[-+]?[01]+#'+unitsSfx, /EXTRACT)
@@ -335,8 +357,8 @@ PRO parsepds, lun, debug=debugArg, doubleDebug=doubleDebugArg
       ;;; Not a quoted string, date-time, integer or floating point; must be an
       ;;; unquoted string made up of of [A-Z0-9_]
 
-      sString = STREGEX( s, '^[A-Z][A-Z0-9_]*($|[ ,)}])', /EXTRACT)      ;;; ( VSH
-      if sString NE '' THEN sString = STREGEX( s, '^[A-Z][A-Z0-9_]*', /EXTRACT)
+      sString = STREGEX( s, '^[A-Z0-9_]+($|[ ,)}])', /EXTRACT)      ;;; ( VSH
+      if sString NE '' THEN sString = STREGEX( s, '^[A-Z0-9_]+', /EXTRACT)
       IF sString NE '' THEN BEGIN
         IF doDebug THEN help,sString
         s = STRMID(s,STRLEN(sString))
