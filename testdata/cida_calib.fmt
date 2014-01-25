@@ -1,0 +1,236 @@
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 1
+        NAME            = STRAIGHT_BASE_CALIB_HIGH_STRAIGHT_OFFSET
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 2
+        BYTES           = 79
+        ITEMS           = 20
+        ITEM_BYTES      = 3
+        ITEM_OFFSET     = 4
+        DESCRIPTION     = "Straight baseline calibration,
+                           high straight channel DA offset"
+        FORMAT          = "I3"
+        MISSING_CONSTANT = 23130
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 2
+        NAME            = STRAIGHT_BASE_CALIB_LOW_STRAIGHT_OFFSET
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 82
+        BYTES           = 79
+        ITEMS           = 20
+        ITEM_BYTES      = 3
+        ITEM_OFFSET     = 4
+        DESCRIPTION     = "Straight baseline calibration,
+                           low straight channel DA offset"
+        FORMAT          = "I3"
+        MISSING_CONSTANT = 23130
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 3
+        NAME            = STRAIGHT_BASE_CALIB_HIGH_DELAYED_MEAN
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 162
+        BYTES           = 79
+        ITEMS           = 20
+        ITEM_BYTES      = 3
+        ITEM_OFFSET     = 4
+        DESCRIPTION     = "Straight baseline calibration,
+                           high delayed channel baseline mean"
+        FORMAT          = "I3"
+        MISSING_CONSTANT = 90
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 4
+        NAME            = STRAIGHT_BASE_CALIB_HIGH_STRAIGHT_MEAN
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 242
+        BYTES           = 79
+        ITEMS           = 20
+        ITEM_BYTES      = 3
+        ITEM_OFFSET     = 4
+        DESCRIPTION     = "Straight baseline calibration,
+                           high straight channel baseline mean"
+        FORMAT          = "I3"
+        MISSING_CONSTANT = 90
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 5
+        NAME            = STRAIGHT_BASE_CALIB_LOW_DELAYED_MEAN
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 322
+        BYTES           = 79
+        ITEMS           = 20
+        ITEM_BYTES      = 3
+        ITEM_OFFSET     = 4
+        DESCRIPTION     = "Straight baseline calibration,
+                           low delayed channel baseline mean"
+        FORMAT          = "I3"
+        MISSING_CONSTANT = 90
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 6
+        NAME            = STRAIGHT_BASE_CALIB_LOW_STRAIGHT_MEAN
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 402
+        BYTES           = 79
+        ITEMS           = 20
+        ITEM_BYTES      = 3
+        ITEM_OFFSET     = 4
+        DESCRIPTION     = "Straight baseline calibration,
+                           low straight channel baseline mean"
+        FORMAT          = "I3"
+        MISSING_CONSTANT = 90
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 7
+        NAME            = DELAYED_BASE_CALIB_HIGH_DELAYED_OFFSET
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 482
+        BYTES           = 79
+        ITEMS           = 20
+        ITEM_BYTES      = 3
+        ITEM_OFFSET     = 4
+        DESCRIPTION     = "Delayed baseline calibration,
+                           high delayed channel DA offset"
+        FORMAT          = "I3"
+        MISSING_CONSTANT = 23130
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 8
+        NAME            = DELAYED_BASE_CALIB_LOW_DELAYED_OFFSET
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 562
+        BYTES           = 79
+        ITEMS           = 20
+        ITEM_BYTES      = 3
+        ITEM_OFFSET     = 4
+        DESCRIPTION     = "Delayed baseline calibration,
+                           low delayed channel DA offset"
+        FORMAT          = "I3"
+        MISSING_CONSTANT = 23130
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 9
+        NAME            = DELAYED_BASE_CALIB_HI_DELAYED_MEAN
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 642
+        BYTES           = 79
+        ITEMS           = 20
+        ITEM_BYTES      = 3
+        ITEM_OFFSET     = 4
+        DESCRIPTION     = "Delayed baseline calibration,
+                           high delayed channel baseline mean"
+        FORMAT          = "I3"
+        MISSING_CONSTANT = 90
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 10
+        NAME            = DELAYED_BASE_CALIB_HIGH_STRAIGHT_MEAN
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 722
+        BYTES           = 79
+        ITEMS           = 20
+        ITEM_BYTES      = 3
+        ITEM_OFFSET     = 4
+        DESCRIPTION     = "Delayed baseline calibration,
+                           high straight channel baseline mean"
+        FORMAT          = "I3"
+        MISSING_CONSTANT = 90
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 11
+        NAME            = DELAYED_BASE_CALIB_LOW_DELAYED_MEAN
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 802
+        BYTES           = 79
+        ITEMS           = 20
+        ITEM_BYTES      = 3
+        ITEM_OFFSET     = 4
+        DESCRIPTION     = "Delayed baseline calibration,
+                           low delayed channel baseline mean"
+        FORMAT          = "I3"
+        MISSING_CONSTANT = 90
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 12
+        NAME            = DELAYED_BASE_CALIB_LOW_STRAIGHT_MEAN
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 882
+        BYTES           = 79
+        ITEMS           = 20
+        ITEM_BYTES      = 3
+        ITEM_OFFSET     = 4
+        DESCRIPTION     = "Delayed baseline calibration,
+                           low straight channel baseline mean"
+        FORMAT          = "I3"
+        MISSING_CONSTANT = 90
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 13
+        NAME            = PULSE_TRIGGER_OFFSET
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 962
+        BYTES           = 79
+        ITEMS           = 20
+        ITEM_BYTES      = 3
+        ITEM_OFFSET     = 4
+        DESCRIPTION     = "Pulse trigger DA offset"
+        FORMAT          = "I3"
+        MISSING_CONSTANT = 90
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 14
+        NAME            = PULSE_TRIGGER_COUNTS
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 1042
+        BYTES           = 239
+        ITEMS           = 20
+        ITEM_BYTES      = 11
+        ITEM_OFFSET     = 12
+        DESCRIPTION     = "Number of FDAQ pulse events in 10 seconds"
+        FORMAT          = "I11"
+        MISSING_CONSTANT = 1515870810
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 15
+        NAME            = INTEGRAL_TRIGGER_OFFSET
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 1282
+        BYTES           = 79
+        ITEMS           = 20
+        ITEM_BYTES      = 3
+        ITEM_OFFSET     = 4
+        DESCRIPTION     = "Integral trigger DA offset"
+        FORMAT          = "I3"
+        MISSING_CONSTANT = 90
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 16
+        NAME            = INTEGRAL_TRIGGER_COUNTS
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 1362
+        BYTES           = 239
+        ITEMS           = 20
+        ITEM_BYTES      = 11
+        ITEM_OFFSET     = 12
+        DESCRIPTION     = "Number of FDAQ integral events in 10 seconds"
+        FORMAT          = "I11"
+        MISSING_CONSTANT = 1515870810
+END_OBJECT              = COLUMN
+

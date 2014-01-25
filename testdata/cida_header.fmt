@@ -1,0 +1,628 @@
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 1
+        NAME            = TIME
+        DATA_TYPE       = CHARACTER
+        START_BYTE      = 1
+        BYTES           = 19
+        DESCRIPTION     = "The time, to the nearest second, at which the
+                           Time-Of-Flight (TOF) spectrum was measured, as
+                           an ISO UTC string:
+
+                             YEAR-MO-DYTHH:MM:SS
+
+                           Fields in UTC string:
+
+                             YEAR = year (1999 - 2011)
+                             MO   = month of year(01 - 12)
+                             DY   = day of month (01 - 31)
+                             HH   = hour of day (01 - 23)
+                             MM   = minute of hour (01 - 59)
+                             SS   = second of hour (01 - 60)
+                             -T:  = field delimiters
+                          "
+        FORMAT        = "A19"
+        MISSING_CONSTANT = 1980-01-01T00:00:00
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 2
+        NAME            = VERSION
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 22
+        BYTES           = 3
+        DESCRIPTION     = "Software version"
+        FORMAT        = "I3"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 3
+        NAME            = KEEPALIVE_STATUS
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 26
+        BYTES           = 1
+        DESCRIPTION     = "Keepalive status, 0 = OK, 1 = defaults used"
+        FORMAT        = "I1"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 4
+        NAME            = ENCOUNTER
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 28
+        BYTES           = 1
+        DESCRIPTION     = "Encounter mode on, 0 = no, 1 = yes"
+        FORMAT        = "I1"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 5
+        NAME            = HV_ARMED
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 30
+        BYTES           = 1
+        DESCRIPTION     = "High voltages automatically on upon boot,
+                           0 = no, 1 = yes"
+        FORMAT        = "I1"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 6
+        NAME            = SAFE_OPERATION
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 32
+        BYTES           = 1
+        DESCRIPTION     = "High voltage command action prohibited,
+                           0 = no, 1 = yes"
+        FORMAT        = "I1"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 7
+        NAME            = FULL_SPECTRUM
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 34
+        BYTES           = 1
+        DESCRIPTION     = "The software should skip the routine for
+                           locating the spectrum, 0 = no, 1 = yes"
+        FORMAT        = "I1"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 8
+        NAME            = SIMULATION_FIFO
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 36
+        BYTES           = 1
+        DESCRIPTION     = "The FIFO content should be filled with
+                           known data pattern, 0 = no, 1 = yes"
+        FORMAT        = "I1"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 9
+        NAME            = ENCOUNTER_SIMULATION
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 38
+        BYTES           = 1
+        DESCRIPTION     = "Simulate the particle hit rate,
+                           0 = no, 1 = yes"
+        FORMAT        = "I1"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 10
+        NAME            = KEEPALIVE_ORIGIN
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 40
+        BYTES           = 2
+        DESCRIPTION     = "Software version used for keepalive default
+                           values, 0 = not used, 1 = 5 or 8, 2 = newer,
+                           3 = from version 5 or 8, new parameters
+                           initialized from later version"
+        FORMAT        = "I2"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 11
+        NAME            = SC_CLOCK
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 43
+        BYTES           = 10
+        DESCRIPTION     = "32-bit S/C clock received from Stardust"
+        FORMAT        = "I10"
+        UNIT            = "s"
+        MISSING_CONSTANT = 0
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 12
+        NAME            = FINE_TIME
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 54
+        BYTES           = 10
+        DESCRIPTION     = "32-bit CIDA clock, starts from 0 at boot,
+                           resolution 1 ms"
+        FORMAT        = "I10"
+        UNIT            = "ms"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 13
+        NAME            = ENCOUNTER_CLOCK
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 65
+        BYTES           = 5
+        DESCRIPTION     = "16-bit encounter clock received from Stardust.
+                           Starts from 0xFFFF 5 hours before closest
+                           encounter, 0x8000 at that point, 0x0000 5h
+                           after the encounter"
+        FORMAT        = "I5"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 14
+        NAME            = EVENT_RATE
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 71
+        BYTES           = 3
+        DESCRIPTION     = "Event rate hits/second. 255, if no events.
+                           254, if more than 253 events per seconds"
+        FORMAT        = "I3"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 15
+        NAME            = PARTITION
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 75
+        BYTES           = 3
+        DESCRIPTION     = "Partition requested for data storage"
+        FORMAT        = "I3"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 16
+        NAME            = LARGE_EVENT_RATE
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 79
+        BYTES           = 3
+        DESCRIPTION     = "Large event rate hits/second. 255, if no events
+                           254, if more than 253 events per seconds"
+        FORMAT        = "I3"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 17
+        NAME            = LARGE_EVENT_NUMBER
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 83
+        BYTES           = 10
+        DESCRIPTION     = "Total number of large events"
+        FORMAT        = "I10"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 18
+        NAME            = EVENT_NUMBER
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 94
+        BYTES           = 10
+        DESCRIPTION     = "Total number of events"
+        FORMAT        = "I10"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 19
+        NAME            = BYTES_SENT
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 105
+        BYTES           = 10
+        DESCRIPTION     = "Total number of bytes sent to S/C"
+        FORMAT        = "I10"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 20
+        NAME            = SEQUENCE_NUMBER
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 116
+        BYTES           = 10
+        DESCRIPTION     = "Event sequential counter"
+        FORMAT        = "I10"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 21
+        NAME            = FDAQ_PRI_BOARD
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 127
+        BYTES           = 1
+        DESCRIPTION     = "FDAQ primary board on, 0 = no, 1 = yes"
+        FORMAT        = "I1"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 22
+        NAME            = FDAQ_AUX_BOARD
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 129
+        BYTES           = 1
+        DESCRIPTION     = "FDAQ auxiliary board on, 0 = no, 1 = yes"
+        FORMAT        = "I1"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 23
+        NAME            = FDAQ_HI_SENS_1
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 131
+        BYTES           = 1
+        DESCRIPTION     = "FDAQ high sensitivity 1 used, 0 = no, 1 = yes"
+        FORMAT        = "I1"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 24
+        NAME            = FDAQ_HI_SENS_2
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 133
+        BYTES           = 1
+        DESCRIPTION     = "FDAQ high sensitivity 2 used, 0 = no, 1 = yes"
+        FORMAT        = "I1"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 25
+        NAME            = FDAQ_LO_SENS_1
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 135
+        BYTES           = 1
+        DESCRIPTION     = "FDAQ low sensitivity 1 used, 0 = no, 1 = yes"
+        FORMAT        = "I1"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 26
+        NAME            = FDAQ_LO_SENS_2
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 137
+        BYTES           = 1
+        DESCRIPTION     = "FDAQ low sensitivity 2 used, 0 = no, 1 = yes"
+        FORMAT        = "I1"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 27
+        NAME            = FDAQ_TARGET
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 139
+        BYTES           = 1
+        DESCRIPTION     = "FDAW target signal enabled on low delayed
+                           channel, 0 = no, 1 = yes"
+        FORMAT        = "I1"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 28
+        NAME            = FDAQ_AUTOCAL
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 141
+        BYTES           = 1
+        DESCRIPTION     = "FDAQ calibration staircase signal enabled,
+                           0 = no, 1 = yes"
+        FORMAT        = "I1"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 29
+        NAME            = FDAQ_PROTECTION
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 143
+        BYTES           = 1
+        DESCRIPTION     = "FDAQ latch-up detection enabled, 0 = no, 1 = yes"
+        FORMAT        = "I1"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 30
+        NAME            = FDAQ_CAL_TARGET
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 145
+        BYTES           = 1
+        DESCRIPTION     = "FDAQ target calibration signal used,
+                           0 = no, 1 = yes"
+        FORMAT        = "I1"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 31
+        NAME            = HV_CONVERTER
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 147
+        BYTES           = 1
+        DESCRIPTION     = "High voltages converter on, 0 = no, 1 = yes"
+        FORMAT        = "I1"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 32
+        NAME            = HV_RFB
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 149
+        BYTES           = 1
+        DESCRIPTION     = "Reflector board high voltage enabled, 0 = no,
+                           1 = yes"
+        FORMAT        = "I1"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 33
+        NAME            = HV_MM1
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 151
+        BYTES           = 1
+        DESCRIPTION     = "Multiplier high voltage enable, 0 = no, 1 = yes"
+        FORMAT        = "I1"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 34
+        NAME            = FDAQ_PRI_LATCHUP
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 153
+        BYTES           = 1
+        DESCRIPTION     = "FDAQ primary board latch-up, 0 = no, 1 = yes"
+        FORMAT        = "I1"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 35
+        NAME            = FDAQ_AUX_LATCHUP
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 155
+        BYTES           = 1
+        DESCRIPTION     = "FDAQ auxiliary board latch-up, 0 = no, 1 = yes"
+        FORMAT        = "I1"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 36
+        NAME            = TRIGGER_INTEG
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 157
+        BYTES           = 3
+        DESCRIPTION     = "FDAQ integral trigger DA level"
+        FORMAT        = "I3"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 37
+        NAME            = TRIGGER_PULSE
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 161
+        BYTES           = 3
+        DESCRIPTION     = "FDAQ pulse trigger DA level"
+        FORMAT        = "I3"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 38
+        NAME            = MULTIPLEXER_INDEX
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 165
+        BYTES           = 2
+        DESCRIPTION     = "Housekeeping multiplexer index"
+        FORMAT        = "I2"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 39
+        NAME            = MULTIPLEXER_VALUE
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 168
+        BYTES           = 3
+        DESCRIPTION     = "Housekeeping multiplexer value, uncalibrated"
+        FORMAT        = "I3"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 40
+        NAME            = MM1_SETUP
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 172
+        BYTES           = 3
+        DESCRIPTION     = "Multiplier high voltage DA setup value"
+        FORMAT        = "I3"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 41
+        NAME            = MM1_VALUE
+        DATA_TYPE       = ASCII_REAL
+        START_BYTE      = 176
+        BYTES           = 4
+        DESCRIPTION     = "Multiplier high voltage calibrated value"
+        FORMAT          = "F4.1"
+        UNIT            = "kV"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 42
+        NAME            = RFB_VALUE
+        DATA_TYPE       = ASCII_REAL
+        START_BYTE      = 181
+        BYTES           = 4
+        DESCRIPTION     = "Reflector high voltage calibrated value"
+        FORMAT          = "F4.1"
+        UNIT            = "kV"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 43
+        NAME            = ADC_STATUS
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 186
+        BYTES           = 1
+        DESCRIPTION     = "AD-status, 0 = ready, 1 = busy"
+        FORMAT        = "I1"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 44
+        NAME            = HV_SAFE
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 188
+        BYTES           = 1
+        DESCRIPTION     = "High voltage safe, 0 = disconnected, 1 = safe"
+        FORMAT        = "I1"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 45
+        NAME            = TEST_CONNECTOR
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 190
+        BYTES           = 1
+        DESCRIPTION     = "Test connector, 0 = unplugged, 1 = plugged"
+        FORMAT        = "I1"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 46
+        NAME            = NEGATIVE_ION_MODE
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 192
+        BYTES           = 1
+        DESCRIPTION     = "Negative ion mode, 0 = no, 1 = yes"
+        FORMAT        = "I1"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 47
+        NAME            = POSITIVE_ION_MODE
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 194
+        BYTES           = 1
+        DESCRIPTION     = "Positive IO mode, 0 = no, 1 = yes"
+        FORMAT        = "I1"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 48
+        NAME            = SMALL_TARGET
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 196
+        BYTES           = 1
+        DESCRIPTION     = "Small target, 0 = no, 1 = yes"
+        FORMAT        = "I1"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 49
+        NAME            = LARGE_TARGET
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 198
+        BYTES           = 1
+        DESCRIPTION     = "Large target, 0 = no, 1 = yes"
+        FORMAT        = "I1"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 50
+        NAME            = HI_SENS_DELAYED
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 200
+        BYTES           = 3
+        DESCRIPTION     = "High sensitivity delayed DA-value"
+        FORMAT        = "I3"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 51
+        NAME            = HI_SENS_STRAIGHT
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 204
+        BYTES           = 3
+        DESCRIPTION     = "High sensitivity straight DA-value"
+        FORMAT        = "I3"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 52
+        NAME            = LO_SENS_DELAYED
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 208
+        BYTES           = 3
+        DESCRIPTION     = "Low sensitivity delayed DA-value"
+        FORMAT        = "I3"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 53
+        NAME            = LO_SENS_STRAIGHT
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 212
+        BYTES           = 3
+        DESCRIPTION     = "Low sensitivity straight DA-value"
+        FORMAT        = "I3"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 54
+        NAME            = COMMAND_1
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 216
+        BYTES           = 5
+        DESCRIPTION     = "First of the last 6 commands"
+        FORMAT        = "I5"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 55
+        NAME            = COMMAND_2
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 222
+        BYTES           = 5
+        DESCRIPTION     = "Second of the last 6 commands"
+        FORMAT        = "I5"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 56
+        NAME            = COMMAND_3
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 228
+        BYTES           = 5
+        DESCRIPTION     = "Third of the last 6 commands"
+        FORMAT        = "I5"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 57
+        NAME            = COMMAND_4
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 234
+        BYTES           = 5
+        DESCRIPTION     = "Fourth of the last 6 commands"
+        FORMAT        = "I5"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 58
+        NAME            = COMMAND_5
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 240
+        BYTES           = 5
+        DESCRIPTION     = "Fifth of the last 6 commands"
+        FORMAT        = "I5"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 59
+        NAME            = COMMAND_6
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 246
+        BYTES           = 5
+        DESCRIPTION     = "Last of the last 6 commands"
+        FORMAT        = "I5"
+END_OBJECT              = COLUMN

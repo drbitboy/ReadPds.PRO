@@ -1,0 +1,648 @@
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 1
+        NAME            = COMMAND_INDEX
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 2
+        BYTES           = 11
+        DESCRIPTION     = "Index to command history table"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 2
+        NAME            = COMMANDS
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 14
+        BYTES           = 71
+        ITEMS           = 6
+        ITEM_BYTES      = 11
+        ITEM_OFFSET     = 12
+        DESCRIPTION     = "Last six commands, cyclic buffer"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 3
+        NAME            = COMMAND_CONFIG_INDEX
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 86
+        BYTES           = 11
+        DESCRIPTION     = "Parameter index of the last config command"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 4
+        NAME            = PREVIOUS_OPER_TIME
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 98
+        BYTES           = 11
+        DESCRIPTION     = "Last time operation control subroutine was run"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 5
+        NAME            = PREVIOUS_UPDATE_TIME
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 110
+        BYTES           = 11
+        DESCRIPTION     = "Last time hardware registers were updated"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 6
+        NAME            = PREVIOUS_TARGET_TIME
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 122
+        BYTES           = 11
+        DESCRIPTION     = "Last time target size was checked against
+                           event rate"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 7
+        NAME            = FDAQ_FALSE_FIFO
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 134
+        BYTES           = 11
+        DESCRIPTION     = "simulated FIFO requested"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 8
+        NAME            = FDAQ_MANUAL
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 146
+        BYTES           = 11
+        DESCRIPTION     = "FDAQ FIFO readout requested"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 9
+        NAME            = FDAQ_CALIBRATE
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 158
+        BYTES           = 11
+        DESCRIPTION     = "FDAQ calibration pulses requested"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 10
+        NAME            = SAFE
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 170
+        BYTES           = 11
+        DESCRIPTION     = "Command to be executed in safe mode"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 11
+        NAME            = KEEP_SETUP
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 182
+        BYTES           = 11
+        DESCRIPTION     = "FDAQ calibration data requested"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 12
+        NAME            = DUMP
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 194
+        BYTES           = 11
+        DESCRIPTION     = "Structure dump requested"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 13
+        NAME            = KEEP_DUMP
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 206
+        BYTES           = 11
+        DESCRIPTION     = "Keepalive data requested"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 14
+        NAME            = GLOBAL_DUMP
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 218
+        BYTES           = 11
+        DESCRIPTION     = "Global data requested"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 15
+        NAME            = INFO_DUMP
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 230
+        BYTES           = 11
+        DESCRIPTION     = "Interrupt data requested"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 16
+        NAME            = TIMEOUT
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 242
+        BYTES           = 11
+        DESCRIPTION     = "Housekeeping timeout in force"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 17
+        NAME            = CALIBRATE_FDAQ
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 254
+        BYTES           = 11
+        DESCRIPTION     = "FDAQ calibration requested"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 18
+        NAME            = FORCEFULL
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 266
+        BYTES           = 11
+        DESCRIPTION     = "Do not compress spectrum data"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 19
+        NAME            = ENCOUNTER_SIMULATION
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 278
+        BYTES           = 11
+        DESCRIPTION     = "Encounter simulation in force"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 20
+        NAME            = MM1
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 290
+        BYTES           = 11
+        DESCRIPTION     = "MM-1 DA setup value"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 21
+        NAME            = POLARITY
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 302
+        BYTES           = 11
+        DESCRIPTION     = "Ion polarity, 1 = positive, 2 = negative"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 22
+        NAME            = TARGET
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 314
+        BYTES           = 11
+        DESCRIPTION     = "Target size, 4 = small, 8 = large"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 23
+        NAME            = HVS
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 326
+        BYTES           = 11
+        DESCRIPTION     = "High voltage setup,
+                           0x00 = all off,
+                           0x01 = converter on,
+                           0x40 = RFB enabled,
+                           0x80 = MM1-1 enabled,
+                           plus the ORed combinations of all bits"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 24
+        NAME            = HK_INDEX
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 338
+        BYTES           = 11
+        DESCRIPTION     = "Index of HK channel to be measured"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 25
+        NAME            = LOOKUP
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 350
+        BYTES           = 239
+        ITEMS           = 20
+        ITEM_BYTES      = 11
+        ITEM_OFFSET     = 12
+        DESCRIPTION     = "Lookup table of housekeeping hardware channels"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 26
+        NAME            = CHARGE
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 590
+        BYTES           = 11
+        DESCRIPTION     = "Current event charge"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 27
+        NAME            = FDAQ_START_TIME
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 602
+        BYTES           = 11
+        DESCRIPTION     = "Start of free FDAQ interrupts,
+                           used for rate calculation"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 28
+        NAME            = FDAQ_END_TIME
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 614
+        BYTES           = 11
+        DESCRIPTION     = "End of free FDAQ interrupts,
+                           used for rate calculation"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 29
+        NAME            = LARGE_START_TIME
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 626
+        BYTES           = 11
+        DESCRIPTION     = "Start of free FDAQ interrupts,
+                           used for large rate calculation"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 30
+        NAME            = LARGE_END_TIME
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 638
+        BYTES           = 11
+        DESCRIPTION     = "End of free FDAQ interrupts,
+                           used for large rate calculation"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 31
+        NAME            = LARGE_COUNTER
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 650
+        BYTES           = 11
+        DESCRIPTION     = "Counter for large events"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 32
+        NAME            = ENCOUNTER_START_TIME
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 662
+        BYTES           = 11
+        DESCRIPTION     = "Not used"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 33
+        NAME            = ENCOUNTER_CHANGE
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 674
+        BYTES           = 11
+        DESCRIPTION     = "Counter of encounter clock changes"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 34
+        NAME            = ENCOUNTER_PREVIOUS
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 686
+        BYTES           = 11
+        DESCRIPTION     = "Encounter clock previous time
+                           operations control subroutine
+                           was entered"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 35
+        NAME            = ENCOUNTER_COUNTER
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 698
+        BYTES           = 11
+        DESCRIPTION     = "Index to encounter cyclic buffer of
+                           8 values"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 36
+        NAME            = ENCOUNTERS
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 710
+        BYTES           = 95
+        ITEMS           = 8
+        ITEM_BYTES      = 11
+        ITEM_OFFSET     = 12
+        DESCRIPTION     = "Encounter clock cyclic buffer"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 37
+        NAME            = ENCOUNTER_NEGATIVE
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 806
+        BYTES           = 11
+        DESCRIPTION     = "Time of when to switch to negative
+                           ion mode in encounter clock units"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 38
+        NAME            = ENCOUNTER_POSITIVE
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 818
+        BYTES           = 11
+        DESCRIPTION     = "Time of when to switch to positive
+                           ion mode in encounter clock units"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 39
+        NAME            = ENCOUNTER_BYTE_LIMIT
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 830
+        BYTES           = 203
+        ITEMS           = 17
+        ITEM_BYTES      = 11
+        ITEM_OFFSET     = 12
+        DESCRIPTION     = "Encounter partition limits in bytes"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 40
+        NAME            = POSITIVE_FDAQ
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 1034
+        BYTES           = 11
+        DESCRIPTION     = "Positive ion mode rate"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 41
+        NAME            = POSITIVE_FDAQ_TABLE
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 1046
+        BYTES           = 47
+        ITEMS           = 4
+        ITEM_BYTES      = 11
+        ITEM_OFFSET     = 12
+        DESCRIPTION     = "Array to calculate running mean of
+                           the event rate in last 4 seconds"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 42
+        NAME            = POSITIVE_FDAQ_INDEX
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 1094
+        BYTES           = 11
+        DESCRIPTION     = "Current index of the rate array"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 43
+        NAME            = POSITIVE_LARGE
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 1106
+        BYTES           = 11
+        DESCRIPTION     = "Positive ion mode large rate"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 44
+        NAME            = POSITIVE_LARGE_TABLE
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 1118
+        BYTES           = 47
+        ITEMS           = 4
+        ITEM_BYTES      = 11
+        ITEM_OFFSET     = 12
+        DESCRIPTION     = "Array to calculate running mean of
+                           the large event rate in last 4 seconds"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 45
+        NAME            = POSITIVE_LARGE_INDEX
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 1166
+        BYTES           = 11
+        DESCRIPTION     = "Current index of the large rate array"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 46
+        NAME            = POSITIVE_LARGE_COUNT
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 1178
+        BYTES           = 11
+        DESCRIPTION     = "Count of positive large events"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 47
+        NAME            = NEGATIVE_FDAQ
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 1190
+        BYTES           = 11
+        DESCRIPTION     = "Negative ion mode rate"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 48
+        NAME            = NEGATIVE_FDAQ_TABLE
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 1202
+        BYTES           = 47
+        ITEMS           = 4
+        ITEM_BYTES      = 11
+        ITEM_OFFSET     = 12
+        DESCRIPTION     = "Array to calculate running mean of
+                           the event rate in last 4 seconds"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 49
+        NAME            = NEGATIVE_FDAQ_INDEX
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 1250
+        BYTES           = 11
+        DESCRIPTION     = "Current index of the rate array"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 50
+        NAME            = NEGATIVE_LARGE
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 1262
+        BYTES           = 11
+        DESCRIPTION     = "Negative ion mode large rate"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 51
+        NAME            = NEGATIVE_LARGE_TABLE
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 1274
+        BYTES           = 47
+        ITEMS           = 4
+        ITEM_BYTES      = 11
+        ITEM_OFFSET     = 12
+        DESCRIPTION     = "Array to calculate running mean of
+                           the large event rate in last 4 seconds"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 52
+        NAME            = NEGATIVE_LARGE_INDEX
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 1322
+        BYTES           = 11
+        DESCRIPTION     = "Current index of the large rate array"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 53
+        NAME            = NEGATIVE_LARGE_COUNT
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 1334
+        BYTES           = 11
+        DESCRIPTION     = "Count of negative large events"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 54
+        NAME            = WAVELET_COEFF_POINTER
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 1346
+        BYTES           = 11
+        DESCRIPTION     = "Pointer to wavelet coefficients"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 55
+        NAME            = WAVELET_COEFF_LENGTHS
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 1358
+        BYTES           = 59
+        ITEMS           = 5
+        ITEM_BYTES      = 11
+        ITEM_OFFSET     = 12
+        DESCRIPTION     = "Array of wavelet coefficient lengths"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 56
+        NAME            = WAVELET_DATA_POINTER
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 1418
+        BYTES           = 11
+        DESCRIPTION     = "Pointer to wavelet data"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 57
+        NAME            = ENCOUNTER_FLUX_COUNTER
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 1430
+        BYTES           = 11
+        DESCRIPTION     = "Encounter simulation flux"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 58
+        NAME            = FDAQ_MANUAL_IN_FORCE
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 1442
+        BYTES           = 11
+        DESCRIPTION     = "FDAQ manual request done"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 59
+        NAME            = TM_BUFFER_SIZE
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 1454
+        BYTES           = 11
+        DESCRIPTION     = "The size of the telemetry buffer"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 60
+        NAME            = MM1_RAMP
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 1466
+        BYTES           = 71
+        ITEMS           = 6
+        ITEM_BYTES      = 11
+        ITEM_OFFSET     = 12
+        DESCRIPTION     = "Array of MM-1 ramp setup values"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN

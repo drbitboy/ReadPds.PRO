@@ -1,0 +1,597 @@
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 1
+        NAME            = SC_SUN_POS_X
+        DATA_TYPE       = ASCII_REAL
+        START_BYTE      = 1
+        BYTES           = 15
+        DESCRIPTION     = "Geometric spacecraft position relative to the 
+                           Sun in the ecliptic reference frame, X component"
+        FORMAT          = "F15.3"
+        UNIT            = "KILOMETER"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 2
+        NAME            = SC_SUN_POS_Y
+        DATA_TYPE       = ASCII_REAL
+        START_BYTE      = 17
+        BYTES           = 15
+        DESCRIPTION     = "Geometric spacecraft position relative to the 
+                           Sun in the ecliptic reference frame, Y component"
+        FORMAT          = "F15.3"
+        UNIT            = "KILOMETER"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 3
+        NAME            = SC_SUN_POS_Z
+        DATA_TYPE       = ASCII_REAL
+        START_BYTE      = 33
+        BYTES           = 15
+        DESCRIPTION     = "Geometric spacecraft position relative to the 
+                           Sun in the ecliptic reference frame, Z component"
+        FORMAT          = "F15.3"
+        UNIT            = "KILOMETER"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 4
+        NAME            = SC_SUN_POS_MAG
+        DATA_TYPE       = ASCII_REAL
+        START_BYTE      = 49
+        BYTES           = 15
+        DESCRIPTION     = "Spacecraft distance from the Sun"
+        FORMAT          = "F15.3"
+        UNIT            = "KILOMETER"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 5
+        NAME            = SC_SUN_VEL_X
+        DATA_TYPE       = ASCII_REAL
+        START_BYTE      = 65
+        BYTES           = 15
+        DESCRIPTION     = "Spacecraft velocity relative to the Sun 
+                           in the ecliptic reference frame, Vx component"
+        FORMAT          = "F15.3"
+        UNIT            = "KILOMETER PER SECOND"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 6
+        NAME            = SC_SUN_VEL_Y
+        DATA_TYPE       = ASCII_REAL
+        START_BYTE      = 81
+        BYTES           = 15
+        DESCRIPTION     = "Spacecraft velocity relative to the Sun 
+                           in the ecliptic reference frame, Vy component"
+        FORMAT          = "F15.3"
+        UNIT            = "KILOMETER PER SECOND"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 7
+        NAME            = SC_SUN_VEL_Z
+        DATA_TYPE       = ASCII_REAL
+        START_BYTE      = 97
+        BYTES           = 15
+        DESCRIPTION     = "Spacecraft velocity relative to the Sun 
+                           in the ecliptic reference frame, Vz component"
+        FORMAT          = "F15.3"
+        UNIT            = "KILOMETER PER SECOND"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 8
+        NAME            = SC_SUN_VEL_MAG
+        DATA_TYPE       = ASCII_REAL
+        START_BYTE      = 113
+        BYTES           = 15
+        DESCRIPTION     = "Magnitude of spacecraft velocity relative to 
+                           the Sun"
+        FORMAT          = "F15.3"
+        UNIT            = "KILOMETER PER SECOND"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 9
+        NAME            = SC_TEMPEL1_POS_X
+        DATA_TYPE       = ASCII_REAL
+        START_BYTE      = 129
+        BYTES           = 15
+        DESCRIPTION     = "Geometric spacecraft position relative to the 
+                           Tempel 1 in the ecliptic reference frame,  
+                           X component"
+        FORMAT          = "F15.3"
+        UNIT            = "KILOMETER"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 10
+        NAME            = SC_TEMPEL1_POS_Y
+        DATA_TYPE       = ASCII_REAL
+        START_BYTE      = 145
+        BYTES           = 15
+        DESCRIPTION     = "Geometric spacecraft position relative to the 
+                           Tempel 1 in the ecliptic reference frame, 
+                           Y component"
+        FORMAT          = "F15.3"
+        UNIT            = "KILOMETER"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 11
+        NAME            = SC_TEMPEL1_POS_Z
+        DATA_TYPE       = ASCII_REAL
+        START_BYTE      = 161
+        BYTES           = 15
+        DESCRIPTION     = "Geometric spacecraft position relative to the 
+                           Tempel 1 in the ecliptic reference frame, 
+                           Z component"
+        FORMAT          = "F15.3"
+        UNIT            = "KILOMETER"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 12
+        NAME            = SC_TEMPEL1_POS_MAG
+        DATA_TYPE       = ASCII_REAL
+        START_BYTE      = 177
+        BYTES           = 15
+        DESCRIPTION     = "Spacecraft distance from Tempel 1"
+        FORMAT          = "F15.3"
+        UNIT            = "KILOMETER"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 13
+        NAME            = SC_TEMPEL1_VEL_X
+        DATA_TYPE       = ASCII_REAL
+        START_BYTE      = 193
+        BYTES           = 15
+        DESCRIPTION     = "Spacecraft velocity relative to Tempel 1 
+                           in the ecliptic reference frame, Vx component"
+        FORMAT          = "F15.3"
+        UNIT            = "KILOMETER PER SECOND"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 14
+        NAME            = SC_TEMPEL1_VEL_Y
+        DATA_TYPE       = ASCII_REAL
+        START_BYTE      = 209
+        BYTES           = 15
+        DESCRIPTION     = "Spacecraft velocity relative to Tempel 1 
+                           in the ecliptic reference frame, Vy component"
+        FORMAT          = "F15.3"
+        UNIT            = "KILOMETER PER SECOND"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 15
+        NAME            = SC_TEMPEL1_VEL_Z
+        DATA_TYPE       = ASCII_REAL
+        START_BYTE      = 225
+        BYTES           = 15
+        DESCRIPTION     = "Spacecraft velocity relative to Tempel 1 
+                           in the ecliptic reference frame, Vz component"
+        FORMAT          = "F15.3"
+        UNIT            = "KILOMETER PER SECOND"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 16
+        NAME            = SC_TEMPEL1_VEL_MAG
+        DATA_TYPE       = ASCII_REAL
+        START_BYTE      = 241
+        BYTES           = 15
+        DESCRIPTION     = "Magnitude of spacecraft velocity relative to 
+                           Tempel 1"
+        FORMAT          = "F15.3"
+        UNIT            = "KILOMETER PER SECOND"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 17
+        NAME            = SC_ISP_VEL_X
+        DATA_TYPE       = ASCII_REAL
+        START_BYTE      = 257
+        BYTES           = 15
+        DESCRIPTION     = "Spacecraft velocity relative to interstellar 
+                           particle stream in the ecliptic reference frame, 
+                           Vx component"
+        FORMAT          = "F15.3"
+        UNIT            = "KILOMETER PER SECOND"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 18
+        NAME            = SC_ISP_VEL_Y
+        DATA_TYPE       = ASCII_REAL
+        START_BYTE      = 273
+        BYTES           = 15
+        DESCRIPTION     = "Spacecraft velocity relative to interstellar 
+                           particle stream in the ecliptic reference frame, 
+                           Vy component"
+        FORMAT          = "F15.3"
+        UNIT            = "KILOMETER PER SECOND"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 19
+        NAME            = SC_ISP_VEL_Z
+        DATA_TYPE       = ASCII_REAL
+        START_BYTE      = 289
+        BYTES           = 15
+        DESCRIPTION     = "Spacecraft velocity relative to interstellar 
+                           particle stream in the ecliptic reference frame, 
+                           Vz component"
+        FORMAT          = "F15.3"
+        UNIT            = "KILOMETER PER SECOND"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 20
+        NAME            = SC_ISP_VEL_MAG
+        DATA_TYPE       = ASCII_REAL
+        START_BYTE      = 305
+        BYTES           = 15
+        DESCRIPTION     = "Magnitude of spacecraft velocity relative to
+                           interstellar particle stream"
+        FORMAT          = "F15.3"
+        UNIT            = "KILOMETER PER SECOND"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 21
+        NAME            = CK_FOUND
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 321
+        BYTES           = 15
+        DESCRIPTION     = "Flag indicating if spacecraft orientation data
+                           data necessary to compute some of the geometry
+                           parameters was available: 1 -- yes, 0 -- no"
+        FORMAT        = "I15"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 22
+        NAME            = SC_X_AXIS_X
+        DATA_TYPE       = ASCII_REAL
+        START_BYTE      = 337
+        BYTES           = 15
+        DESCRIPTION     = "Spacecraft reference frame +X axis direction
+                           in the ecliptic reference frame, X component of 
+                           the unit vector"
+        FORMAT          = "F15.6"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 23
+        NAME            = SC_X_AXIS_Y
+        DATA_TYPE       = ASCII_REAL
+        START_BYTE      = 353
+        BYTES           = 15
+        DESCRIPTION     = "Spacecraft reference frame +X axis direction
+                           in the ecliptic reference frame, Y component of 
+                           the unit vector"
+        FORMAT          = "F15.6"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 24
+        NAME            = SC_X_AXIS_Z
+        DATA_TYPE       = ASCII_REAL
+        START_BYTE      = 369
+        BYTES           = 15
+        DESCRIPTION     = "Spacecraft reference frame +X axis direction
+                           in the ecliptic reference frame, Z component of 
+                           the unit vector"
+        FORMAT          = "F15.6"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 25
+        NAME            = SC_Y_AXIS_X
+        DATA_TYPE       = ASCII_REAL
+        START_BYTE      = 385
+        BYTES           = 15
+        DESCRIPTION     = "Spacecraft reference frame +Y axis direction
+                           in the ecliptic reference frame, X component of 
+                           the unit vector"
+        FORMAT          = "F15.6"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 26
+        NAME            = SC_Y_AXIS_Y
+        DATA_TYPE       = ASCII_REAL
+        START_BYTE      = 401
+        BYTES           = 15
+        DESCRIPTION     = "Spacecraft reference frame +Y axis direction
+                           in the ecliptic reference frame, Y component of 
+                           the unit vector"
+        FORMAT          = "F15.6"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 27
+        NAME            = SC_Y_AXIS_Z
+        DATA_TYPE       = ASCII_REAL
+        START_BYTE      = 417
+        BYTES           = 15
+        DESCRIPTION     = "Spacecraft reference frame +Y axis direction
+                           in the ecliptic reference frame, Z component of 
+                           the unit vector"
+        FORMAT          = "F15.6"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 28
+        NAME            = SC_Z_AXIS_X
+        DATA_TYPE       = ASCII_REAL
+        START_BYTE      = 433
+        BYTES           = 15
+        DESCRIPTION     = "Spacecraft reference frame +Z axis direction
+                           in the ecliptic reference frame, X component of 
+                           the unit vector"
+        FORMAT          = "F15.6"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 29
+        NAME            = SC_Z_AXIS_Y
+        DATA_TYPE       = ASCII_REAL
+        START_BYTE      = 449
+        BYTES           = 15
+        DESCRIPTION     = "Spacecraft reference frame +Z axis direction
+                           in the ecliptic reference frame, Y component of 
+                           the unit vector"
+        FORMAT          = "F15.6"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 30
+        NAME            = SC_Z_AXIS_Z
+        DATA_TYPE       = ASCII_REAL
+        START_BYTE      = 465
+        BYTES           = 15
+        DESCRIPTION     = "Spacecraft reference frame +Z axis direction
+                           in the ecliptic reference frame, Z component of 
+                           the unit vector"
+        FORMAT          = "F15.6"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 31
+        NAME            = SC_SUN_VEL_SC_X
+        DATA_TYPE       = ASCII_REAL
+        START_BYTE      = 481
+        BYTES           = 15
+        DESCRIPTION     = "Spacecraft velocity relative to the Sun 
+                           in the spacecraft reference frame, Vx component"
+        FORMAT          = "F15.3"
+        UNIT            = "KILOMETER PER SECOND"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 32
+        NAME            = SC_SUN_VEL_SC_Y
+        DATA_TYPE       = ASCII_REAL
+        START_BYTE      = 497
+        BYTES           = 15
+        DESCRIPTION     = "Spacecraft velocity relative to the Sun 
+                           in the spacecraft reference frame, Vy component"
+        FORMAT          = "F15.3"
+        UNIT            = "KILOMETER PER SECOND"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 33
+        NAME            = SC_SUN_VEL_SC_Z
+        DATA_TYPE       = ASCII_REAL
+        START_BYTE      = 513
+        BYTES           = 15
+        DESCRIPTION     = "Spacecraft velocity relative to the Sun 
+                           in the spacecraft reference frame, Vz component"
+        FORMAT          = "F15.3"
+        UNIT            = "KILOMETER PER SECOND"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 34
+        NAME            = SC_SUN_VEL_OFFSET_ANG
+        DATA_TYPE       = ASCII_REAL
+        START_BYTE      = 529
+        BYTES           = 15
+        DESCRIPTION     = "Angle between spacecraft velocity relative
+                           to the Sun and the spacecraft reference frame 
+                           +X axis"
+        FORMAT          = "F15.3"
+        UNIT            = "DEGREE"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 35
+        NAME            = SC_SUN_VEL_CLOCK_ANG
+        DATA_TYPE       = ASCII_REAL
+        START_BYTE      = 545
+        BYTES           = 15
+        DESCRIPTION     = "Angle between the s/c +Z axis and the plane 
+                           containing spacecraft velocity relative to
+                           the Sun and the s/c +X axis, measured CCW as
+                           seen from the tip of the s/c +X axis."
+        FORMAT          = "F15.3"
+        UNIT            = "DEGREE"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 36
+        NAME            = SC_SUN_VEL_TARGET_ANG
+        DATA_TYPE       = ASCII_REAL
+        START_BYTE      = 561
+        BYTES           = 15
+        DESCRIPTION     = "Angle between spacecraft velocity relative
+                           to the Sun and the CIDA target normal vector 
+                           (pointing into the drift tube)"
+        FORMAT          = "F15.3"
+        UNIT            = "DEGREE"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 37
+        NAME            = SC_TEMPEL1_VEL_SC_X
+        DATA_TYPE       = ASCII_REAL
+        START_BYTE      = 577
+        BYTES           = 15
+        DESCRIPTION     = "Spacecraft velocity relative to Tempel 1 
+                           in the spacecraft reference frame, Vx component"
+        FORMAT          = "F15.3"
+        UNIT            = "KILOMETER PER SECOND"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 38
+        NAME            = SC_TEMPEL1_VEL_SC_Y
+        DATA_TYPE       = ASCII_REAL
+        START_BYTE      = 593
+        BYTES           = 15
+        DESCRIPTION     = "Spacecraft velocity relative to Tempel 1 
+                           in the spacecraft reference frame, Vy component"
+        FORMAT          = "F15.3"
+        UNIT            = "KILOMETER PER SECOND"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 39
+        NAME            = SC_TEMPEL1_VEL_SC_Z
+        DATA_TYPE       = ASCII_REAL
+        START_BYTE      = 609
+        BYTES           = 15
+        DESCRIPTION     = "Spacecraft velocity relative to Tempel 1 
+                           in the spacecraft reference frame, Vz component"
+        FORMAT          = "F15.3"
+        UNIT            = "KILOMETER PER SECOND"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 40
+        NAME            = SC_TEMPEL1_VEL_OFFSET_ANG
+        DATA_TYPE       = ASCII_REAL
+        START_BYTE      = 625
+        BYTES           = 15
+        DESCRIPTION     = "Angle between spacecraft velocity relative to 
+                           Tempel 1 and the spacecraft reference frame 
+                           +X axis"
+        FORMAT          = "F15.3"
+        UNIT            = "DEGREE"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 41
+        NAME            = SC_TEMPEL1_VEL_CLOCK_ANG
+        DATA_TYPE       = ASCII_REAL
+        START_BYTE      = 641
+        BYTES           = 15
+        DESCRIPTION     = "Angle between the s/c +Z axis and the plane 
+                           containing spacecraft velocity relative to
+                           Tempel 1 and the s/c +X axis, measured CCW as
+                           seen from the tip of the s/c +X axis."
+        FORMAT          = "F15.3"
+        UNIT            = "DEGREE"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 42
+        NAME            = SC_TEMPEL1_VEL_TARGET_ANG
+        DATA_TYPE       = ASCII_REAL
+        START_BYTE      = 657
+        BYTES           = 15
+        DESCRIPTION     = "Angle between spacecraft velocity relative to 
+                           Tempel 1 and the CIDA target normal vector 
+                           (pointing into the drift tube)"
+        FORMAT          = "F15.3"
+        UNIT            = "DEGREE"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 43
+        NAME            = SC_ISP_VEL_SC_X
+        DATA_TYPE       = ASCII_REAL
+        START_BYTE      = 673
+        BYTES           = 15
+        DESCRIPTION     = "Spacecraft velocity relative to interstellar 
+                           particle stream in the spacecraft reference 
+                           frame, Vx component"
+        FORMAT          = "F15.3"
+        UNIT            = "KILOMETER PER SECOND"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 44
+        NAME            = SC_ISP_VEL_SC_Y
+        DATA_TYPE       = ASCII_REAL
+        START_BYTE      = 689
+        BYTES           = 15
+        DESCRIPTION     = "Spacecraft velocity relative to interstellar 
+                           particle stream in the spacecraft reference 
+                           frame, Vy component"
+        FORMAT          = "F15.3"
+        UNIT            = "KILOMETER PER SECOND"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 45
+        NAME            = SC_ISP_VEL_SC_Z
+        DATA_TYPE       = ASCII_REAL
+        START_BYTE      = 705
+        BYTES           = 15
+        DESCRIPTION     = "Spacecraft velocity relative to interstellar 
+                           particle stream in the spacecraft reference 
+                           frame, Vz component"
+        FORMAT          = "F15.3"
+        UNIT            = "KILOMETER PER SECOND"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 46
+        NAME            = SC_ISP_VEL_OFFSET_ANG
+        DATA_TYPE       = ASCII_REAL
+        START_BYTE      = 721
+        BYTES           = 15
+        DESCRIPTION     = "Angle between spacecraft velocity relative 
+                           to interstellar particle stream and the the
+                           spacecraft reference frame +X axis"
+        FORMAT          = "F15.3"
+        UNIT            = "DEGREE"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 47
+        NAME            = SC_ISP_VEL_CLOCK_ANG
+        DATA_TYPE       = ASCII_REAL
+        START_BYTE      = 737
+        BYTES           = 15
+        DESCRIPTION     = "Angle between the s/c +Z axis and the plane
+                           containing spacecraft velocity relative to
+                           interstellar particle stream and the s/c +X
+                           axis, measured CCW as seen from the tip of
+                           the s/c +X axis."
+        FORMAT          = "F15.3"
+        UNIT            = "DEGREE"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 48
+        NAME            = SC_ISP_VEL_TARGET_ANG
+        DATA_TYPE       = ASCII_REAL
+        START_BYTE      = 753
+        BYTES           = 15
+        DESCRIPTION     = "Angle between spacecraft velocity relative 
+                           to interstellar particle stream and the CIDA
+                           target normal vector (pointing into the
+                           drift tube)"
+        FORMAT          = "F15.3"
+        UNIT            = "DEGREE"
+END_OBJECT              = COLUMN
+

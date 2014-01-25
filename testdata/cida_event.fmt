@@ -1,0 +1,219 @@
+OBJECT                   = COLUMN
+        COLUMN_NUMBER    = 1
+        NAME             = TARGET
+        DATA_TYPE        = ASCII_INTEGER
+        START_BYTE       = 1
+        BYTES            = 3
+        DESCRIPTION      = "Target AD-data
+                            N.B. These target AD-data have been removed
+                                 from the first 4096 rows of either the
+                                 LOW_DELAYED COLUMN or the LOW_STRAIGHT
+                                 COLUMN and replaced with the
+                                 MISSING_CONSTANT (-1).  The last 4096 rows
+                                 of this column will always be the
+                                 MISSING_CONSTANT."
+        FORMAT         = "I3"
+        MISSING_CONSTANT = -1
+END_OBJECT               = COLUMN
+
+OBJECT                   = COLUMN
+        COLUMN_NUMBER    = 2
+        NAME             = HIGH_STRAIGHT
+        DATA_TYPE        = ASCII_INTEGER
+        START_BYTE       = 5
+        BYTES            = 3
+        DESCRIPTION      = "High straight channel AD-data"
+        FORMAT         = "I3"
+        MISSING_CONSTANT = -1
+END_OBJECT               = COLUMN
+
+OBJECT                   = COLUMN
+        COLUMN_NUMBER    = 3
+        NAME             = HIGH_DELAYED
+        DATA_TYPE        = ASCII_INTEGER
+        START_BYTE       = 9
+        BYTES            = 3
+        DESCRIPTION      = "High delayed channel AD-data"
+        FORMAT         = "I3"
+        MISSING_CONSTANT = -1
+END_OBJECT               = COLUMN
+
+OBJECT                   = COLUMN
+        COLUMN_NUMBER    = 4
+        NAME             = LOW_STRAIGHT
+        DATA_TYPE        = ASCII_INTEGER
+        START_BYTE       = 13
+        BYTES            = 3
+        DESCRIPTION      = "Low straight channel AD-data.
+                            N.B. Target AD-data have been removed from
+                                 the first 4096 rows of either this COLUMN
+                                 or the LOW_DELAYED COLUMN and replaced
+                                 with the MISSING_CONSTANT (-1)."
+        FORMAT         = "I3"
+        MISSING_CONSTANT = -1
+END_OBJECT               = COLUMN
+
+OBJECT                   = COLUMN
+        COLUMN_NUMBER    = 5
+        NAME             = LOW_DELAYED
+        DATA_TYPE        = ASCII_INTEGER
+        START_BYTE       = 17
+        BYTES            = 3
+        DESCRIPTION      = "Low delayed channel AD-data.
+                            N.B. Target AD-data have been removed from
+                                 the first 4096 rows of either this COLUMN
+                                 or the LOW_STRAIGHT COLUMN and replaced
+                                 with the MISSING_CONSTANT (-1)."
+        FORMAT         = "I3"
+        MISSING_CONSTANT = -1
+END_OBJECT               = COLUMN
+
+OBJECT                   = COLUMN
+        COLUMN_NUMBER    = 6
+        NAME             = TARGET_CHARGE
+        DATA_TYPE        = ASCII_REAL
+        START_BYTE       = 21
+        BYTES            = 9
+        UNIT             = "pC"
+        DESCRIPTION      = "Target data, in picocoulombs.
+                            N.B. These target charge data have been removed
+                                 from the first 4096 rows of either the
+                                 LOW_DELAYED_CHARGE COLUMN or the
+                                 LOW_STRAIGHT_CHARGE COLUMN and replaced
+                                 with the MISSING_CONSTANT (-9999.999).
+                                 The last 4096 rows of this column will
+                                 always be the MISSING_CONSTANT."
+        FORMAT          = "F9.3"
+        MISSING_CONSTANT = -9999.999
+END_OBJECT               = COLUMN
+
+OBJECT                   = COLUMN
+        COLUMN_NUMBER    = 7
+        NAME             = HIGH_STRAIGHT_CHARGE
+        DATA_TYPE        = ASCII_REAL
+        START_BYTE       = 31
+        BYTES            = 9
+        UNIT             = "pC"
+        DESCRIPTION      = "High straight channel AD-data, in picocoulombs"
+        FORMAT          = "F9.3"
+        MISSING_CONSTANT = -9999.999
+END_OBJECT               = COLUMN
+
+OBJECT                   = COLUMN
+        COLUMN_NUMBER    = 8
+        NAME             = HIGH_DELAYED_CHARGE
+        DATA_TYPE        = ASCII_REAL
+        START_BYTE       = 41
+        BYTES            = 9
+        UNIT             = "pC"
+        DESCRIPTION      = "High delayed channel AD-data, in picocoulombs"
+        FORMAT          = "F9.3"
+        MISSING_CONSTANT = -9999.999
+END_OBJECT               = COLUMN
+
+OBJECT                   = COLUMN
+        COLUMN_NUMBER    = 9
+        NAME             = LOW_STRAIGHT_CHARGE
+        DATA_TYPE        = ASCII_REAL
+        START_BYTE       = 51
+        BYTES            = 9
+        UNIT             = "pC"
+        DESCRIPTION      = "Low straight channel AD-data, in picocoulombs
+                            N.B. Target AD-data have been removed from
+                                 the first 4096 rows of either this COLUMN
+                                 or the LOW_DELAYED_CHARGE COLUMN and
+                                 replaced with the MISSING_CONSTANT
+                                 (-9999.999)."
+        FORMAT          = "F9.3"
+        MISSING_CONSTANT = -9999.999
+END_OBJECT               = COLUMN
+
+OBJECT                   = COLUMN
+        COLUMN_NUMBER    = 10
+        NAME             = LOW_DELAYED_CHARGE
+        DATA_TYPE        = ASCII_REAL
+        START_BYTE       = 61
+        BYTES            = 9
+        UNIT             = "pC"
+        DESCRIPTION      = "Low delayed channel AD-data, in picocoulombs
+                            N.B. Target AD-data have been removed from
+                                 the first 4096 rows of either this COLUMN
+                                 or the LOW_STRAIGHT_CHARGE COLUMN and
+                                 replaced with the MISSING_CONSTANT
+                                 (-9999.999)."
+        FORMAT          = "F9.3"
+        MISSING_CONSTANT = -9999.999
+END_OBJECT               = COLUMN
+
+OBJECT                   = COLUMN
+        COLUMN_NUMBER    = 11
+        NAME             = BEST_CHARGE
+        DATA_TYPE        = ASCII_REAL
+        START_BYTE       = 71
+        BYTES            = 9
+        UNIT             = "pC"
+        DESCRIPTION      = "Best of two high-sensitivity AD-data
+                            channels, in picocoulombs"
+        FORMAT          = "F9.3"
+        MISSING_CONSTANT = -9999.999
+END_OBJECT               = COLUMN
+
+OBJECT                   = COLUMN
+        COLUMN_NUMBER    = 12
+        NAME             = BEST_CHARGE_SATURATED_STATE
+        DATA_TYPE        = ASCII_INTEGER
+        START_BYTE       = 81
+        BYTES            = 1
+        UNIT             = "N/A"
+        DESCRIPTION      = "This column will be 1 if the value in the
+                            previous BEST_CHARGE column for the row
+                            represents a saturated value, else it will
+                            be 0"
+        FORMAT          = "I1"
+END_OBJECT               = COLUMN
+
+OBJECT                   = COLUMN
+        DESCRIPTION      = "A description of the values in this column
+is below; the user is first directed to consider the following caveats:
+
+***N.B. This COLUMN is an INTERPRETATION that has been provided at the
+        request of the peer reviewers of this data set (Sascha Kempf and
+        Mihaly Horanyi, as well as at the request of Michael A'Hearn, the
+        director of the PDS Small Bodies Node at the time of delivery of
+        this data set), and against the advice of the Stardust-NExT CIDA
+        Science Team.
+
+        The gist of the objection of the CIDA team is that a PDS data set
+        is an excellent tool for archiving data, not interpretations, and
+        that by providing such interpreted data users are encouraged to
+        use, and give the same weight to, the interpretations as they would
+        raw data.  The proper place for interpretations is in peer-reviewed
+        literature, where uncertainties in each interpretation can be
+        adequately, and properly, addressed and reviewed.
+
+        The derivation of this ESTIMATE was highly dependent on the quality
+        of the data in this spectrum.  It is irresponsible for anyone to
+        use these values without significant understanding and experience
+        in the interpretration of Time-Of-Flight (TOF) mass spectra.
+
+        Refer to values for keywords DATA_QUALITY_ID and DATA_QUALITY_DESC
+        in PDS label for qualitative assessement of this estimate.  The 'a'
+        and 'b' estimated values, listed in the DATA_QUALITY_DESC keyword
+        string, are an interpretation of these data, and characterize this
+        spectrum.
+
+Subject to those caveats, here is the description of this column:
+
+The values in this column are ***APPROXIMATE*** masses, in units of
+daltons, for the time-of-flight (TOF) mass lines.  The user is directed
+to the caveats above if they want to use these values in any way."
+
+        COLUMN_NUMBER    = 13
+        NAME             = MASS_ESTIMATE_SEE_DESCRIPTION_AND_CAVEATS
+        DATA_TYPE        = ASCII_REAL
+        START_BYTE       = 83
+        BYTES            = 8
+        UNIT             = "Da"
+        FORMAT          = "F8.3"
+        MISSING_CONSTANT = -999.999
+END_OBJECT               = COLUMN

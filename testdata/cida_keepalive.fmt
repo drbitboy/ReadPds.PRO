@@ -1,0 +1,876 @@
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 1
+        NAME            = CHECKSUM
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 2
+        BYTES           = 11
+        DESCRIPTION     = "Signed 32-bit Checksum of remaining 71 COLUMNs
+                           (189 ITEMS) of KEEPALIVE data, in binary format,
+                           for this row.  N.B. this value may be negative.
+
+                           This CIDA_KEEPALIVE.FMT auxiliary label
+                           (^STRUCTURE) file comprises 72 COLUMNs
+                           (COLUMN_NAMEs ORIGINATOR through SPARE) and 190
+                           ITEMS.  N.B. some of the COLUMNs comprise
+                           multiple ITEMS.  All of these values are numeric
+                           (ASCII_INTEGER or ASCII_REAL).  In each row,
+                           each numeric value described by the 189 items
+                           after this CHECKSUM COLUMN can be represented
+                           as a signed 32-bit quantity.  Summing those 189
+                           signed 32-bit values, and discarding any
+                           overflow or underflow, will result in the 32-bit
+                           value described by this COLUMN.
+
+                           Conversion of a COLUMN value of
+                           DATA_TYPE = ASCII_INTEGER is straightforward.
+                           E.g. in Python with the Numpy module:
+
+                             import numpy
+                             I32 = numpy.int32( ItemString )
+
+                           Conversion of a COLUMN value of
+                           DATA_TYPE = ASCII_REAL requires converting the
+                           ASCII REAL value to a 32-bit (4-byte) IEEE-754
+                           floating-point values and then treating those
+                           32-bits as an unsigned integer.  The bits
+                           assignments for 4-byte IEEE-754 floating point
+                           values are described in the PDS Standards
+                           Reference. E.g. in Python:
+
+                             NPI32 = numpy.int32
+                             F32 = numpy.float32( ItemString )
+                             S32 = F32.tostring()
+                             I32 = numpy.fromstring( Str32, dtype=NPI32)[0]
+
+                           The byte order of the signed 32-bit integers and
+                           the 4-byte IEEE-754 floating point values is not
+                           important as long as it is consistent for the
+                           CHECKSUM.
+
+                           Obviously, the conversion of ASCII_REAL strings
+                           with 4-5 significant decimal digits to full
+                           32-bit floating-point precision is suspect and
+                           may be architecture-dependent, but the procedure
+                           described above, executed on a 64-bit
+                           Intel-compatible system running Gnu/Linux, was
+                           found to correctly predict this CHECKSUM value
+                           for all sixty rows of keepalive data from the
+                           Stardust-NExT mission.
+                          "
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 2
+        NAME            = ORIGINATOR
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 14
+        BYTES           = 11
+        DESCRIPTION     = "Software version initializing the keepalive data:
+                           0 = unknown
+                           1 = version 5, i.e. PROM
+                           2 = version higher 8 or higher
+                           3 = version 5 updated from higher version"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 3
+        NAME            = USEHV
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 26
+        BYTES           = 11
+        DESCRIPTION     = "flag, if it is 0x48564F4 = 1213615947,
+                           let's the high voltages to be turn on
+                           automatically in boot"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 4
+        NAME            = PARTITION
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 38
+        BYTES           = 11
+        DESCRIPTION     = "S/C memory partition used"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 5
+        NAME            = MINUS_PARTITION
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 50
+        BYTES           = 11
+        DESCRIPTION     = "S/C memory partition used, negated"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 6
+        NAME            = PRIM_PROTECTION
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 62
+        BYTES           = 11
+        DESCRIPTION     = "Primary FDAQ board protection flag,
+                           0 = off, 1 = on"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 7
+        NAME            = PRIM_AUTOCAL
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 74
+        BYTES           = 11
+        DESCRIPTION     = "Primary FDAQ board auto-calibration flag,
+                           0 = off, 1 = on"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 8
+        NAME            = PRIM_TARGET
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 86
+        BYTES           = 11
+        DESCRIPTION     = "Primary FDAQ board target flag,
+                           0 = off, 1 = on"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 9
+        NAME            = PRIM_LO
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 98
+        BYTES           = 11
+        DESCRIPTION     = "Primary FDAQ board low sensitivity channel,
+                           0 = low sensitivity 1,
+                           1 = low sensitivity 2"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 10
+        NAME            = PRIM_HI
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 110
+        BYTES           = 11
+        DESCRIPTION     = "Primary FDAQ board high sensitivity channel,
+                           0 = high sensitivity 1,
+                           1 = high sensitivity 2"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 11
+        NAME            = PRIM_PULSE
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 122
+        BYTES           = 11
+        DESCRIPTION     = "Primary FDAQ pulse trigger
+                           DA-converter setup value"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 12
+        NAME            = PRIM_INTEGRAL
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 134
+        BYTES           = 11
+        DESCRIPTION     = "Primary FDAQ integral trigger
+                           DA-converter setup value"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 13
+        NAME            = PRIM_LO_1
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 146
+        BYTES           = 11
+        DESCRIPTION     = "Primary FDAQ low sensitivity 1
+                           straight channel baseline DA-converter
+                           setup value"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 14
+        NAME            = PRIM_LO_DELAY_1
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 158
+        BYTES           = 11
+        DESCRIPTION     = "Primary FDAQ low sensitivity 1
+                           delayed channel baseline DA-converter
+                           setup value"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 15
+        NAME            = PRIM_HI_1
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 170
+        BYTES           = 11
+        DESCRIPTION     = "Primary FDAQ high sensitivity 1
+                           straight channel baseline DA-converter
+                           setup value"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 16
+        NAME            = PRIM_HI_DELAY_1
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 182
+        BYTES           = 11
+        DESCRIPTION     = "Primary FDAQ high sensitivity 1
+                           delayed channel baseline DA-converter
+                           setup value"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 17
+        NAME            = PRIM_LO_2
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 194
+        BYTES           = 11
+        DESCRIPTION     = "Primary FDAQ low sensitivity 2
+                           straight channel baseline DA-converter
+                           setup value"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 18
+        NAME            = PRIM_LO_DELAY_2
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 206
+        BYTES           = 11
+        DESCRIPTION     = "Primary FDAQ low sensitivity 2
+                           delayed channel baseline DA-converter
+                           setup value"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 19
+        NAME            = PRIM_HI_2
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 218
+        BYTES           = 11
+        DESCRIPTION     = "Primary FDAQ high sensitivity 2
+                           straight channel baseline DA-converter
+                           setup value"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 20
+        NAME            = PRIM_HI_DELAY_2
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 230
+        BYTES           = 11
+        DESCRIPTION     = "Primary FDAQ high sensitivity 2
+                           delayed channel baseline DA-converter
+                           setup value"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 21
+        NAME            = AUX_PROTECTION
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 242
+        BYTES           = 11
+        DESCRIPTION     = "Auxiliary FDAQ board protection flag,
+                           0 = off, 1 = on"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 22
+        NAME            = AUX_AUTOCAL
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 254
+        BYTES           = 11
+        DESCRIPTION     = "Auxiliary FDAQ board auto-calibration flag,
+                           0 = off, 1 = on"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 23
+        NAME            = AUX_TARGET
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 266
+        BYTES           = 11
+        DESCRIPTION     = "Primary FDAQ board target flag,
+                           0 = off, 1 = on"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 24
+        NAME            = AUX_LO
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 278
+        BYTES           = 11
+        DESCRIPTION     = "Auxiliary FDAQ board low sensitivity channel,
+                           0 = low sensitivity 1,
+                           1 = low sensitivity 2"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 25
+        NAME            = AUX_HI
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 290
+        BYTES           = 11
+        DESCRIPTION     = "Auxiliary FDAQ board high sensitivity channel,
+                           0 = high sensitivity 1,
+                           1 = high sensitivity 2"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 26
+        NAME            = AUX_PULSE
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 302
+        BYTES           = 11
+        DESCRIPTION     = "Auxiliary FDAQ pulse trigger
+                           DA-converter setup value"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 27
+        NAME            = AUX_INTEGRAL
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 314
+        BYTES           = 11
+        DESCRIPTION     = "Auxiliary FDAQ integral trigger
+                           DA-converter setup value"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 28
+        NAME            = AUX_LO_1
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 326
+        BYTES           = 11
+        DESCRIPTION     = "Auxiliary FDAQ low sensitivity 1
+                           straight channel baseline DA-converter
+                           setup value"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 29
+        NAME            = AUX_LO_DELAY_1
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 338
+        BYTES           = 11
+        DESCRIPTION     = "Auxiliary FDAQ low sensitivity 1
+                           delayed channel baseline DA-converter
+                           setup value"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 30
+        NAME            = AUX_HI_1
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 350
+        BYTES           = 11
+        DESCRIPTION     = "Auxiliary FDAQ high sensitivity 1
+                           straight channel baseline DA-converter
+                           setup value"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 31
+        NAME            = AUX_HI_DELAY_1
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 362
+        BYTES           = 11
+        DESCRIPTION     = "Auxiliary FDAQ high sensitivity 1
+                           delayed channel baseline DA-converter
+                           setup value"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 32
+        NAME            = AUX_LO_2
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 374
+        BYTES           = 11
+        DESCRIPTION     = "Auxiliary FDAQ low sensitivity 2
+                           straight channel baseline DA-converter
+                           setup value"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 33
+        NAME            = AUX_LO_DELAY_2
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 386
+        BYTES           = 11
+        DESCRIPTION     = "Auxiliary FDAQ low sensitivity 2
+                           delayed channel baseline DA-converter
+                           setup value"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 34
+        NAME            = AUX_HI_2
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 398
+        BYTES           = 11
+        DESCRIPTION     = "Auxiliary FDAQ high sensitivity 2
+                           straight channel baseline DA-converter
+                           setup value"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 35
+        NAME            = AUX_HI_DELAY_2
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 410
+        BYTES           = 11
+        DESCRIPTION     = "Auxiliary FDAQ high sensitivity 2
+                           delayed channel baseline DA-converter
+                           setup value"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 36
+        NAME            = ACTIVE_FDAQ
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 422
+        BYTES           = 11
+        DESCRIPTION     = "Active FDAQ board
+                           0 = primary, 1 = auxiliary"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 37
+        NAME            = MM1
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 434
+        BYTES           = 11
+        DESCRIPTION     = "MM-1 voltage setup value"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 38
+        NAME            = POLARITY
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 446
+        BYTES           = 11
+        DESCRIPTION     = "Ion polarity, 1 = positive, 2 = negative"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 39
+        NAME            = TARGET
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 458
+        BYTES           = 11
+        DESCRIPTION     = "Target size, 4 = small, 8 = large"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 40
+        NAME            = HVS
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 470
+        BYTES           = 11
+        DESCRIPTION     = "High voltage setup,
+                           0x00 = all off,
+                           0x01 = converter on,
+                           0x40 = RFB enabled,
+                           0x80 = MM1-1 enabled,
+                           plus the OR-ed combinations of all bits"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 41
+        NAME            = EDF_TIMEOUT
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 482
+        BYTES           = 11
+        DESCRIPTION     = "Time-out to send housekeeping data in 
+                           milliseconds"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 42
+        NAME            = COMPRESS
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 494
+        BYTES           = 11
+        DESCRIPTION     = "Channel Compression,
+                           0 = off, 1 = Rice, 2 = wavelet"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 43
+        NAME            = CHANNELS
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 506
+        BYTES           = 11
+        DESCRIPTION     = "Channels included in the EDF,
+                           0x01 = low straight channel,
+                           0x02 = low delayed channel,
+                           0x04 = high straight channel,
+                           0x08 = high delayed channel,
+                           plus the OR-ed combinations of all bits"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 44
+        NAME            = ENCOUNTER
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 518
+        BYTES           = 11
+        DESCRIPTION     = "Encounter clock received from S/C"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 45
+        NAME            = MINUS_ENCOUNTER
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 530
+        BYTES           = 11
+        DESCRIPTION     = "Encounter clock received from S/C negated"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 46
+        NAME            = ENCOUNTER_LIMIT
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 542
+        BYTES           = 203
+        ITEMS           = 17
+        ITEM_BYTES      = 11
+        ITEM_OFFSET     = 12
+        DESCRIPTION     = "Partition table limits expressed in
+                           encounter clock units"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 47
+        NAME            = ENCOUNTER_FIRST_NEGATIVE
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 746
+        BYTES           = 11
+        DESCRIPTION     = "First time the instrument will switch
+                           the negative mode, in encounter clock units"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 48
+        NAME            = ENCOUNTER_NEGATIVE_TIME
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 758
+        BYTES           = 11
+        DESCRIPTION     = "Time to stay in negative mode, in
+                           encounter clock units"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 49
+        NAME            = ENCOUNTER_POSITIVE_TIME
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 770
+        BYTES           = 11
+        DESCRIPTION     = "Time to stay in positive mode, in
+                           encounter clock units"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 50
+        NAME            = SWITCH_ONS
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 782
+        BYTES           = 11
+        DESCRIPTION     = "Number of instrument switch ons"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 51
+        NAME            = MINUS_SWITCH_ONS
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 794
+        BYTES           = 11
+        DESCRIPTION     = "Number of instrument switch ons, negated"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 52
+        NAME            = TOTAL_BYTES_TO_HEAP_SPACE
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 806
+        BYTES           = 11
+        DESCRIPTION     = "Total number of bytes sent to S/C
+                           encounter telemetry memory"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 53
+        NAME            = MINUS_TOTAL_BYTES_TO_HEAP_SPACE
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 818
+        BYTES           = 11
+        DESCRIPTION     = "Total number of bytes sent to S/C
+                           encounter telemetry memory, negated"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 54
+        NAME            = BYTES_TO_HEAP
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 830
+        BYTES           = 11
+        DESCRIPTION     = "Number of bytes in the S/C
+                           encounter telemetry memory, taking
+                           in to the account the partition limits"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 55
+        NAME            = MINUS_BYTES_TO_HEAP
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 842
+        BYTES           = 11
+        DESCRIPTION     = "Number of bytes in the S/C
+                           encounter telemetry memory, taking
+                           in to the account the partition limits,
+                           negated"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 56
+        NAME            = LARGE_LIMIT
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 854
+        BYTES           = 11
+        DESCRIPTION     = "Limit to consider event large, used
+                           only in s/w version 5"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 57
+        NAME            = SPECTRUM_HI_BIN_LIMIT
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 866
+        BYTES           = 11
+        DESCRIPTION     = "Limit to consider, that a real event
+                           is in high sensitivity channel"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 58
+        NAME            = SPECTRUM_LO_BIN_LIMIT
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 878
+        BYTES           = 11
+        DESCRIPTION     = "Limit to consider, that a real event
+                           is in low sensitivity channel"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 59
+        NAME            = SPECTRUM_HI_LO_LIMIT
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 890
+        BYTES           = 11
+        DESCRIPTION     = "High sensitivity level limit to consider,
+                           that the low sensitivity channel is to be
+                           included"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 60
+        NAME            = POLARITY_INDEX
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 902
+        BYTES           = 11
+        DESCRIPTION     = "Ion polarity, 0 = positive, 1 = negative"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 61
+        NAME            = TRIGGER_PULSE_ADJUST
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 914
+        BYTES           = 11
+        DESCRIPTION     = "Value added to the pulse trigger DA
+                           after noise level calibration"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 62
+        NAME            = TRIGGER_INTEGRAL_ADJUST
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 926
+        BYTES           = 11
+        DESCRIPTION     = "Value added to the integral trigger DA
+                           after noise level calibration"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 63
+        NAME            = TARGET_TO_SMALL_LIMIT
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 938
+        BYTES           = 11
+        DESCRIPTION     = "Event rate in 1/s, when to switch to
+                           the small target"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 64
+        NAME            = TARGET_TO_LARGE_LIMIT
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 950
+        BYTES           = 11
+        DESCRIPTION     = "Event rate in 1/s, when to switch to
+                           the large target"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 65
+        NAME            = EVENT_NUMBER
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 962
+        BYTES           = 11
+        DESCRIPTION     = "Total number of events recorded"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 66
+        NAME            = MINUS_EVENT_NUMBER
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 974
+        BYTES           = 11
+        DESCRIPTION     = "Total number of events recorded, negated"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 67
+        NAME            = WAVELET_FILTER_LENGTH
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 986
+        BYTES           = 11
+        DESCRIPTION     = "Wavelet filter length"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 68
+        NAME            = WAVELET_LOPASS
+        DATA_TYPE       = ASCII_REAL
+        START_BYTE      = 998
+        BYTES           = 47
+        ITEMS           = 4
+        ITEM_BYTES      = 11
+        ITEM_OFFSET     = 12
+        DESCRIPTION     = "Wavelet low pass filter parameters"
+        FORMAT          = "F11.5"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 69
+        NAME            = WAVELET_HIPASS
+        DATA_TYPE       = ASCII_REAL
+        START_BYTE      = 1046
+        BYTES           = 47
+        ITEMS           = 4
+        ITEM_BYTES      = 11
+        ITEM_OFFSET     = 12
+        DESCRIPTION     = "Wavelet high pass filter parameters"
+        FORMAT          = "F11.5"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 70
+        NAME            = NEGATIVE_PULSE_FACTOR
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 1094
+        BYTES           = 11
+        DESCRIPTION     = "Factor to multiply the pulse trigger
+                           DA setup value for negative ion mode
+                           in units of 1/16"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 71
+        NAME            = NEGATIVE_INTEGRAL_FACTOR
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 1106
+        BYTES           = 11
+        DESCRIPTION     = "Factor to multiply the negative trigger
+                           DA setup value for negative ion mode
+                           in units of 1/16"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
+
+OBJECT                  = COLUMN
+        COLUMN_NUMBER   = 72
+        NAME            = SPARE
+        DATA_TYPE       = ASCII_INTEGER
+        START_BYTE      = 1118
+        BYTES           = 1163
+        ITEMS           = 97
+        ITEM_BYTES      = 11
+        ITEM_OFFSET     = 12
+        DESCRIPTION     = "Not currently used"
+        FORMAT          = "I11"
+END_OBJECT              = COLUMN
