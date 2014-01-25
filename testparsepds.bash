@@ -1,5 +1,7 @@
 #!/bin/bash
 
+### Usage:  $0 testparsepds.bash testdata/xyz.lbl
+
 echo '!QUIET=1'
 for i in $* ; do
 

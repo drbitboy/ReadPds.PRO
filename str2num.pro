@@ -59,7 +59,7 @@ function STR2NUM, svalue, TYPE = type
 ;----------------------------------------------------------------------
 
  if ( N_PARAMS() NE 1)then begin
-     print,'Syntax - result =str2num(svalue,[ TYPE = type])
+     print,'Syntax - result =str2num(svalue,[ TYPE = type])'
      return, -1
  endif 
 
@@ -109,6 +109,7 @@ function STR2NUM, svalue, TYPE = type
  if(strpos(svalue,'D') GT 0) then type = 5
  ON_IOERROR,NULL
  THE_CASE:
+   if !err ne 0L then !err = 0L
 	CASE type OF
 	    7 : value=svalue
             6 : value=temp

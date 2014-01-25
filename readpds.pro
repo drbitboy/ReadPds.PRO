@@ -230,6 +230,18 @@ sSavePath = !PATH
     label = (~st) ? headpds(filename) : headpds(filename, /silent)
     if (label[0] eq "-1") then return, -1
 
+IF getenv("READPDS_WRITELBL") NE '' THEN BEGIN
+ lun=-1L
+ catcherr=0L
+ catch,catcherr
+ IF catcherr EQ 0L THEN BEGIN
+  openw,lun,'lblsave.txt',/get_lun
+  printf,lun,strjoin(label,''),f='(a)'
+ ENDIF
+ catch,/cancel
+ IF lun GT 0L then free_lun,lun
+ENDIF
+
     ; reset file name
     filename = savefile
 

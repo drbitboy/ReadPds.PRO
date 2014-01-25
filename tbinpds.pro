@@ -579,7 +579,8 @@ function OBTAIN_TBIN_CONTAINERS, label, req_keywds, start_ind, end_ind
     
     column = objpds(label[container_info[i].start_index:container_info[i].end_index],"COLUMN")
     container_info[i].columns = column.count
-    end_header = container_info[i].start_index + column.index[0]
+    ;;;end_header = container_info[i].start_index + column.index[0]
+    end_header = container_info[i].end_index
     
     name = obtain_keyword("NAME",label, container_info[i].start_index, end_header)    
     repetitions = obtain_keyword("REPETITIONS",label, container_info[i].start_index, end_header)
@@ -590,11 +591,23 @@ function OBTAIN_TBIN_CONTAINERS, label, req_keywds, start_ind, end_ind
       keywds.flag2 = -1
       goto, endfun
     endif
-    
+
+catcherr = 0L
+catch,catcherr
+if catcherr ne 0L then begin
+  help,/st,i,'CONTAINER_INFO[I]:',container_info[i],end_header
+  catch,/cancel
+  openw,lun,'lblsave.txt',/get_lun
+  printf,lun,strjoin(label,''),f='(a)'
+  free_lun,lun
+  message,!error_state.msg
+endif
+
     container_info[i].name = name.val[0]
     container_info[i].repetitions = repetitions.val[0]
     container_info[i].bytes = bytes.val[0]
     container_info[i].start_byte = start_byte.val[0]
+catch,/cancel
   endfor
 
   ; store info into a structure:
@@ -1198,7 +1211,7 @@ end
 
 function TBINPDS, fname, label, objindex, SILENT=silent
     ; error protection:
-    ON_ERROR, 2
+    ;ON_ERROR, 2
 
     ; check for number of parameters in function call:
     if (n_params() LT 3) then begin
@@ -1287,6 +1300,26 @@ function TBINPDS, fname, label, objindex, SILENT=silent
         return, -1
     endif        
 
+help,req_keywds
+help,/st,req_keywds
+help,/st,'REQ.NAME:',req_keywds.name
+help,/st,'REQ.DATA_TYPE:',req_keywds.DATA_TYPE
+help,/st,'REQ.BYTES:',req_keywds.BYTES
+help,/st,'REQ.START_BYTE:',req_keywds.START_BYTE
+print,req_keywds
+help,opt_keywds
+help,/st, opt_keywds
+print,opt_keywds
+help,items
+help,/st, items
+help,/st,'ITEMS.ITEMS:',ITEMS.ITEMS
+help,/st,'ITEMS.BYTES:',ITEMS.BYTES
+help,/st,'ITEMS.OFFSET:',ITEMS.OFFSET
+print,items
+help,containers
+help,/st, containers
+print,containers
+help,label, start_ind, end_ind
     ; create data structure to be read:
     complete_set = CREATE_TBIN_STRUCT(req_keywds, opt_keywds, items, containers, label, $
                                        start_ind, end_ind)    ; subroutine

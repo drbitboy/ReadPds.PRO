@@ -32,6 +32,7 @@
 ;
 ;    29 Jan 2009, S. Martinez: Add [CR,LF] instead of [LF,CR].
 ;    01 Feb 2009, S. Martinez: Corrected to do not crash when file does not exist.
+;    22 Jan 2014, BT.Carcich:  Skip recursion if ,/FORMAT
 ;    
 ;    For detailed log of modifications to this routine, please see the
 ;    changelog.txt file.
@@ -165,61 +166,45 @@ function headpds, input_filename, SILENT = silent, FILE = file, FORMAT = format
     close, unit
     free_lun, unit
 
-;    ; process ^STRUCTURE object in label if any:
-;    struct = pdspar(lbl, "^STRUCTURE", COUNT=strcount, INDEX=strindex)
-;    if (strcount ne 0) then begin
-;        endobj = pdspar(lbl, "END_OBJECT", COUNT=eobjcount, INDEX=eobjindex)
-;      
-;        ; obtain the position where the contents of STRUCTURE file are
-;        ; to go in the lbl array, viz., before the last END_OBJECT keyword:
-;        structpos = where (eobjindex gt strindex[0])
-;        lblpos = eobjindex[structpos[0]]
-;        lastelem = n_elements(lbl) - 1
-;
-;        ; obtain the pointer attributes for STRUCTURE, and read the file:
-;        pointer = pointpds (lbl, filename, "STRUCTURE")   ; external routine
-;        if (pointer.flag eq -1) then begin
-;            print, "Error: structure pointer file missing"
-;            return, "-1"
-;        endif
-;
-;        datafile = pointer.datafile
-;        fmtlabel = headpds (datafile, /format)
-;
-;        ; insert fmtlabel into lbl array:
-;        lbl = [lbl[0:lblpos - 1], fmtlabel, lbl[lblpos:lastelem]]
-;    endif
-
      ; process ^STRUCTURE object in label if any:
-     struct = pdspar(lbl, "^STRUCTURE", COUNT=strcount, INDEX=strindex)  ;; ^STRUCTURE
-     for i=0,strcount-1 do begin ;;santa
-        endobj = pdspar(lbl, "END_OBJECT", COUNT=eobjcount, INDEX=eobjindex)
+     ;;; - Only if /FORMAT was not specified
+     ;;;   - To ensures this loop is only called once per label
+
+     IF NOT KEYWORD_SET(format) THEN BEGIN
+
+       struct = pdspar(lbl, "^STRUCTURE", COUNT=strcount, INDEX=strindex)  ;; ^STRUCTURE
+       i = 0L
+       WHILE i LT strcount DO BEGIN
+          endobj = pdspar(lbl, "END_OBJECT", COUNT=eobjcount, INDEX=eobjindex)
       
-        ; obtain the position where the contents of STRUCTURE file are
-        ; to go in the lbl array, viz., before the last END_OBJECT keyword:
-        structpos = where (eobjindex gt strindex[i]) 
-        lblpos = eobjindex[structpos[0]]
-        lastelem = n_elements(lbl) - 1
+          ; obtain the position where the contents of STRUCTURE file are
+          ; to go in the lbl array, viz., before the last END_OBJECT keyword:
+          structpos = where (eobjindex gt strindex[i]) 
+          lblpos = eobjindex[structpos[0]]
+          lastelem = n_elements(lbl) - 1
 
-        ; obtain the pointer attributes for STRUCTURE, and read the file:
-        objname = get_struct_name(lbl, strindex[i])
+          ; obtain the pointer attributes for STRUCTURE, and read the file:
+          objname = get_struct_name(lbl, strindex[i])
 
-        pointer = pointpds(lbl[strindex[i]-1:lastelem], filename, objname)   ; external routine
-        if (pointer.flag eq -1) then begin
-            print, "Error: structure pointer file missing"
-            return, "-1"
-        endif
+          pointer = pointpds(lbl[strindex[i]-1:lastelem], filename, objname)   ; external routine
+          if (pointer.flag eq -1) then begin
+              print, "Error: structure pointer file missing"
+              return, "-1"
+          endif
 
-        datafile = pointer.datafile
-        fmtlabel = headpds (datafile, /format)
+          datafile = pointer.datafile
+          fmtlabel = headpds (datafile, /format)
 
-        ; insert fmtlabel into lbl array:
+          ; insert fmtlabel into lbl array:
         
-        lblpos = strindex[i] + 1
-        lbl = [lbl[0:lblpos - 1], fmtlabel, lbl[lblpos:lastelem]]
-        ;strcount--  ;; 2008 May 20, smartinez: removed
-        struct = pdspar(lbl, "STRUCTURE", COUNT=strcount, INDEX=strindex)
-    endfor
+          lblpos = strindex[i] + 1
+          lbl = [lbl[0:lblpos - 1], fmtlabel, lbl[lblpos:lastelem]]
+          ;strcount--  ;; 2008 May 20, smartinez: removed
+          struct = pdspar(lbl, "STRUCTURE", COUNT=strcount, INDEX=strindex)
+          i += 1
+      ENDWHILE
+
+    ENDIF  ;;; IF NOT KEYWORD_SET(format)
 
     return, lbl
 
