@@ -49,7 +49,7 @@ FUNCTION popstack, stack, countArg, PEEK=peek
   RETURN, popped
 END
 
-;;; Wrapper function for popstack,...,/PEEK
+;;; Wrapper function for popstack,/PEEK,...
 FUNCTION peekstack, stack, countArg
   RETURN,popstack(stack, countArg, /PEEK)
 END
@@ -72,8 +72,9 @@ PRO parsepds, lun, debug=debugArg, doubleDebug=doubleDebugArg
   wantendq = wantendu + 1L      ;;; Waiting for end of quoted string
 
   ;;; UNITS suffix (e.g. <degree> or <BYTES>) may follow any number
+  ;;; - Space should not bi in there, but I'm not too bothered
 
-  unitsSfx = '( *<[-+/A-Z0-9* ]+>)?'     ;;; : Help VIM syntax highlighting (VSH), fooled by paren-query
+  unitsSfx = '( *<[-+/A-Z0-9*_() ]+>)?'     ;;; : Help VIM syntax highlighting (VSH), fooled by paren-query
 
   NL = string(10b)    ;;; newline
   CR = string(13b)    ;;; carriage return
@@ -343,7 +344,7 @@ PRO parsepds, lun, debug=debugArg, doubleDebug=doubleDebugArg
       ENDIF
 
       ;;; Check for different form of fp value
-      IF sDbl EQ '' then sDbl = STREGEX( s, '^[-+]? *[.][0-9]+([eE][-+]?[0-9]+)?)'+unitsSfx, /EXTRACT, /FOLD_CASE)     ;;; ( VSH
+      IF sDbl EQ '' then sDbl = STREGEX( s, '^[-+]? *[.][0-9]+([eE][-+]?[0-9]+)?'+unitsSfx, /EXTRACT, /FOLD_CASE)     ;;; ( VSH
       ;;; If an fp, save it, pop wantv state, loop back to start
       IF sDbl NE '' THEN BEGIN
         IF doDebug THEN help,sDbl
